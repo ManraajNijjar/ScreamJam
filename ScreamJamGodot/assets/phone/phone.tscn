@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://biawd8tdcac18"]
+
+[ext_resource type="PackedScene" uid="uid://b8axm4f5esmy3" path="res://assets/phone/phone_screen.tscn" id="1_pndbc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofam8"]
+albedo_color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c4qyj"]
+material = SubResource("StandardMaterial3D_ofam8")
+
+[node name="Phone" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.554834, 0, 0, 0, 1, 0, 0, 0, 0.175399, 0, 0, 0)
+mesh = SubResource("BoxMesh_c4qyj")
+
+[node name="PhoneScreen" parent="MeshInstance3D" instance=ExtResource("1_pndbc")]
+transform = Transform3D(1.80234, 0, 0, 0, 1, 0, 0, 0, 5.7013, 0, 0, 0.529552)

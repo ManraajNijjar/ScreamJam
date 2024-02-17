@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://ganwygpofh6t"]
+
+[ext_resource type="PackedScene" uid="uid://biawd8tdcac18" path="res://assets/phone/phone.tscn" id="1_8sibd"]
+[ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="1_n2lxc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7xcwe"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_eolq0"]
+sky_material = SubResource("ProceduralSkyMaterial_7xcwe")
+
+[sub_resource type="Environment" id="Environment_xtl6b"]
+background_mode = 2
+sky = SubResource("Sky_eolq0")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t2bo6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dlusx"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="Phone" parent="." instance=ExtResource("1_8sibd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xtl6b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_n2lxc")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(14.3783, 0, 0, 0, 1, 0, 0, 0, 14.139, 0, -0.543231, 0)
+shape = SubResource("BoxShape3D_t2bo6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_dlusx")
+skeleton = NodePath("../../..")

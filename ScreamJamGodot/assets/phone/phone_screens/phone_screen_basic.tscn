@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ucq783b85rq"]
+
+[ext_resource type="Script" path="res://assets/phone/phone_screens/phone_screen_basic.gd" id="1_yka7p"]
+[ext_resource type="Texture2D" uid="uid://wbmgraxic1us" path="res://icon.svg" id="2_qbksp"]
+
+[node name="PhoneScreenBasic" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yka7p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button4" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button5" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button6" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button7" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button8" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Button9" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Button
+"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(263, 248)
+scale = Vector2(1.62965, 0.731134)
+texture = ExtResource("2_qbksp")
+
+[connection signal="focus_entered" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]

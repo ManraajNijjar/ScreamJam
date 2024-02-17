@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8axm4f5esmy3"]
+
+[ext_resource type="PackedScene" uid="uid://1ucq783b85rq" path="res://assets/phone/phone_screens/phone_screen_basic.tscn" id="1_4uv64"]
+[ext_resource type="Script" path="res://assets/phone/phone_screen.gd" id="1_gpdl3"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2dbpp"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vk8v4"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_2dbpp")
+texture_filter = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_bq6cq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wucn7"]
+
+[node name="PhoneScreen" type="Node3D"]
+script = ExtResource("1_gpdl3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_vk8v4")
+mesh = SubResource("QuadMesh_bq6cq")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -0.0394371)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_wucn7")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+render_target_update_mode = 4
+
+[node name="PhoneScreenBasic" parent="SubViewport" instance=ExtResource("1_4uv64")]
