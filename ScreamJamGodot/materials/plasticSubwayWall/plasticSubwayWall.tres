@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://brpc1t4vc4t7v"]
+
+[ext_resource type="Texture2D" uid="uid://dq5xhk8ufj36f" path="res://materials/plasticSubwayWall/Plastic005_4K_Color.jpg" id="1_85ny5"]
+[ext_resource type="Texture2D" uid="uid://chxeato3m8u05" path="res://materials/plasticSubwayWall/Plastic005_4K_Displacement.jpg" id="2_jipyh"]
+[ext_resource type="Texture2D" uid="uid://rfwji50utr70" path="res://materials/plasticSubwayWall/Plastic005_4K_NormalDX.jpg" id="3_ih4lb"]
+[ext_resource type="Texture2D" uid="uid://dxi7dxyccjqbm" path="res://materials/plasticSubwayWall/Plastic005_4K_Roughness.jpg" id="4_rstrf"]
+
+[resource]
+albedo_color = Color(1, 1, 0.682353, 1)
+albedo_texture = ExtResource("1_85ny5")
+roughness = 0.25
+roughness_texture = ExtResource("4_rstrf")
+normal_enabled = true
+normal_scale = 0.0
+normal_texture = ExtResource("3_ih4lb")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_jipyh")
+uv1_triplanar = true
