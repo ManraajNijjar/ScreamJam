@@ -125,3 +125,26 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.2713
 
 [node name="subwaySideDoor2" parent="environment" instance=ExtResource("8_e2tci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92621, -0.421463, 7.88285)
+
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+load_on = 1
+
+[node name="AkBank_Main" type="AkBank" parent="AkBank_Init"]
+bank = {
+"id": 534561221,
+"name": "MainSoundbank"
+}
+load_on = 1
+
+[node name="AkEvent3D_TEST" type="AkEvent3D" parent="AkBank_Init/AkBank_Main"]
+event = {
+"id": 3157003241,
+"name": "TEST"
+}
+visible = false
+
+[node name="AkListener3D" type="AkListener3D" parent="AkBank_Init"]

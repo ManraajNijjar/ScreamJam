@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="TEST" ID="{E2B6837F-74C4-46AB-A356-EB8ECD511ED1}" ShortID="515222182">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Whip Transition" ID="{7697F097-857E-41CA-AE15-DDE148F36701}">
+							<Language>SFX</Language>
+							<AudioFile>Whip Transition.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="810854900"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Whip Transition" ID="{7697F097-857E-41CA-AE15-DDE148F36701}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
