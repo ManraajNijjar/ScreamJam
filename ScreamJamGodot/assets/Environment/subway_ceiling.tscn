@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://7pxjhvjgqfhm"]
+
+[ext_resource type="PackedScene" uid="uid://dp4bo2g5n80h6" path="res://3DModels/SubwayCeiling/subwayCeiling2.glb" id="1_7j87c"]
+[ext_resource type="PackedScene" uid="uid://xujgis6ted6k" path="res://assets/Environment/SubwayLight.tscn" id="2_vbfpa"]
+
+[node name="subwayCeiling2" instance=ExtResource("1_7j87c")]
+
+[node name="MeshInstance3D" parent="." index="1" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.03275, -0.0782882, 0, 0.123916, 0.652476, 0, 0, 0, 4.73262, -3.7957, -0.915064, 6.57858)
+
+[node name="MeshInstance3D2" parent="." index="2" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.03275, -0.0782882, 0, 0.123916, 0.652476, 0, 0, 0, 4.73262, -3.7957, -0.915064, 0.621022)
+
+[node name="MeshInstance3D3" parent="." index="3" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.03275, -0.0782882, 0, 0.123916, 0.652476, 0, 0, 0, 4.73262, -3.7957, -0.915064, -5.20883)
+
+[node name="MeshInstance3D4" parent="." index="4" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.03275, -0.0782882, 0, 0.123916, 0.652476, 0, 0, 0, 4.73262, -3.7957, -0.915064, -11.0428)
+
+[node name="MeshInstance3D5" parent="." index="5" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.036, 0.0587258, 0, -0.0929523, 0.654526, 0, 0, 0, 4.73262, 4.19789, -0.958103, 6.57858)
+
+[node name="MeshInstance3D6" parent="." index="6" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.036, 0.0587258, 0, -0.0929523, 0.654526, 0, 0, 0, 4.73262, 4.19789, -0.958103, 0.621022)
+
+[node name="MeshInstance3D7" parent="." index="7" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.036, 0.0587258, 0, -0.0929523, 0.654526, 0, 0, 0, 4.73262, 4.19789, -0.958103, -5.20883)
+
+[node name="MeshInstance3D8" parent="." index="8" instance=ExtResource("2_vbfpa")]
+transform = Transform3D(1.036, 0.0587258, 0, -0.0929523, 0.654526, 0, 0, 0, 4.73262, 4.19789, -0.958103, -11.0428)

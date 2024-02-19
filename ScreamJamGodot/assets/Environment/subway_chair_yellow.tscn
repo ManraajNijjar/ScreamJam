@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn5sctb0n25r6"]
+
+[ext_resource type="PackedScene" uid="uid://deqf2bp725phl" path="res://3DModels/SubwayChair/subwayChairYellow.glb" id="1_y6ro2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjtu7"]
+size = Vector3(5.00238, 2.70911, 1.47461)
+
+[node name="subwayChairYellow" instance=ExtResource("1_y6ro2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104828, 0.854553, -0.237305)
+shape = SubResource("BoxShape3D_hjtu7")

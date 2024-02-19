@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://jui036ps8dan"]
+
+[ext_resource type="PackedScene" uid="uid://uq4v5unrqkuq" path="res://3DModels/SubwayWallJoined/subwayWall2.glb" id="1_wi4pm"]
+[ext_resource type="Material" uid="uid://bfl7krowrqmpu" path="res://assets/Environment/glass.tres" id="2_cto1b"]
+[ext_resource type="PackedScene" uid="uid://cl0ldajtciw16" path="res://assets/Environment/subway_chair_blue.tscn" id="3_vgbot"]
+[ext_resource type="PackedScene" uid="uid://dn5sctb0n25r6" path="res://assets/Environment/subway_chair_yellow.tscn" id="4_ic37g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lt34g"]
+size = Vector3(1, 8.20236, 2.21387)
+
+[sub_resource type="QuadMesh" id="QuadMesh_1gwof"]
+material = ExtResource("2_cto1b")
+
+[sub_resource type="BoxMesh" id="BoxMesh_g34f5"]
+material = ExtResource("2_cto1b")
+
+[node name="SubwayWall" type="Node3D"]
+
+[node name="subwayWall2" parent="." instance=ExtResource("1_wi4pm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.501061, 0, 1.12433)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 11.4659, 0, 3.60118, -1.39405)
+shape = SubResource("BoxShape3D_lt34g")
+
+[node name="glass" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.283855, -0.132372, 2.02345, 4.27239, -0.103658, -0.135051, 0.0704792, 6.81681, 0.037239, 0.244147, 4.95293, -3.25608)
+visible = false
+mesh = SubResource("QuadMesh_1gwof")
+
+[node name="glass2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.283855, -0.132372, 2.02345, 4.27239, -0.103658, -0.135051, 0.0704792, 6.81681, 0.037239, 0.244147, 4.95293, 5.53688)
+visible = false
+mesh = SubResource("QuadMesh_1gwof")
+
+[node name="subwayChairBlue" parent="." instance=ExtResource("3_vgbot")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.42168, 1.07379, 7.7971)
+
+[node name="subwayChairBlue2" parent="." instance=ExtResource("3_vgbot")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.42168, 1.07379, -1.67407)
+
+[node name="subwayChairYellow" parent="." instance=ExtResource("4_ic37g")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.39765, 1.04753, 3.04573)
+
+[node name="subwayChairYellow2" parent="." instance=ExtResource("4_ic37g")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.39765, 1.04753, -6.44759)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.322945, 0.410466, 0, -0.0381202, 3.47737, 0, 0, 0, 6.62703, 0.0537391, 4.79897, -3.28541)
+mesh = SubResource("BoxMesh_g34f5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.322945, 0.410466, 0, -0.0381202, 3.47737, 0, 0, 0, 6.62703, 0.0443411, 4.81071, 5.47525)
+mesh = SubResource("BoxMesh_g34f5")

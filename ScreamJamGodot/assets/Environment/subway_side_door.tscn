@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7q65nu2xj4we"]
+
+[ext_resource type="PackedScene" uid="uid://w7mk3c0ha7gi" path="res://3DModels/SubwaySideDoor/subwaySideDoor.glb" id="1_vycb6"]
+[ext_resource type="Material" uid="uid://bfl7krowrqmpu" path="res://assets/Environment/glass.tres" id="2_ct754"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lols0"]
+material = ExtResource("2_ct754")
+
+[node name="subwaySideDoor" instance=ExtResource("1_vycb6")]
+
+[node name="Cube_003" parent="." index="0"]
+transform = Transform3D(0.137913, -0.197509, 0, 0.0277864, 0.980301, 0, 0, 0, 8.01944, -0.305713, 0.96417, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.162983, 0.375845, 0, -0.0131935, 4.64293, 0, 0, 0, 3.71431, -0.458427, 4.14325, -2.17096)
+mesh = SubResource("BoxMesh_lols0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(0.162983, 0.375845, 0, -0.0131935, 4.64293, 0, 0, 0, 3.71431, -0.458427, 4.14325, 2.58284)
+mesh = SubResource("BoxMesh_lols0")

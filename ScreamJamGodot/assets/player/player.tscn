@@ -1,11 +1,80 @@
-[gd_scene load_steps=3 format=3 uid="uid://df0f1urbyhljl"]
+[gd_scene load_steps=8 format=3 uid="uid://df0f1urbyhljl"]
 
 [ext_resource type="Script" path="res://assets/player/player.gd" id="1_6mqc3"]
+[ext_resource type="PackedScene" uid="uid://biawd8tdcac18" path="res://assets/phone/phone.tscn" id="2_o8v1j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mu32f"]
 
+[sub_resource type="Animation" id="Animation_giuy2"]
+resource_name = "MovePhoneToFace"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Phone")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.367247, 0.171169, -0.731582, 0.5, 1, 0.007, 0.486, -0.38)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Phone:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.08596, -0.588298, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0dvey"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Phone:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hybwr"]
+resource_name = "MovePhoneBack"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Phone")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.007, 0.486, -0.38, 0.5, 1, 0.367247, 0.171169, -0.731582)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Phone:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.08596, -0.588298, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qq7fs"]
+_data = {
+"MovePhoneBack": SubResource("Animation_hybwr"),
+"MovePhoneToFace": SubResource("Animation_giuy2"),
+"RESET": SubResource("Animation_0dvey")
+}
+
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1.53497, 0, 0, 0, 1.53497, 0, 0, 0, 1.53497, 0, 1.5, 0)
 script = ExtResource("1_6mqc3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -15,3 +84,11 @@ shape = SubResource("CapsuleShape3D_mu32f")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Phone" parent="." instance=ExtResource("2_o8v1j")]
+transform = Transform3D(0.281113, 0, 0, 0, 0.281113, 0, 0, 0, 0.281113, 0.367247, 0.171169, -0.731582)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qq7fs")
+}
