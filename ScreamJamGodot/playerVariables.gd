@@ -2,6 +2,7 @@ extends Node
 
 var sanity = 100;
 var weirdness = 0;
+var missed_calls = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

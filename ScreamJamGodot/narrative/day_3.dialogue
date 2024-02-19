@@ -1,0 +1,165 @@
+# import "res://narrative/day_2.dialogue" as snippets
+
+~ day_3_house_am
+if sanity == 100:
+	Scott wakes up and sees the blue sky, stocked with clouds. The weather seems to be getting nicer each day.
+else:
+	Another morning of grey clouds. Scott sighs.
+	
+He gets up and takes a shower, and scrubs his skin. 
+
+Gambit needs to be fed, of course. Scott gets dressed and heads to work.
+
+As usual, he stops in at the cafe on his way to the train. There's a few people already working at tables, but no one in line.
+
+Barista: Hi, Scott! Black coffee with one cream?
+- Scott: Yep, the usual please.
+- Scott: What's the seasonal latte?
+	Barista: Well, it's made with oatmilk and a house mint syrup we make. I really like it.
+	- Scott: Sure, I'll try that.
+		do sanity -= 10
+		[i](Almost instantly, my stomach hurts. I feel woozy.)[/i]
+		The barista doesn't notice his face go a little pale.
+		Barista: Of course! This will take a little longer than usual, but there's not a line so it'll be up quick.
+		He waits for a few minutes, at the counter, feeling awkward.
+		She runs back and forth, prepping ingredients. 
+		While it's not as quick as his usual order, he's out the door, with a wave.
+		He does have to run to make sure he doesn't miss his normal train.
+		
+	- Scott: Eh. The usual is fine.
+		Barista: You got it.
+		She turns around and almost instantly turns back, holding his normal coffee.
+		He smiles and waves, and walks into the clear day.
+
+# lowest possible sanity here is 80
+
+~ day_3_train_am
+if sanity == 100:
+	The train is a little more crowded than it has been, but it's probably due to the weather clearing up.
+else:
+	The mostly empty train is a welcome sight. He takes a seat.
+
+
+
+~ day_3_office
+if sanity == 100:
+	The office seems busier than normal, and everyone is in good spirits. 
+
+else:
+	Scott notices a few of his colleagues are out, having said they'd work from home today.
+
+The other people on his team are having meetings about training material for new employees..
+[i](I'm so glad I don't have to do those presentations. I love talking in front of a crowd, but not about insurance benefits.)[/i]
+The amount of work he has to do is light, and he finds himself reading the news instead.
+
+!
+Scott feels a hand clasp his shoulder. He looks up and sees his boss, Dylan, smiling down at him.
+Dylan: Hey, man. What's up?
+- Scott: Not much. Just working on next pay period.
+- Scott: I don't really have a lot to do, but--
+Dylan: Remember the other day when you said we should go get lunch together?
+- Scott: No?
+- Scott: Sure.
+Dylan: Can you go today?
+- Scott: I meant we'd both order from the app and then sit together.
+	Dylan: Oh, I thought we'd go outside.
+	if sanity == 100:
+		Dylan: It's such a nice day. Come on, we should go.
+		Dylan is insistent, emphatic. 
+		=> day_3_lunch_dec
+- Scott: No, I'm way too busy. 
+	Dylan: Scott, I'm your boss. I know you're not.
+	=> day_3_lunch_dec
+	
+~ day_3_lunch_dec
+- Scott: Okay, you got me.
+	do sanity -= 10
+	Scott feels something twist inside him. He gasps.
+	Dylan doesn't notice.
+	Dylan: Sweet. I want to take you to this ramen place that just opened up.
+	They eat. Dylan pays, which is nice. 
+	The walk back from the restaurant seems gloomy.
+	Dylan: You think it's going to rain?
+- Scott: Sorry, I already ordered from the app.
+	Dylan: Bummer, man. Ah well. We can go another day.
+	Scott eats his salad for lunch the same way he always does\: he pours the dressing in, puts the lid back on, and shakes it.
+	
+The rest of the day is slow and brutal as Scott runs out of things to work on.
+
+# lowest possible sanity here is 70
+
+if sanity == 100:
+	It's getting sunnier out. 
+elif sanity >=80:
+	It's a little gloomy.
+else:
+	The day is unusually dark. The walk to the train seems weird. Scott is unusually sweaty.
+	
+~ day_3_train_pm
+
+if sanity == 100:
+	Scott stands again in the crowded train. The afternoon sun falls on his face as he rides the train home.
+elif sanity >=80:
+	Few seats are available, but he gets one facing forward.
+else:
+	The empty train seems weird in the middle of rush hour, but Scott is glad to sit and ride home in silence.
+	
+	
+~ day_3_house_pm
+
+if sanity == 100:
+	things should be brighter
+elif sanity >=80:
+	things should be middle
+else:
+	things should seem bad
+	
+
+~ phone_call_3
+- pick up the phone
+	Scott: Hi, mom.
+	Mom: Hi, Scott. Just wanted to check in.
+	Scott: Sure, I’m doing okay.
+	Mom: Great! I had such an awful day running errands today.
+	- Scott: Oh yeah?
+	- Scott: ...
+	Mom: There was a car that almost smashed into me on Rose St. You know where that hardware store just opened up?
+	- Scott: Mom, I haven't been home in 10 years. [if sanity <= 71]
+	- Scott: Nope. 
+	- Scott: Yep. 
+	Mom: There's no left turn there, but this guy just didn't care and almost hit me.
+	Mom: I swear, old people can't drive any more.
+	Mom: You know, eventually I'm going to be too old to drive.
+	Mom: I'll have to hire a driver! Can you imagine? 
+	- Scott: Couldn't dad just drive you around?
+	- Scott: I definitely can.
+	if missed_calls >= 0:
+		Mom: Make sure you pick up when I call. Okay?
+		Mom: I get worried when you don't.
+		Scott: I know.
+	Mom: Well, it's late here. You know the time zones make it hard to call you sometimes.
+	Mom: But I wouldn't miss it for a day.
+	Mom: I love you. Bye!
+- don't pick up
+	if missed_calls >= 0:
+		do sanity -= 10
+		[i](I'll call her back later.)[/i]
+		He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+	if missed_calls == 1:
+		do sanity -= 15
+		[i](I'll call her back later.)[/i]
+		He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+
+# lowest possible sanity here is 60
+
+~ day_3_bed
+if sanity == 100:
+	things should be brighter
+elif sanity >=80:
+	things should be middle
+else:
+	things should seem bad
+
+# => day_x+1_house_am
+
+#=> snippets/day_2_train_am

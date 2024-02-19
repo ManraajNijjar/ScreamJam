@@ -21,6 +21,10 @@ PlayerVariables="*res://playerVariables.gd"
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/states=["PlayerVariables"]
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Wwise/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
@@ -55,7 +59,7 @@ viewPhone={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://narrative/start.dialogue")
+locale/translations_pot_files=PackedStringArray("res://narrative/start.dialogue", "res://narrative/day_2.dialogue", "res://narrative/template.dialogue", "res://narrative/day_3.dialogue")
 
 [wwise]
 

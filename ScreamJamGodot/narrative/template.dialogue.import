@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c1bveugl8eeym"
+path="res://.godot/imported/template.dialogue-5fbec9286ec56a4c35d865febc670e0f.tres"
+
+[deps]
+
+source_file="res://narrative/template.dialogue"
+dest_files=["res://.godot/imported/template.dialogue-5fbec9286ec56a4c35d865febc670e0f.tres"]
+
+[params]
+
+defaults=true

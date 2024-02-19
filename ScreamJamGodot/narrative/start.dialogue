@@ -1,5 +1,4 @@
 ~ day_1_house_am
-
 It’s a little cloudy, like the sky filled with salt water. He rubs his eyes more than usual this morning. 
 Scott realizes he’s hit snooze a few times more than usual. The grey skies didn’t allow the sun to warm his skin and wake him. 
 Gambit didn’t even paw at his face this morning yet, but once Scott’s fully awake, with glasses on, he sees his cat pacing back and forth around his food bowl. 
@@ -15,15 +14,12 @@ Barista: Hey, Scott! Have a good day.
 
 He smiles back at her, and waves as he walks away.
 
-=> day_1_train_am
-
 
 ~ day_1_train_am
 
 Scott sits in a forward facing seat, and looks out the window. The cloudy morning hasn’t let up, and there’s almost a fog permeating his view. 
 He stares at his phone, scrolling through the news and social media. He drinks his coffee and finishes it as he’s getting off the train.
 
-=> day_1_office
 
 
 ~ day_1_office
@@ -33,7 +29,6 @@ He orders the Black and Bleu salad from the local chain, his favorite.
 When it shows up, he eats at his desk while going over the last pay period’s numbers so he can make sure there’s no unapproved time cards. 
 There’s always one manager he has to chase down, and after a few messages on the work approved chat app, he’s got his work done for today.
 
-=> day_1_train_pm
 
 ~ day_1_train_pm
 He has to stand due to rush hour traffic on the train, but he faces the direction the train is going and gets a good look out the window. 
@@ -61,16 +56,12 @@ Scott: Sure, I’m doing okay.
 Mom: Great! Well, today at work some guy called and complained about how the download time was too long on his app. 
 Mom: I told him I can’t control his internet speed. 
 Mom: He said he wasn’t even on the internet because he was - get this - on his phone!
-- "Wow... what an idiot."
-	Scott: Wow... what an idiot.
-- "Well, maybe he doesn't think that's the internet."
-	Scott: Well, maybe he doesn't think that's the internet.
+- Scott: Wow... what an idiot.
+- Scott: Well, maybe he doesn't think that's the internet.
 Mom: It's so surprising how your generation doesn't even get the technology they grew up with.
 Mom: I also had someone try to ask for a discount on renewal because he was sick and couldn't use the service as much.
-- "Did you give it to him?"
-	Scott: Did you give it to him?
-- "For real? That's not your fault."
-	Scott: For real? That's not your fault.
+- Scott: Did you give it to him?
+- Scott: For real? That's not your fault.
 Mom: Everyone wants luxury even if they can't afford it. I wouldn't sign up if I couldn't pay.
 Mom: I think I'm getting too old for this. But I'll still be working for a while...
 He loves his mom, but sometimes he regrets picking up the phone. 
@@ -90,5 +81,3 @@ He washes his face again, and reapplies the lotion even though the SPF isn’t g
 
 Scott gets back on his phone, and stares at the screen in the dark until his eyes start to droop. 
 He feels Gambit jump up onto the bed and lie down in the crook of his knees. The warmth of the cat urges him even more quickly into sleep, and he plugs his phone in, and drifts off.
-
-=> END

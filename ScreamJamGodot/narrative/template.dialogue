@@ -1,0 +1,34 @@
+# import "res://narrative/day_2.dialogue" as snippets
+
+~ day_x_house_am
+
+if sanity == 100:
+	things should be brighter
+elif sanity >=80:
+	things should be middle
+else:
+	things should seem bad
+	
+
+~ day_x_train_am
+
+
+
+~ day_x_office
+
+~ day_x_train_pm
+
+~ day_x_house_pm
+
+~ phone_call_x
+- pick up the phone
+	Scott: Hi, mom.
+- don't pick
+	He gets a gnawing feeling in the pit of his stomach, swirling and dizzy.
+	Scott: I really should pick up.
+
+~ day_x_bed
+
+# => day_x+1_house_am
+
+#=> snippets/day_2_train_am
