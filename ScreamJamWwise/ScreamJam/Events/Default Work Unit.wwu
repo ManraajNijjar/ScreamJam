@@ -74,7 +74,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Folder Name="Music" ID="{332D71E9-953C-46E5-9B5D-55D604FBDCE8}" ShortID="283735970"/>
+				<Folder Name="Music" ID="{332D71E9-953C-46E5-9B5D-55D604FBDCE8}" ShortID="283735970">
+					<ChildrenList>
+						<Event Name="Dark_Music" ID="{7C97DC11-AE57-42F4-B0C5-53441E44DC6C}">
+							<ChildrenList>
+								<Action Name="" ID="{25442244-E38E-4007-A24F-F762A1252C92}" ShortID="746945027">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dark Music Seg" ID="{57329BC0-FB2F-4F80-A766-3D470F7E1C44}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

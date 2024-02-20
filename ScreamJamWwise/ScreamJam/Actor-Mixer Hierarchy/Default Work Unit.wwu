@@ -37,6 +37,13 @@
 						<Folder Name="Subway" ID="{7293111B-878F-4EE3-A6C8-06C13A66FC51}" ShortID="573924418">
 							<ChildrenList>
 								<BlendContainer Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" ShortID="366252467">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
