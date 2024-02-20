@@ -334,6 +334,40 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Dialog" ID="{8BBE40AF-310D-44C0-952A-14ABB5EDF987}" ShortID="489138231">
+					<ChildrenList>
+						<Sound Name="Mom Dialog" ID="{593A2208-2EC8-42B9-B953-66BEC76396FF}" ShortID="201254541">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>37</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Mom_Dialog_Final" ID="{EABCE646-81A9-4AC1-819E-D0E44595BF03}">
+									<Language>SFX</Language>
+									<AudioFile>Mom_Dialog_Final.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="936359435"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Mom_Dialog_Final" ID="{EABCE646-81A9-4AC1-819E-D0E44595BF03}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

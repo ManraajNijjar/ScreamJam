@@ -63,6 +63,18 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Mom_Dialog" ID="{8F611BF4-0F76-4C41-BB09-8153CFF11E56}">
+					<ChildrenList>
+						<Action Name="" ID="{FCB600DF-28DA-44C6-A3B9-6D3244AE17B7}" ShortID="406266595">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom Dialog" ID="{593A2208-2EC8-42B9-B953-66BEC76396FF}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Music" ID="{332D71E9-953C-46E5-9B5D-55D604FBDCE8}" ShortID="283735970"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

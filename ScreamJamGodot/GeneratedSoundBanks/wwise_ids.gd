@@ -2,20 +2,24 @@ class_name AK
 
 class EVENTS:
 
-	const SUBWAYENVLOOP = 1699039505
 	const TEST = 3157003241
-	const TV_STATIC = 1436086644
+	const SUBWAYENVLOOP = 1699039505
 	const PHONE_RINGTONE = 4265022948
-	const PHONE_ALERT = 423885916
 	const CAT_MEOW = 1968116890
+	const PHONE_ALERT = 423885916
+	const MOM_DIALOG = 546191921
+	const TV_STATIC = 1436086644
+	const DARK_MUSIC = 1142103033
 
 	const _dict = {
-		"SubwayEnvLoop": SUBWAYENVLOOP,
 		"TEST": TEST,
-		"TV_Static": TV_STATIC,
+		"SubwayEnvLoop": SUBWAYENVLOOP,
 		"Phone_Ringtone": PHONE_RINGTONE,
+		"Cat_Meow": CAT_MEOW,
 		"Phone_Alert": PHONE_ALERT,
-		"Cat_Meow": CAT_MEOW
+		"Mom_Dialog": MOM_DIALOG,
+		"TV_Static": TV_STATIC,
+		"Dark_Music": DARK_MUSIC
 	}
 
 class STATES:

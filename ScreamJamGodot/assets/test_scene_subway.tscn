@@ -158,3 +158,10 @@ event = {
 }
 trigger_on = 1
 is_environment_aware = true
+
+[node name="Dark_Music_Test" type="AkEvent2D" parent="."]
+event = {
+"id": 1142103033,
+"name": "Dark_Music"
+}
+trigger_on = 1

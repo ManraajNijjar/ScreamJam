@@ -1,6 +1,593 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}" SchemaVersion="119">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Dark Music Seg" ID="{57329BC0-FB2F-4F80-A766-3D470F7E1C44}" ShortID="463775730">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="75"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{EBD2BADE-05F1-46C3-AFA1-E8A6FBC56E9E}" ShortID="303524421">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{1BBDBCD5-1A21-4115-9F6F-E209D8CDEB8B}" ShortID="933284357">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="Dark Music" ID="{52D27DBD-AB10-41DF-B91A-DA7EA2C1D7AD}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{E9753D5A-2BB3-413E-B14D-407468DCFC64}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{29FA6FA6-6D92-4A39-8883-36D9BA13F725}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Dark Music" ID="{52D27DBD-AB10-41DF-B91A-DA7EA2C1D7AD}" ShortID="32328444">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="133111.150980305"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Dark Music_bpm75_D-AnalogPad" ID="{1FECA0B1-14B8-4C3B-810C-870207C6EA3C}" ShortID="299168913">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{54200DCF-E28C-4C0F-9624-84E38F44C474}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-AnalogPad" ID="{CBCE34D2-5663-4C8F-B76E-E28B45BF9DFA}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-AnalogPad.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="619753218"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{08924F15-6EF6-4AC5-92D7-34D0318872BD}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-AnalogPad" ID="{17ACA1DE-7158-48D3-8E4B-52DD2243407C}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-AnalogPad" ID="{CBCE34D2-5663-4C8F-B76E-E28B45BF9DFA}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{76DD022B-066C-4E5E-A1A4-83C0A3A9E4C9}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-BSPad" ID="{2B8F44F0-F805-44D0-ACDC-8AA342629662}" ShortID="662725789">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{47076D7D-3075-4B86-A85C-649795B2D593}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-BSPad" ID="{A6500DD8-33F7-42CC-B04E-55BDB29317F9}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-BSPad.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="108424136"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B73C8C64-C91A-4FA7-BB7B-54EB1997A28E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-BSPad" ID="{ABB25B39-BF04-4D1E-B328-DF0E6A5655A4}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-BSPad" ID="{A6500DD8-33F7-42CC-B04E-55BDB29317F9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-Cymbols" ID="{61480A36-F913-486A-BEA5-21FB2819677D}" ShortID="862743615">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{19B7CE59-3922-46E5-81FC-86E56FA47B28}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-Cymbols" ID="{749E85CE-CD8D-4189-B1F0-BF617BBD20C4}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-Cymbols.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="499859042"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0135B047-BCFC-4599-B21C-C245017DF86C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-Cymbols" ID="{79351CEE-A7C6-4011-A19E-780461C9AAA0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-Cymbols" ID="{749E85CE-CD8D-4189-B1F0-BF617BBD20C4}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{95434749-AC8C-42C3-AC3A-577458448C8F}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-Drone1" ID="{B1C22679-4C90-45ED-99F8-7235A8CC847B}" ShortID="182840928">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{89D18E5E-4C18-4B28-94E7-78920A1F33CC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-Drone1" ID="{0B82D8C0-0F2C-4486-A09E-C7249A4C50EC}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-Drone1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="197905848"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5E40A5F7-944D-451A-A7F2-F034486AD3B7}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-Drone1" ID="{7BFF742A-287C-4392-A718-2FE0CAA434FC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-Drone1" ID="{0B82D8C0-0F2C-4486-A09E-C7249A4C50EC}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-Drone2" ID="{55229324-7047-4471-B934-6D85971BC0EC}" ShortID="142328891">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{12D417DA-D898-436A-8A6C-B773D946A628}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-Drone2" ID="{3B1E63F6-B489-449F-B0C3-F47D11BA47FB}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-Drone2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="395390605"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0AD7C850-901A-4A2A-914D-41DF19F247D0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-Drone2" ID="{529D65CE-9420-440D-8DB3-690F497B1986}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-Drone2" ID="{3B1E63F6-B489-449F-B0C3-F47D11BA47FB}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{648F8625-329D-4C52-A6E2-A7B92BE2CE3B}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-Kick" ID="{2F4F21E4-E89D-4AEA-B417-89492581B2FB}" ShortID="262078100">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{AC2C894B-9E44-445B-902F-24E1EBE8E645}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-Kick" ID="{A2790BB7-23DE-48E6-A34D-6B5047743AE6}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-Kick.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="483754966"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9E956026-AAB1-41A3-BEB3-799194A5AD9C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-Kick" ID="{CE27E546-00A4-41BF-B21B-41DDFA76E963}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-Kick" ID="{A2790BB7-23DE-48E6-A34D-6B5047743AE6}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{67E2CD82-FD6D-4C77-A632-CB7BBFD567D7}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-RimTaps" ID="{911A7974-542B-45CA-88D8-FC77210C1B8B}" ShortID="944974372">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{C3ED5281-D276-4817-B21D-FA3FFA617E03}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-RimTaps" ID="{611EDEBB-518E-4B65-B13C-C135CE99EC91}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-RimTaps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1051437156"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{248D33B9-B3C4-48EB-BAC8-50291D3F7025}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-RimTaps" ID="{787C9132-15E2-4E61-A319-1C0449E7BB4E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-RimTaps" ID="{611EDEBB-518E-4B65-B13C-C135CE99EC91}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{17265927-156F-4FA6-9383-923BF3225FD9}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Dark Music_bpm75_D-SynthPulse" ID="{7FA29697-ED99-4458-AA02-62A4D101BEDD}" ShortID="709004912">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{09F155AB-671F-411E-AE0E-C4E358C684DF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Dark Music_bpm75_D-SynthPulse" ID="{52346C7B-4A48-4307-AE0B-B9657FBEC438}">
+											<Language>SFX</Language>
+											<AudioFile>Dark Music_bpm75_D-SynthPulse.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="871492776"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{EBE0AF04-9959-4FAD-B65F-36B8DEF48ED5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Dark Music_bpm75_D-SynthPulse" ID="{0FBB9A9C-A97D-4902-ABB7-1148935CD2D7}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="112000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Dark Music_bpm75_D-SynthPulse" ID="{52346C7B-4A48-4307-AE0B-B9657FBEC438}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5DD33120-3043-4D0D-A2DA-84D9CBCE757B}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{7552E7A3-5539-4755-8F0E-372CC9B11AC3}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{E7CF30E4-D876-47F5-9B42-D04A8B3D7ECE}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="102400"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
