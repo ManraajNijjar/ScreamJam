@@ -1,14 +1,23 @@
 extends Node
 
+enum TIMEOFDAY {MORNING, NIGHT}
+
 var sanity = 100;
 var weirdness = 0;
 var missed_calls = 0;
+var day = 0;
+var time : TIMEOFDAY = TIMEOFDAY.MORNING;
 
-# Called when the node enters the scene tree for the first time.
+signal toTrain
+signal displayMomCall
+
 func _ready():
-	pass # Replace with function body.
+	toTrain.connect(loadTrain);
+	displayMomCall.connect(toggleMomCall);
 
+func loadTrain(sceneChangeParameter: String):
+	print(sceneChangeParameter);
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func toggleMomCall(dayCall):
 	pass
+	

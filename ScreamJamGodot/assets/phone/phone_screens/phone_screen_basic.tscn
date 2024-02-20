@@ -21,9 +21,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="LineEdit" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Button" type="Button" parent="VBoxContainer/GridContainer"]
@@ -71,10 +73,36 @@ layout_mode = 2
 text = "Button
 "
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(263, 248)
-scale = Vector2(1.62965, 0.731134)
+[node name="MomCallScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.52588e-05
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MomCallScreen"]
+position = Vector2(264, 140)
+scale = Vector2(2.59449, 1.86001)
 texture = ExtResource("2_qbksp")
+
+[node name="Button" type="Button" parent="MomCallScreen"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 335.0
+offset_right = 148.0
+offset_bottom = 366.0
+scale = Vector2(2.2695, 3.13981)
+text = "pickup"
+
+[node name="Button2" type="Button" parent="MomCallScreen"]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 335.0
+offset_right = 361.0
+offset_bottom = 366.0
+scale = Vector2(2.2695, 3.13981)
+text = "deny"
 
 [connection signal="focus_entered" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
