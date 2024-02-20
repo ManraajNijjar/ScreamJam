@@ -32,6 +32,57 @@
 						<ActiveSource Name="Whip Transition" ID="{7697F097-857E-41CA-AE15-DDE148F36701}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Environments" ID="{3C92F75C-C761-4E94-B3BE-5BC0A5B77FCA}" ShortID="620177831">
+					<ChildrenList>
+						<BlendContainer Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" ShortID="366252467">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SubwayBaseLoop" ID="{64CA55BF-3B02-4D5B-BD19-6247A9C9C543}" ShortID="763487843">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Subway Environment Loop" ID="{CA7B0C64-66C4-4E6A-A847-6801F5889A59}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.406976744186047"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.406976744186047"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Subway Environment Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="979213786"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Subway Environment Loop" ID="{CA7B0C64-66C4-4E6A-A847-6801F5889A59}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -3,9 +3,11 @@ class_name AK
 class EVENTS:
 
 	const TEST = 3157003241
+	const SUBWAYENVLOOP = 1699039505
 
 	const _dict = {
-		"TEST": TEST
+		"TEST": TEST,
+		"SubwayEnvLoop": SUBWAYENVLOOP
 	}
 
 class STATES:
@@ -48,12 +50,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const SYSTEM = 3859886410
 	const NO_OUTPUT = 2317455096
+	const SYSTEM = 3859886410
 
 	const _dict = {
-		"System": SYSTEM,
-		"No_Output": NO_OUTPUT
+		"No_Output": NO_OUTPUT,
+		"System": SYSTEM
 	}
 
 class EXTERNAL_SOURCES:

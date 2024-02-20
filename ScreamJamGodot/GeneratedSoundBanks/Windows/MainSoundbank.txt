@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1699039505	SubwayEnvLoop			\Default Work Unit\Environments\SubwayEnvLoop	
 	3157003241	TEST			\Default Work Unit\TEST	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	810854900	TEST	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Whip Transition_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST		330316
+	979213786	SubwayBaseLoop	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Subway Environment Loop_D8294E6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environments\SubwayEnvLoop\SubwayBaseLoop		13361956
 

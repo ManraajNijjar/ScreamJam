@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{75C386D1-CA7B-717D-1CE8-512FD02DC33D}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{24B0DB5B-42C8-13BA-E7DA-D472F239A2B5}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -17,8 +17,17 @@
 					<ShortName>Whip Transition.wav</ShortName>
 					<CachePath>SFX/Whip Transition_818F3B66.wem</CachePath>
 				</File>
+				<File Id="979213786" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Subway Environment Loop.wav</ShortName>
+					<CachePath>SFX/Subway Environment Loop_D8294E6C.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="1699039505" Name="SubwayEnvLoop">
+					<MediaRefs>
+						<MediaRef Id="979213786"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3157003241" Name="TEST">
 					<MediaRefs>
 						<MediaRef Id="810854900"/>
@@ -168,5 +177,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{009338FA-2757-E435-35FA-27E7963A8538}</FileHash>
+	<FileHash>{C58AE767-B2D2-A650-F1C2-6FCF95229C2A}</FileHash>
 </SoundBanksInfo>
