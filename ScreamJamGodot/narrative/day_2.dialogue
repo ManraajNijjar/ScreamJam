@@ -4,21 +4,21 @@ The morning is already brighter than the day before, and Scott wakes up a little
 He gets up and feeds Gambit, takes a shower and cleans his face carefully. 
 Scott showers, which helps wake him the rest of the way up.
 He pays a little more attention to his hair today, but there’s almost no use. It doesn’t look great, but he’s done the best he can with it.
-~ showCoffee
+do emit("showCoffee")
 On the way to the train, he stops in the coffee shop. 
 It’s more crowded today, so he has to wait in line for a few people to pause and think about what they want, but quickly enough the barista has handed him his--
 Barista: black coffee, one cream.
 She smiles as she passes it to him.
 [i](Is she flirting with me?)[/i]
 He smiles and waves, walking away as his face turns red.
-~ toTrainAM
+do emit("toTrainAM")
 => END!
 
 ~ day_2_train_am
 It's also more crowded than yesterday. He struggles to grab the last forward facing seat. His careful maneuvering means he scoots in as someone gets up, replacing them. 
 He looks at his phone, checking the news again. 
 The clouds part for a moment right before he gets off, and he enjoys the view before almost missing his stop.
-~ toOffice
+do emit("toOffice")
 => END!
 
 ~ day_2_office
@@ -44,13 +44,13 @@ Scott listens to them go back and forth, but tries to focus on his work.
 He only has ten minutes until it's too late to order lunch. He quickly orders the Black and Bleu salad.
 When it shows up, he eats at his desk, as usual.
 Alexis and Sandra are still bickering when he gets up to leave at the end of the day, but they don't notice him.
-~ toTrainPM
+do emit("toTrainPM")
 => END!
 
 ~ day_2_train_pm
 It’s even more packed than the day before. 
 He faces forward and doesn’t think about much, just lets his mind clear as he experiences the familiar trip\: trees, the buildings, the sound of the train. 
-~ toHousePM
+do emit("toHousePM")
 => END!
 
 ~ day_2_house_pm
@@ -63,7 +63,7 @@ He pops his dinner in the microwave and then sits on the couch.
 He completely zones out eats while as usual Gambit attempts to steal some.
 Scott: Hey! Back off.
 Gambit hisses and moves back, but then starts licking his paws like nothing happened. 
-~ showCall
+do emit("showCall")
 => END!
 
 ~ deny_call_mom
@@ -110,4 +110,4 @@ else:
 
 do day += 1
 do time = TIMEOFDAY.MORNING
-~ toHouseAM
+do emit("toHouseAM")

@@ -8,20 +8,20 @@ Gambit begins eating immediately, and Scott goes to take a shower.
 He keeps the water just warm enough so he doesn’t cause steam on the mirror. Afterwards, he washes his face, meticulously, with his favorite face scrub. 
 He puts on an expensive lotion recommended to him by the lady at the Korean skin care place down the street from his work. 
 Scott gets dressed in his favorite work outfit, a button up with khakis, and packs up his laptop to head to work. It feels weird to carry a backpack around, like a child, but he’s found it to be the best option.
-~ showCoffee
+do emit("showCoffee")
 On the way to work, he grabs a coffee from the small local shop near the train station. There’s no one in the cafe when he gets there. The barista knows him, and she greets him with an open smile. 
 He always gets his coffee black with one cream. It’s quick and easy to make, and she’s got it in her hand almost immediately.
 Barista: Hey, Scott! Have a good day.
 
 He smiles back at her, and waves as he walks away.
-~ toTrainAM
+do emit("toTrainAM")
 => END!
 
 ~ day_1_train_am
 
 Scott sits in a forward facing seat, and looks out the window. The cloudy morning hasn’t let up, and there’s almost a fog permeating his view. 
 He stares at his phone, scrolling through the news and social media. He drinks his coffee and finishes it as he’s getting off the train.
-~ toOffice
+do emit("toOffice")
 => END!
 
 ~ day_1_office
@@ -30,13 +30,13 @@ The best part of his work is that every day, lunch is catered. They pick a few r
 He orders the Black and Bleu salad from the local chain, his favorite. 
 When it shows up, he eats at his desk while going over the last pay period’s numbers so he can make sure there’s no unapproved time cards. 
 There’s always one manager he has to chase down, and after a few messages on the work approved chat app, he’s got his work done for today.
-~ toTrainPM
+do emit("toTrainPM")
 => END!
 
 ~ day_1_train_pm
 He has to stand due to rush hour traffic on the train, but he faces the direction the train is going and gets a good look out the window. 
 The sky looks a little more clear, and he lets the bit of sun reflect off his face. He hopes his glasses aren’t reflecting into anyone’s eyes, like a little beam of blinding light.
-~ toHousePM
+do emit("toHousePM")
 => END!
 
 ~ day_1_house_pm
@@ -46,7 +46,7 @@ Luckily, these are completely precooked, so he doesn’t have to do anything exc
 
 He flips through Youtube videos on chess and history that are catered to him algorithmically. 
 
-~ showCall
+do emit("showCall")
 => END!
 
 ~ pick_up_call_mom
@@ -93,4 +93,4 @@ Scott gets back on his phone, and stares at the screen in the dark until his eye
 He feels Gambit jump up onto the bed and lie down in the crook of his knees. The warmth of the cat urges him even more quickly into sleep, and he plugs his phone in, and drifts off.
 do day += 1
 do time = TIMEOFDAY.MORNING
-~ toHouseAM
+do emit("toHouseAM")

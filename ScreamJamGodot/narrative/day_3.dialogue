@@ -10,7 +10,7 @@ He gets up and takes a shower, and scrubs his skin.
 
 Gambit needs to be fed, of course. Scott gets dressed and heads to work.
 
-~ showCoffee
+do emit("showCoffee")
 As usual, he stops in at the cafe on his way to the train. There's a few people already working at tables, but no one in line.
 
 Barista: Hi, Scott! Black coffee with one cream?
@@ -30,7 +30,7 @@ Barista: Hi, Scott! Black coffee with one cream?
 		Barista: You got it.
 		She turns around and almost instantly turns back, holding his normal coffee.
 		He smiles and waves, and walks into the clear day.
-~ toTrainAM
+do emit("toTrainAM")
 => END!
 # lowest possible sanity here is 80
 
@@ -40,7 +40,7 @@ if sanity == 100:
 else:
 	The mostly empty train is a welcome sight. He takes a seat.
 
-~ toOffice
+do emit("toOffice")
 => END!
 
 ~ day_3_office
@@ -88,7 +88,7 @@ Dylan: Can you go today?
 	
 The rest of the day is slow and brutal as Scott runs out of things to work on.
 # lowest possible sanity here is 70
-~ toTrainPM
+do emit("toTrainPM")
 => END!
 
 
@@ -116,7 +116,7 @@ else:
 	things should seem bad
 	
 
-~ showCall
+do emit("showCall")
 => END!
 
 ~ deny_call_mom
@@ -180,4 +180,4 @@ else:
 
 do day += 1
 do time = TIMEOFDAY.MORNING
-~ toHouseAM
+do emit("toHouseAM")

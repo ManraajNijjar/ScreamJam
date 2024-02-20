@@ -2,11 +2,21 @@ extends Node3D
 
 @export var player : Node3D;
 
+signal showCoffee
+signal toTrainAM
+signal showCall
+signal toHouseAM
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	DialogueManager.connect("dialogue_ended", dialogueEndedFunction)
-	DialogueManager.connect("got_dialogue", receivedDialogueFunction)
-	DialogueManager.connect("passed_title", passedTitleFunction)
+	#DialogueManager.connect("dialogue_ended", dialogueEndedFunction)
+	#DialogueManager.connect("got_dialogue", receivedDialogueFunction)
+	#DialogueManager.connect("passed_title", passedTitleFunction)
+
+	showCoffee.connect(displayCoffeeScene);
+	toTrainAM.connect(goToTrain);
+	showCall.connect(displayPlayerCall);
+	toHouseAM.connect(goToHouseAM);
 
 	if(PlayerVariables.day == 0):
 		if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
@@ -21,29 +31,16 @@ func _ready():
 	
 	pass # Replace with function body.
 
+func displayCoffeeScene():
+	pass;
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func goToTrain():
+	get_tree().change_scene_to_file("res://assets/subway.tscn")
+	pass;
 
-func dialogueEndedFunction(value):
-	#print(value);
-	pass
+func displayPlayerCall():
+	player.displayCall();
+	pass;
 
-func receivedDialogueFunction(value):
-	#print(value);
-	pass
-
-func passedTitleFunction(value):
-	print(value);
-	if value == "showCoffee":
-		pass
-	if value == "toTrainAM":
-		get_tree().change_scene_to_file("res://assets/subway.tscn")
-		pass
-	if value == "showCall":
-		player.displayCall();
-		pass
-	if value == "toHouseAM":
-		pass
-	pass
+func goToHouseAM():
+	pass;
