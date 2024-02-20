@@ -2,12 +2,20 @@ class_name AK
 
 class EVENTS:
 
-	const TEST = 3157003241
 	const SUBWAYENVLOOP = 1699039505
+	const TEST = 3157003241
+	const TV_STATIC = 1436086644
+	const PHONE_RINGTONE = 4265022948
+	const PHONE_ALERT = 423885916
+	const CAT_MEOW = 1968116890
 
 	const _dict = {
+		"SubwayEnvLoop": SUBWAYENVLOOP,
 		"TEST": TEST,
-		"SubwayEnvLoop": SUBWAYENVLOOP
+		"TV_Static": TV_STATIC,
+		"Phone_Ringtone": PHONE_RINGTONE,
+		"Phone_Alert": PHONE_ALERT,
+		"Cat_Meow": CAT_MEOW
 	}
 
 class STATES:
@@ -50,12 +58,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const NO_OUTPUT = 2317455096
 	const SYSTEM = 3859886410
+	const NO_OUTPUT = 2317455096
 
 	const _dict = {
-		"No_Output": NO_OUTPUT,
-		"System": SYSTEM
+		"System": SYSTEM,
+		"No_Output": NO_OUTPUT
 	}
 
 class EXTERNAL_SOURCES:

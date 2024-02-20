@@ -29,6 +29,40 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Cat_Meow" ID="{027D2CC5-4752-418D-A1FD-EACB518D0776}"/>
+				<Event Name="Phone_Ringtone" ID="{B87D3A6A-E69D-469B-A933-53E343980FF5}">
+					<ChildrenList>
+						<Action Name="" ID="{A274DAC8-EF01-495D-AC6E-2F06CF9DD45A}" ShortID="85030328">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Phone Ringtone" ID="{2A9CBF05-524B-4AAD-B991-CCF03C5B4C1A}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Phone_Alert" ID="{D32CBE60-7851-4117-8AFE-97366996FB0C}">
+					<ChildrenList>
+						<Action Name="" ID="{DC22BF98-8201-427E-B075-F4E1D5FD56C2}" ShortID="944034742">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Phone Alert" ID="{2DA7A5FC-246E-4E59-9948-D3683FBEEBA8}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TV_Static" ID="{BFC5D598-3740-423A-BAC7-EBC6EDA1580F}">
+					<ChildrenList>
+						<Action Name="" ID="{785ADFC8-90DF-4F78-AE3D-3188F5F04A55}" ShortID="8587049">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TV Static" ID="{E486F7EA-DF2D-4510-858C-FABC50A53AA9}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

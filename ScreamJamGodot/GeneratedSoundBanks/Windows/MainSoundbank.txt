@@ -1,8 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
+	423885916	Phone_Alert			\Default Work Unit\Phone_Alert	
+	546191921	Mom_Dialog			\Default Work Unit\Mom_Dialog	
+	1436086644	TV_Static			\Default Work Unit\TV_Static	
 	1699039505	SubwayEnvLoop			\Default Work Unit\Environments\SubwayEnvLoop	
-	3157003241	TEST			\Default Work Unit\TEST	
+	1968116890	Cat_Meow			\Default Work Unit\Cat_Meow	
+	4265022948	Phone_Ringtone			\Default Work Unit\Phone_Ringtone	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	810854900	TEST	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Whip Transition_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST		330316
-	979213786	SubwayBaseLoop	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Subway Environment Loop_D8294E6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environments\SubwayEnvLoop\SubwayBaseLoop		13361956
+	234497861	Phone Ringtone	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Phone Ringtone W Vibrate Final_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\Phone\Phone Ringtone		1920096
+	645295004	TV Static	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\TV Static Final_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environments\Home\TV Static		6569080
+	712826778	Phone Alert	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Phone Alarm w Vibrate Final _818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Phone\Phone Alert		77364
+	936359435	Mom Dialog	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Mom_Dialog_Final_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialog\Mom Dialog		3435396
+	937904889	SubwayBaseLoop	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Subway Environment Loop_Final_7E848740.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environments\Subway\SubwayEnvLoop\SubwayBaseLoop		13361864
 

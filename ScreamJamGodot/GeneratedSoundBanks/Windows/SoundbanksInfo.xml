@@ -9,28 +9,56 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{24B0DB5B-42C8-13BA-E7DA-D472F239A2B5}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{25D6BF3C-1528-8775-58FB-B35F31BAC7BC}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
-				<File Id="810854900" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Whip Transition.wav</ShortName>
-					<CachePath>SFX/Whip Transition_818F3B66.wem</CachePath>
+				<File Id="234497861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phone Ringtone W Vibrate Final.wav</ShortName>
+					<CachePath>SFX/Phone Ringtone W Vibrate Final_11A93380.wem</CachePath>
 				</File>
-				<File Id="979213786" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Subway Environment Loop.wav</ShortName>
-					<CachePath>SFX/Subway Environment Loop_D8294E6C.wem</CachePath>
+				<File Id="645295004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TV Static Final.wav</ShortName>
+					<CachePath>SFX/TV Static Final_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="712826778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phone Alarm w Vibrate Final .wav</ShortName>
+					<CachePath>SFX/Phone Alarm w Vibrate Final _818F3B66.wem</CachePath>
+				</File>
+				<File Id="936359435" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mom_Dialog_Final.wav</ShortName>
+					<CachePath>SFX/Mom_Dialog_Final_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="937904889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Subway Environment Loop_Final.wav</ShortName>
+					<CachePath>SFX/Subway Environment Loop_Final_7E848740.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1699039505" Name="SubwayEnvLoop">
+				<Event Id="1968116890" Name="Cat_Meow"/>
+				<Event Id="546191921" Name="Mom_Dialog">
 					<MediaRefs>
-						<MediaRef Id="979213786"/>
+						<MediaRef Id="936359435"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3157003241" Name="TEST">
+				<Event Id="423885916" Name="Phone_Alert">
 					<MediaRefs>
-						<MediaRef Id="810854900"/>
+						<MediaRef Id="712826778"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4265022948" Name="Phone_Ringtone">
+					<MediaRefs>
+						<MediaRef Id="234497861"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1699039505" Name="SubwayEnvLoop">
+					<MediaRefs>
+						<MediaRef Id="937904889"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1436086644" Name="TV_Static">
+					<MediaRefs>
+						<MediaRef Id="645295004"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -177,5 +205,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C58AE767-B2D2-A650-F1C2-6FCF95229C2A}</FileHash>
+	<FileHash>{E09E2A28-5690-B5FE-BB40-2C1D9C9900EE}</FileHash>
 </SoundBanksInfo>
