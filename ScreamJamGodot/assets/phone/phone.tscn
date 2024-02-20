@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://biawd8tdcac18"]
+[gd_scene load_steps=5 format=3 uid="uid://biawd8tdcac18"]
 
 [ext_resource type="PackedScene" uid="uid://b8axm4f5esmy3" path="res://assets/phone/phone_screen.tscn" id="1_pndbc"]
+[ext_resource type="Script" path="res://assets/phone/phone.gd" id="1_rfyw4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofam8"]
 albedo_color = Color(0.101961, 0.101961, 0.101961, 1)
@@ -9,6 +10,7 @@ albedo_color = Color(0.101961, 0.101961, 0.101961, 1)
 material = SubResource("StandardMaterial3D_ofam8")
 
 [node name="Phone" type="Node3D"]
+script = ExtResource("1_rfyw4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.554834, 0, 0, 0, 1, 0, 0, 0, 0.175399, 0, 0, 0)

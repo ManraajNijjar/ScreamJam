@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Scream Jam"
-run/main_scene="res://assets/test_scene_subway.tscn"
+run/main_scene="res://assets/subway.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,7 +20,6 @@ config/icon="res://icon.svg"
 PlayerVariables="*res://playerVariables.gd"
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-PhoneScreenBasic="*res://assets/phone/phone_screens/phone_screen_basic.gd"
 
 [dialogue_manager]
 

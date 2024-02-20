@@ -3,6 +3,7 @@ extends Node3D
 @onready var display = $MeshInstance3D
 @onready var viewport : SubViewport = $SubViewport
 @onready var area = $Area3D
+@onready var phoneScreenUI = $SubViewport/PhoneScreenBasic
 
 var mesh_size = Vector2();
 
@@ -89,7 +90,9 @@ func find_mouse(pos: Vector2):
 
 	var result = dss.intersect_ray(rayparam);
 	if result.size() > 0:
-		print(result.position)
 		return result.position;
 	else:
 		return null;
+
+func showMomCall():
+	phoneScreenUI.showMomCall();

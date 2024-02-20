@@ -1,0 +1,162 @@
+[gd_scene load_steps=25 format=3 uid="uid://co2ktstqpgolr"]
+
+[ext_resource type="Script" path="res://assets/subway.gd" id="1_cfmxi"]
+[ext_resource type="Texture2D" uid="uid://miof3h4f1dch" path="res://images/subwaySkyBackground.png" id="1_xu01s"]
+[ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="2_ej5hr"]
+[ext_resource type="Texture2D" uid="uid://ck2ax8hwnkyda" path="res://images/subwayBackground.png" id="3_hwwqo"]
+[ext_resource type="Shader" path="res://shaders/water.gdshader" id="4_5bv6r"]
+[ext_resource type="PackedScene" uid="uid://jui036ps8dan" path="res://assets/Environment/subway_wall.tscn" id="5_vn4p8"]
+[ext_resource type="PackedScene" uid="uid://7pxjhvjgqfhm" path="res://assets/Environment/subway_ceiling.tscn" id="6_p04xs"]
+[ext_resource type="Material" uid="uid://c6gmlk1yx8ss8" path="res://materials/plasticSubwayFloor/plasticMaterialFloor.tres" id="7_xm20a"]
+[ext_resource type="PackedScene" uid="uid://bytbt8nnkl8ve" path="res://3DModels/SubwayRearDoor/subwayRearDoor.glb" id="8_ivoss"]
+[ext_resource type="PackedScene" uid="uid://b7q65nu2xj4we" path="res://assets/Environment/subway_side_door.tscn" id="9_74ofo"]
+[ext_resource type="Texture2D" uid="uid://cxigo0rfqgkut" path="res://goku.png" id="10_4jjsk"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_8ewgp"]
+panorama = ExtResource("1_xu01s")
+
+[sub_resource type="Sky" id="Sky_u77il"]
+sky_material = SubResource("PanoramaSkyMaterial_8ewgp")
+
+[sub_resource type="Environment" id="Environment_fkv4v"]
+background_mode = 2
+sky = SubResource("Sky_u77il")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gkwe8"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2ibg7"]
+seamless = true
+as_normal_map = true
+bump_strength = 10.0
+noise = SubResource("FastNoiseLite_gkwe8")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_plg8g"]
+noise_type = 3
+seed = 5
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xws6j"]
+seamless = true
+as_normal_map = true
+bump_strength = 10.0
+noise = SubResource("FastNoiseLite_plg8g")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vhgy4"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_txskt"]
+seamless = true
+noise = SubResource("FastNoiseLite_vhgy4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rolh0"]
+render_priority = 0
+shader = ExtResource("4_5bv6r")
+shader_parameter/albedo = Color(0.101961, 0.631373, 0.717647, 1)
+shader_parameter/albedo2 = Color(0.137255, 0.419608, 0.415686, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.009
+shader_parameter/wave_direction = Vector2(2, 0)
+shader_parameter/wave_direction2 = Vector2(0, 1)
+shader_parameter/time_scale = 0.025
+shader_parameter/noise_scale = 10.0
+shader_parameter/height_scale = 0.15
+shader_parameter/color_deep = Color(0.243137, 0, 0, 1)
+shader_parameter/color_shallow = Color(0.235294, 0, 0.0705882, 1)
+shader_parameter/beers_law = 2.0
+shader_parameter/depth_offset = -0.75
+shader_parameter/edge_scale = 0.1
+shader_parameter/near = 1.0
+shader_parameter/far = 100.0
+shader_parameter/edge_color = Color(1, 1, 1, 1)
+shader_parameter/wave = SubResource("NoiseTexture2D_txskt")
+shader_parameter/texture_normal = SubResource("NoiseTexture2D_2ibg7")
+shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_xws6j")
+
+[sub_resource type="BoxMesh" id="BoxMesh_qgf1g"]
+material = SubResource("ShaderMaterial_rolh0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_81gk8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5banw"]
+material = ExtResource("7_xm20a")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_cfmxi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.3023, 0.398265, 0, 0.79653, 0.604599, -0.5, 0.523598, -0.689815, 21.828, 2.50491, -50.4794)
+light_color = Color(0.835294, 0.74902, 0.556863, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fkv4v")
+
+[node name="Player" parent="." instance=ExtResource("2_ej5hr")]
+transform = Transform3D(-1.53497, 0, -0.00112521, 0, 1.53497, 0, 0.00112521, 0, -1.53497, 11.5848, 2.24904, 0)
+yClamp = 45
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.275852, -0.35629, -1.36766, 1.39384e-08, 4.41485, -0.110666, 5.36021, 0.0183357, 0.0703837, 116.848, 13.3037, -5.0986)
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.275852, -0.35629, -1.36766, 1.39384e-08, 4.41485, -0.110666, 5.36021, 0.0183357, 0.0703837, 116.848, 13.3037, -5.0986)
+visible = false
+texture = ExtResource("3_hwwqo")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.18994, 0, -1.3447e-06, 0, 0.000275113, 0, 3.66296e-07, 0, -15.3816, 0, 0.476184, 7.15256e-07)
+mesh = SubResource("BoxMesh_qgf1g")
+
+[node name="environment" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.3654, 0, -1.97135)
+
+[node name="SubwayWall" parent="environment" instance=ExtResource("5_vn4p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26619, -0.530014, -7.35313)
+
+[node name="SubwayWall4" parent="environment" instance=ExtResource("5_vn4p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26619, -0.530014, 25.9574)
+
+[node name="SubwayWall2" parent="environment" instance=ExtResource("5_vn4p8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.98038, -0.4173, -9.38463)
+
+[node name="SubwayWall3" parent="environment" instance=ExtResource("5_vn4p8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.98037, -0.4173, 23.6951)
+
+[node name="subwayCeiling2" parent="environment" instance=ExtResource("6_p04xs")]
+transform = Transform3D(0.966276, 0, 0, 0, 1, 0, 0, 0, 1.20673, 1.81403, 7.96974, -3.71506)
+
+[node name="subwayCeiling3" parent="environment" instance=ExtResource("6_p04xs")]
+transform = Transform3D(0.966276, 0, 0, 0, 1, 0, 0, 0, 1.20673, 1.81403, 7.96974, 25.5841)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="environment"]
+transform = Transform3D(2.71155, 0, -2.84217e-14, 0, 1, 0, 0, 0, 4.91363, 3.35848, 0, 6.86752)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="environment/RigidBody3D"]
+transform = Transform3D(4.83107, 0, 0, 0, 0.243537, 0, 0, 0, 14.139, 0, -0.543231, 0)
+shape = SubResource("BoxShape3D_81gk8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment/RigidBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.77636e-15, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_5banw")
+skeleton = NodePath("../../../..")
+
+[node name="subwayRearDoor" parent="environment" instance=ExtResource("8_ivoss")]
+transform = Transform3D(0.961035, 0, -0.00649149, 0, 0.961056, 0, 0.00649149, 0, 0.961035, -2.25174, -0.378678, -29.1747)
+
+[node name="subwayRearDoor2" parent="environment" instance=ExtResource("8_ivoss")]
+transform = Transform3D(-0.961057, 0, 8.40182e-08, 0, 0.961056, 0, -8.40182e-08, 0, -0.961057, 6.18211, -0.378678, 45.0644)
+
+[node name="subwaySideDoor" parent="environment" instance=ExtResource("9_74ofo")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.27133, -0.421463, 8.64832)
+
+[node name="subwaySideDoor2" parent="environment" instance=ExtResource("9_74ofo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92621, -0.421463, 7.88285)
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5686, 2.59674, 0)
+modulate = Color(0.419608, 0.0705882, 0.352941, 1)
+billboard = 2
+texture = ExtResource("10_4jjsk")

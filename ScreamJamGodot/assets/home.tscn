@@ -1,0 +1,118 @@
+[gd_scene load_steps=16 format=3 uid="uid://c64n2k46w2nvl"]
+
+[ext_resource type="Material" uid="uid://ciuor5jv1ttgd" path="res://materials/woodFloor/woodfloor.tres" id="1_huuek"]
+[ext_resource type="Script" path="res://assets/home.gd" id="1_txegw"]
+[ext_resource type="PackedScene" uid="uid://bignsyq52p8m" path="res://assets/Environment/apartmentWall.tscn" id="2_q8ejy"]
+[ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="2_qhrgk"]
+[ext_resource type="Material" uid="uid://b0c2cswshd4cm" path="res://materials/wallpaper/wallpaper.tres" id="3_wud81"]
+[ext_resource type="PackedScene" uid="uid://eudmhavrk7om" path="res://3DModels/apartmentDoor/apartmentDoor.glb" id="5_fbxqm"]
+[ext_resource type="PackedScene" uid="uid://dfki630jo762" path="res://3DModels/apartmentTable/apartmentTable.glb" id="6_6xjd7"]
+[ext_resource type="PackedScene" uid="uid://x6ku0h1lkeke" path="res://3DModels/apartmentBed/apartmentBed.glb" id="7_g4mtx"]
+[ext_resource type="PackedScene" uid="uid://dhbrdfvkx1ix5" path="res://3DModels/apartmentCouch/couch.glb" id="8_ic7bh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_04m4x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s1oqi"]
+material = ExtResource("1_huuek")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8i26"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v2qii"]
+material = ExtResource("3_wud81")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cga7b"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l2xnu"]
+material = SubResource("StandardMaterial3D_cga7b")
+
+[node name="Home" type="Node3D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_txegw")
+player = NodePath("Player")
+
+[node name="environment" type="Node3D" parent="."]
+
+[node name="Floor" type="RigidBody3D" parent="environment"]
+transform = Transform3D(4.05587, 0, 0, 0, 1, 0, 0, 0, 2.00104, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="environment/Floor"]
+transform = Transform3D(15.0155, 0, 0, 0, 1, 0, 0, 0, 15.8074, 0, 0, 0)
+shape = SubResource("BoxShape3D_04m4x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment/Floor/CollisionShape3D"]
+mesh = SubResource("BoxMesh_s1oqi")
+
+[node name="wall5" type="RigidBody3D" parent="environment"]
+transform = Transform3D(-6.96959e-07, 0, -1.04793, 0, 1.04973, 0, 15.9446, 0, -4.58064e-08, 7.11885, 10.9759, 1.22834)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="environment/wall5"]
+shape = SubResource("BoxShape3D_x8i26")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment/wall5/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 12.0709, 0, 0, 0, 1, 0, 4.46957, 0)
+mesh = SubResource("BoxMesh_v2qii")
+
+[node name="wall10" type="RigidBody3D" parent="environment"]
+transform = Transform3D(15.9428, 0, -0.0154361, 0, 1.04973, 0, 0.234865, 0, 1.04781, 15.3373, 8.38167, -12.4492)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="environment/wall10"]
+shape = SubResource("BoxShape3D_x8i26")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment/wall10/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 12.0709, 0, 0, 0, 1, 0, 4.46957, 0)
+mesh = SubResource("BoxMesh_v2qii")
+
+[node name="wall" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(15.0155, 0, 0, 0, 1, 0, 0, 0, 1.04793, -0.405047, 2.35783, -7.10716)
+
+[node name="wall2" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(15.0155, 0, 0, 0, 1, 0, 0, 0, 1.04793, -0.405047, 2.35783, 8.44436)
+
+[node name="wall6" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(15.0155, 0, 0, 0, 1, 0, 0, 0, 1.04793, 14.4761, 2.35783, 8.44436)
+
+[node name="wall7" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(15.0155, 0, 0, 0, 1, 0, 0, 0, 1.04793, 9.3352, 2.35783, -12.2944)
+
+[node name="wall3" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, -8.16624, 2.35783, 0.557103)
+
+[node name="wall8" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 21.397, 2.35783, 0.557103)
+
+[node name="wall9" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 21.397, 2.35783, -12.7154)
+
+[node name="wall4" parent="environment" instance=ExtResource("2_q8ejy")]
+transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 7.0792, 2.35783, -4.96386)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(62.5654, 0, 0, 0, 1.18601, 0, 0, 0, 49.9153, 0, 11.9831, 0)
+mesh = SubResource("BoxMesh_l2xnu")
+
+[node name="light" type="Node3D" parent="environment"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="environment/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79463, 5.55724, 1.37092)
+omni_range = 15.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="environment/light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88876, 5.55724, -11.044)
+omni_range = 15.0
+
+[node name="Player" parent="." instance=ExtResource("2_qhrgk")]
+transform = Transform3D(2.38311, 0, 0, 0, 2.38311, 0, 0, 0, 2.38311, -0.101345, 2.93987, 1.51966)
+
+[node name="apartmentDoor" parent="." instance=ExtResource("5_fbxqm")]
+transform = Transform3D(0.931323, 0, 0, 0, 0.734879, 0, 0, 0, 0.737202, 18.6403, 0.313319, -12.0725)
+
+[node name="apartmentTable" parent="." instance=ExtResource("6_6xjd7")]
+transform = Transform3D(0.585891, 0, 0, 0, 0.585891, 0, 0, 0, 0.585891, 9.95187, 0.58405, -8.48237)
+
+[node name="apartmentBed" parent="." instance=ExtResource("7_g4mtx")]
+transform = Transform3D(-3.22235e-08, 0, 0.737187, 0, 0.737187, 0, -0.737187, 0, -3.22235e-08, -3.92478, 0.5, -3.69924)
+
+[node name="couch" parent="." instance=ExtResource("8_ic7bh")]
+transform = Transform3D(9.09523e-08, 0, -0.693582, 0, 0.693582, 0, 0.693582, 0, 9.09523e-08, 17.8371, 0.5, 3.49692)

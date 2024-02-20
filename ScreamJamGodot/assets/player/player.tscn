@@ -74,7 +74,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1.53497, 0, 0, 0, 1.53497, 0, 0, 0, 1.53497, 0, 1.5, 0)
+transform = Transform3D(2.38311, 0, 0, 0, 2.38311, 0, 0, 0, 2.38311, 0, 2.5, 0)
 script = ExtResource("1_6mqc3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

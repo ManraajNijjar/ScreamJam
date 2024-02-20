@@ -86,7 +86,7 @@ position = Vector2(264, 140)
 scale = Vector2(2.59449, 1.86001)
 texture = ExtResource("2_qbksp")
 
-[node name="Button" type="Button" parent="MomCallScreen"]
+[node name="MomPickup" type="Button" parent="MomCallScreen"]
 layout_mode = 0
 offset_left = 88.0
 offset_top = 335.0
@@ -95,7 +95,7 @@ offset_bottom = 366.0
 scale = Vector2(2.2695, 3.13981)
 text = "pickup"
 
-[node name="Button2" type="Button" parent="MomCallScreen"]
+[node name="MomReject" type="Button" parent="MomCallScreen"]
 layout_mode = 0
 offset_left = 301.0
 offset_top = 335.0
@@ -106,3 +106,5 @@ text = "deny"
 
 [connection signal="focus_entered" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MomCallScreen/MomPickup" to="." method="_on_mom_pickup_pressed"]
+[connection signal="pressed" from="MomCallScreen/MomReject" to="." method="_on_mom_reject_pressed"]

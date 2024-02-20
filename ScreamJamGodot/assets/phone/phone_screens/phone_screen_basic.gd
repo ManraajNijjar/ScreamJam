@@ -2,22 +2,23 @@ extends Control
 
 @onready var button1 = $VBoxContainer/GridContainer/Button
 @onready var momCallScreen = $MomCallScreen
-
-signal displayMomCall
+#var momChatScreen = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	displayMomCall.connect(toggleMomCall);
 	pass # Replace with function body.
 
-func toggleMomCall(dayCall):
+func showMomCall():
 	momCallScreen.visible = true;
 
-func _on_button_pressed():
-	print("Button 1 was pressed")
-	#DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_house_am")
+func _on_mom_reject_pressed():
+	momCallScreen.visible = false;
+	if PlayerVariables.currentCall == 0:
+		DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "deny_call_mom")
 	pass # Replace with function body.
 
-func _on_button_focus_entered():
-	print("Button 1 has focus")
+func _on_mom_pickup_pressed():
+	momCallScreen.visible = false;
+	if PlayerVariables.currentCall == 0:
+		DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "pick_up_call_mom")
 	pass # Replace with function body.

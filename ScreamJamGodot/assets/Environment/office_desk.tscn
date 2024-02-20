@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dff6n644p7stw"]
+
+[ext_resource type="PackedScene" uid="uid://b34xu1nw2bug4" path="res://3DModels/officeDesk/officeDesk.glb" id="1_2vaxj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjmmg"]
+
+[node name="officeDesk" instance=ExtResource("1_2vaxj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(7.94084, 0, 0, 0, 0.785534, 0, 0, 0, 3.4698, 0, 3.06979, 0)
+shape = SubResource("BoxShape3D_jjmmg")
