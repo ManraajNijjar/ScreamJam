@@ -10,6 +10,7 @@ He gets up and takes a shower, and scrubs his skin.
 
 Gambit needs to be fed, of course. Scott gets dressed and heads to work.
 
+~ showCoffee
 As usual, he stops in at the cafe on his way to the train. There's a few people already working at tables, but no one in line.
 
 Barista: Hi, Scott! Black coffee with one cream?
@@ -25,12 +26,12 @@ Barista: Hi, Scott! Black coffee with one cream?
 		She runs back and forth, prepping ingredients. 
 		While it's not as quick as his usual order, he's out the door, with a wave.
 		He does have to run to make sure he doesn't miss his normal train.
-		
 	- Scott: Eh. The usual is fine.
 		Barista: You got it.
 		She turns around and almost instantly turns back, holding his normal coffee.
 		He smiles and waves, and walks into the clear day.
-
+~ toTrainAM
+=> END!
 # lowest possible sanity here is 80
 
 ~ day_3_train_am
@@ -39,7 +40,8 @@ if sanity == 100:
 else:
 	The mostly empty train is a welcome sight. He takes a seat.
 
-
+~ toOffice
+=> END!
 
 ~ day_3_office
 if sanity == 100:
@@ -85,26 +87,25 @@ Dylan: Can you go today?
 	Scott eats his salad for lunch the same way he always does\: he pours the dressing in, puts the lid back on, and shakes it.
 	
 The rest of the day is slow and brutal as Scott runs out of things to work on.
-
 # lowest possible sanity here is 70
+~ toTrainPM
+=> END!
 
-if sanity == 100:
-	It's getting sunnier out. 
-elif sanity >=80:
-	It's a little gloomy.
-else:
-	The day is unusually dark. The walk to the train seems weird. Scott is unusually sweaty.
-	
+
 ~ day_3_train_pm
 
 if sanity == 100:
+	It's getting sunnier out. 
 	Scott stands again in the crowded train. The afternoon sun falls on his face as he rides the train home.
 elif sanity >=80:
+	It's a little gloomy.
 	Few seats are available, but he gets one facing forward.
 else:
+	The day is unusually dark. The walk to the train seemed weird. 
+	Scott is unusually sweaty.
 	The empty train seems weird in the middle of rush hour, but Scott is glad to sit and ride home in silence.
 	
-	
+
 ~ day_3_house_pm
 
 if sanity == 100:
@@ -115,42 +116,55 @@ else:
 	things should seem bad
 	
 
-~ phone_call_3
-- pick up the phone
-	Scott: Hi, mom.
-	Mom: Hi, Scott. Just wanted to check in.
-	Scott: Sure, I’m doing okay.
-	Mom: Great! I had such an awful day running errands today.
-	- Scott: Oh yeah?
-	- Scott: ...
-	Mom: There was a car that almost smashed into me on Rose St. You know where that hardware store just opened up?
-	- Scott: Mom, I haven't been home in 10 years. [if sanity <= 71]
-	- Scott: Nope. 
-	- Scott: Yep. 
-	Mom: There's no left turn there, but this guy just didn't care and almost hit me.
-	Mom: I swear, old people can't drive any more.
-	Mom: You know, eventually I'm going to be too old to drive.
-	Mom: I'll have to hire a driver! Can you imagine? 
-	- Scott: Couldn't dad just drive you around?
-	- Scott: I definitely can.
-	if missed_calls >= 0:
-		Mom: Make sure you pick up when I call. Okay?
-		Mom: I get worried when you don't.
-		Scott: I know.
-	Mom: Well, it's late here. You know the time zones make it hard to call you sometimes.
-	Mom: But I wouldn't miss it for a day.
-	Mom: I love you. Bye!
-- don't pick up
-	if missed_calls >= 0:
-		do sanity -= 10
-		[i](I'll call her back later.)[/i]
-		He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
-	if missed_calls == 1:
-		do sanity -= 15
-		[i](I'll call her back later.)[/i]
-		He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+~ showCall
+=> END!
 
-# lowest possible sanity here is 60
+~ deny_call_mom
+if missed_calls >= 0:
+	do sanity -= 10
+	[i](I'll call her back later.)[/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+if missed_calls == 1:
+	do sanity -= 15
+	[i](I'll call her back later.)[/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+=> post_phone_call_3
+
+~ pick_up_call_mom
+Scott: Hi, mom.
+=> phone_call_3 
+
+~ phone_call_3
+
+Mom: Hi, Scott. Just wanted to check in.
+Scott: Sure, I’m doing okay.
+Mom: Great! I had such an awful day running errands today.
+- Scott: Oh yeah?
+- Scott: ...
+Mom: There was a car that almost smashed into me on Rose St. You know where that hardware store just opened up?
+- Scott: Mom, I haven't been home in 10 years. [if sanity <= 71]
+- Scott: Nope. 
+- Scott: Yep. 
+Mom: There's no left turn there, but this guy just didn't care and almost hit me.
+Mom: I swear, old people can't drive any more.
+Mom: You know, eventually I'm going to be too old to drive.
+Mom: I'll have to hire a driver! Can you imagine? 
+- Scott: Couldn't dad just drive you around?
+- Scott: I definitely can.
+if missed_calls >= 0:
+	Mom: Make sure you pick up when I call. Okay?
+	Mom: I get worried when you don't.
+	Scott: I know.
+Mom: Well, it's late here. You know the time zones make it hard to call you sometimes.
+Mom: But I wouldn't miss it for a day.
+Mom: I love you. Bye!
+=> post_phone_call_3
+
+
+~ post_phone_call_3
+# lowest possible sanity here is 55
+Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
+
 
 ~ day_3_bed
 if sanity == 100:
@@ -163,3 +177,7 @@ else:
 # => day_x+1_house_am
 
 #=> snippets/day_2_train_am
+
+do day += 1
+do time = TIMEOFDAY.MORNING
+~ toHouseAM

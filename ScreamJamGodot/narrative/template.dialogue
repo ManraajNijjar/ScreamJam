@@ -1,34 +1,52 @@
 # import "res://narrative/day_2.dialogue" as snippets
 
 ~ day_x_house_am
+# house am stuff
 
-if sanity == 100:
-	things should be brighter
-elif sanity >=80:
-	things should be middle
-else:
-	things should seem bad
-	
+~ showCoffee
+#coffee stuff
+~ toTrainAM
+=> END!
 
 ~ day_x_train_am
-
-
+# train am stuff
+~ toOffice
+=> END!
 
 ~ day_x_office
+# office stuff
+~ toTrainPM
+=> END!
 
 ~ day_x_train_pm
+# train pm stuff
+~ toHousePM
+=> END!
 
 ~ day_x_house_pm
+# house pm stuff
+~ showCall
+=> END!
+
+~ pick_up_call_mom 
+# this will likely need to be pick_up_call_mom_x
+Scott: Hi, mom.
+=> phone_call_x
+
+~ deny_call_mom 
+# this will likely need to be deny_call_mom_x
+# voicemail
+=> post_phone_call_x
 
 ~ phone_call_x
-- pick up the phone
-	Scott: Hi, mom.
-- don't pick
-	He gets a gnawing feeling in the pit of his stomach, swirling and dizzy.
-	Scott: I really should pick up.
+#phone call
+=> post_phone_call_x
+
+
+~ post_phone_call_x
 
 ~ day_x_bed
-
-# => day_x+1_house_am
-
-#=> snippets/day_2_train_am
+# bed stuff
+do day += 1
+do time = TIMEOFDAY.MORNING
+~ toHouseAM

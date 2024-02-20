@@ -4,19 +4,22 @@ The morning is already brighter than the day before, and Scott wakes up a little
 He gets up and feeds Gambit, takes a shower and cleans his face carefully. 
 Scott showers, which helps wake him the rest of the way up.
 He pays a little more attention to his hair today, but there’s almost no use. It doesn’t look great, but he’s done the best he can with it.
-
+~ showCoffee
 On the way to the train, he stops in the coffee shop. 
 It’s more crowded today, so he has to wait in line for a few people to pause and think about what they want, but quickly enough the barista has handed him his--
 Barista: black coffee, one cream.
 She smiles as she passes it to him.
 [i](Is she flirting with me?)[/i]
 He smiles and waves, walking away as his face turns red.
+~ toTrainAM
+=> END!
 
 ~ day_2_train_am
 It's also more crowded than yesterday. He struggles to grab the last forward facing seat. His careful maneuvering means he scoots in as someone gets up, replacing them. 
 He looks at his phone, checking the news again. 
 The clouds part for a moment right before he gets off, and he enjoys the view before almost missing his stop.
-
+~ toOffice
+=> END!
 
 ~ day_2_office
 
@@ -41,10 +44,14 @@ Scott listens to them go back and forth, but tries to focus on his work.
 He only has ten minutes until it's too late to order lunch. He quickly orders the Black and Bleu salad.
 When it shows up, he eats at his desk, as usual.
 Alexis and Sandra are still bickering when he gets up to leave at the end of the day, but they don't notice him.
+~ toTrainPM
+=> END!
 
 ~ day_2_train_pm
 It’s even more packed than the day before. 
 He faces forward and doesn’t think about much, just lets his mind clear as he experiences the familiar trip\: trees, the buildings, the sound of the train. 
+~ toHousePM
+=> END!
 
 ~ day_2_house_pm
 
@@ -56,35 +63,42 @@ He pops his dinner in the microwave and then sits on the couch.
 He completely zones out eats while as usual Gambit attempts to steal some.
 Scott: Hey! Back off.
 Gambit hisses and moves back, but then starts licking his paws like nothing happened. 
-The phone rings.
-~ phone_call_2
-- pick up the phone
-	Scott: Hi, mom.
-	Mom: Hi, Scott. Just wanted to check in.
-	Scott: Sure, I’m doing okay.
-	Mom: Great! Well, today your dad told me he wanted to go ball room dancing! Can you believe it?
-	[i](She doesn't actually pause for me to respond.)[/i]
-	Mom: He has two left feet! Can you imagine? He’d obviously fall and break his neck if he tried that.
-	Mom: Do you remember when we went to Mexico?
-	- Scott: No, mom, I wasn't with you on that vacation.
-	- Scott: Yep. It was a great vacation. 
-	Mom: Remember in Cozumel when he had a little too much mezcal and tripped? He’s lucky he didn’t knock open his head.
-	Mom: He's never been good at any physical labor. Right? Right?
-	[i](She's laughing, but it's not for me.)[/i]
-	Mom: Oh, I also found out Julie, you know our neighbor?
-	Mom: Her brother is super sick. They don't know if he'll make it through the week.
-	Mom: It's so awful.
-	- Scott: I don't even know who she is.
-	- Scott: That's awful, yeah.
-	Mom: Anyway, I gotta go because I'm going to go help her organize some paperwork.
-	Mom: I love you. Bye!
-- don't pick up
-	do sanity -= 10
-	[i](I'll call her back later.)[/i]
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+~ showCall
+=> END!
 
+~ deny_call_mom
+do sanity -= 10
+[i](I'll call her back later.)[/i]
+He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+=> post_phone_call_2
+
+~ pick_up_call_mom
+Scott: Hi, mom.
+=> phone_call_2
+
+~ phone_call_2
+Mom: Hi, Scott. Just wanted to check in.
+Scott: Sure, I’m doing okay.
+Mom: Great! Well, today your dad told me he wanted to go ball room dancing! Can you believe it?
+[i](She doesn't actually pause for me to respond.)[/i]
+Mom: He has two left feet! Can you imagine? He’d obviously fall and break his neck if he tried that.
+Mom: Do you remember when we went to Mexico?
+- Scott: No, mom, I wasn't with you on that vacation.
+- Scott: Yep. It was a great vacation. 
+Mom: Remember in Cozumel when he had a little too much mezcal and tripped? He’s lucky he didn’t knock open his head.
+Mom: He's never been good at any physical labor. Right? Right?
+[i](She's laughing, but it's not for me.)[/i]
+Mom: Oh, I also found out Julie, you know our neighbor?
+Mom: Her brother is super sick. They don't know if he'll make it through the week.
+Mom: It's so awful.
+- Scott: I don't even know who she is.
+- Scott: That's awful, yeah.
+Mom: Anyway, I gotta go because I'm going to go help her organize some paperwork.
+Mom: I love you. Bye!
+=> post_phone_call_2
 # lowest possible sanity here is 90
 
+~ post_phone_call_2
 Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 
 ~ day_2_bed
@@ -94,3 +108,6 @@ if sanity == 100:
 else:
 	As he looks out the window, the fog seems to be closing in a little. The light coming into the window is diffuse and calming, and he falls asleep quickly.
 
+do day += 1
+do time = TIMEOFDAY.MORNING
+~ toHouseAM

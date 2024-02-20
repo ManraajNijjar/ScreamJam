@@ -46,7 +46,6 @@ Luckily, these are completely precooked, so he doesn’t have to do anything exc
 
 He flips through Youtube videos on chess and history that are catered to him algorithmically. 
 
-His mom calls him.
 ~ showCall
 => END!
 
@@ -82,6 +81,8 @@ Scott: Yeah, mom. It's his dinner time.
 Mom: Okay, kiddo. I'll let you go. I'll talk to you tomorrow.
 Scott: Sure. Have a good night.
 Mom: I love you. Bye!
+
+~ post_phone_call_1
 He feeds Gambit who, by now, has been yowling for food for half an hour.
 Gambit settles down to eat, and Scott gets ready for bed. 
 He washes his face again, and reapplies the lotion even though the SPF isn’t going to help him right now.
