@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://b0c2cswshd4cm"]
+
+[ext_resource type="Texture2D" uid="uid://bpfl11i0llifa" path="res://materials/wallpaper/4K-walllpaper_10-diffuse.jpg" id="1_0cbfq"]
+[ext_resource type="Texture2D" uid="uid://bqbnv1vbktqbn" path="res://materials/wallpaper/4K-walllpaper_10-ao.jpg" id="2_ob36n"]
+[ext_resource type="Texture2D" uid="uid://1srpp4e212an" path="res://materials/wallpaper/4K-walllpaper_10-displacement.jpg" id="3_lsshl"]
+[ext_resource type="Texture2D" uid="uid://cbhkh7xone0co" path="res://materials/wallpaper/4K-walllpaper_10-normal.jpg" id="4_tk662"]
+
+[resource]
+albedo_texture = ExtResource("1_0cbfq")
+normal_enabled = true
+normal_texture = ExtResource("4_tk662")
+ao_enabled = true
+ao_texture = ExtResource("2_ob36n")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_lsshl")
+uv1_triplanar = true

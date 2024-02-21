@@ -5,8 +5,8 @@
 [resource]
 transparency = 1
 blend_mode = 1
-albedo_color = Color(1, 1, 1, 0.0196078)
-roughness = 0.8
+albedo_color = Color(1, 1, 1, 0.0156863)
+roughness = 0.5
 roughness_texture = ExtResource("1_r672e")
 clearcoat_roughness = 0.75
 refraction_enabled = true

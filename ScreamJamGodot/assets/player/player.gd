@@ -16,6 +16,10 @@ var phoneInPlace = true;
 @export var clampY = false;
 @export var yClamp = 90;
 
+@export var gravityEnabled = true;
+
+@onready var phone = $Phone;
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -34,7 +38,7 @@ func _input(event):
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() && gravityEnabled:
 		velocity.y -= gravity * delta
 
 	
@@ -63,3 +67,6 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func displayCall():
+	phone.showMomCall();

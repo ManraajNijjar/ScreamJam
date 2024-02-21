@@ -3,6 +3,7 @@ extends Node3D
 @onready var display = $MeshInstance3D
 @onready var viewport : SubViewport = $SubViewport
 @onready var area = $Area3D
+@onready var phoneScreenUI = $SubViewport/PhoneScreenBasic
 
 var mesh_size = Vector2();
 
@@ -36,6 +37,8 @@ func handle_mouse(event):
 		
 		mouse_held = event.pressed;
 	
+	if event == InputEventKey:
+		return;
 	var mouse_pos3d = find_mouse(event.global_position);
 	mouse_inside = mouse_pos3d != null;
 
@@ -79,6 +82,7 @@ func find_mouse(pos: Vector2):
 	var dss:PhysicsDirectSpaceState3D = get_world_3d().direct_space_state;
 
 	var rayparam = PhysicsRayQueryParameters3D.new();
+	rayparam.collision_mask = 2;
 	rayparam.from = camera.project_ray_origin(pos);
 
 	var distance = 5;
@@ -89,7 +93,9 @@ func find_mouse(pos: Vector2):
 
 	var result = dss.intersect_ray(rayparam);
 	if result.size() > 0:
-		print(result.position)
 		return result.position;
 	else:
 		return null;
+
+func showMomCall():
+	phoneScreenUI.showMomCall();

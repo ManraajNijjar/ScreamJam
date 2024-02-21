@@ -5,8 +5,9 @@ enum TIMEOFDAY {MORNING, NIGHT}
 var sanity = 100;
 var weirdness = 0;
 var missed_calls = 0;
+var currentCall = 0;
 var day = 0;
-var time : TIMEOFDAY = TIMEOFDAY.MORNING;
+var time : TIMEOFDAY = TIMEOFDAY.NIGHT;
 
 signal toTrain
 signal displayMomCall

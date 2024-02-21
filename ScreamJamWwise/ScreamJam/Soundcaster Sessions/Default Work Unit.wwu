@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8EDA65BB-9860-4239-BF86-82AEC70F95C1}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{8EDA65BB-9860-4239-BF86-82AEC70F95C1}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8EDA65BB-9860-4239-BF86-82AEC70F95C1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Music Testing" ID="{4E9C5E15-2D18-4EB5-9990-3824D26F3573}">
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}"/>
+							<Value>13</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Darkest" ID="{B1CA89D8-241A-41A0-A9A6-A454D4078475}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

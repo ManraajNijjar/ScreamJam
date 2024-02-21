@@ -5,6 +5,7 @@ extends Node3D
 func _ready():
 	DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_house_am")
 	DialogueManager.connect("dialogue_ended", dialogueEndedFunction)
+	DialogueManager.connect("got_dialogue", receivedDialogueFunction)
 	pass # Replace with function body.
 
 
@@ -17,3 +18,6 @@ func dialogueEndedFunction(something):
 	print("dialogue ended");
 	print(something);
 	print(PlayerVariables.sanity);
+
+func receivedDialogueFunction(something):
+	print(something);

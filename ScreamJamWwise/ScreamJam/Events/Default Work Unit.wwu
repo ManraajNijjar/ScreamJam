@@ -14,6 +14,125 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Environments" ID="{727D8A9A-AFE5-440F-9048-3C347B4814B5}" ShortID="905309487">
+					<ChildrenList>
+						<Event Name="SubwayEnvLoop" ID="{D010032E-3B05-4677-B6C4-40E42F256F83}">
+							<ChildrenList>
+								<Action Name="" ID="{2258B01D-31A9-4C8C-95FB-035AAD1BF80F}" ShortID="39818476">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Cat_Meow" ID="{027D2CC5-4752-418D-A1FD-EACB518D0776}"/>
+				<Event Name="Phone_Ringtone" ID="{B87D3A6A-E69D-469B-A933-53E343980FF5}">
+					<ChildrenList>
+						<Action Name="" ID="{A274DAC8-EF01-495D-AC6E-2F06CF9DD45A}" ShortID="85030328">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Phone Ringtone" ID="{2A9CBF05-524B-4AAD-B991-CCF03C5B4C1A}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Phone_Alert" ID="{D32CBE60-7851-4117-8AFE-97366996FB0C}">
+					<ChildrenList>
+						<Action Name="" ID="{DC22BF98-8201-427E-B075-F4E1D5FD56C2}" ShortID="944034742">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Phone Alert" ID="{2DA7A5FC-246E-4E59-9948-D3683FBEEBA8}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TV_Static" ID="{BFC5D598-3740-423A-BAC7-EBC6EDA1580F}">
+					<ChildrenList>
+						<Action Name="" ID="{785ADFC8-90DF-4F78-AE3D-3188F5F04A55}" ShortID="8587049">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TV Static" ID="{E486F7EA-DF2D-4510-858C-FABC50A53AA9}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mom_Dialog" ID="{8F611BF4-0F76-4C41-BB09-8153CFF11E56}">
+					<ChildrenList>
+						<Action Name="" ID="{FCB600DF-28DA-44C6-A3B9-6D3244AE17B7}" ShortID="406266595">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mom Dialog" ID="{593A2208-2EC8-42B9-B953-66BEC76396FF}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Music" ID="{332D71E9-953C-46E5-9B5D-55D604FBDCE8}" ShortID="283735970">
+					<ChildrenList>
+						<Event Name="Dark_Music" ID="{7C97DC11-AE57-42F4-B0C5-53441E44DC6C}">
+							<ChildrenList>
+								<Action Name="" ID="{25442244-E38E-4007-A24F-F762A1252C92}" ShortID="746945027">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dark" ID="{BB674E28-A47F-4086-A2D1-D98FC88B431F}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Neutral_Music" ID="{93176A15-1EFF-48C7-820C-9EDB8A22252F}">
+							<ChildrenList>
+								<Action Name="" ID="{91FF2941-D522-4853-BF8D-E548BC5D9649}" ShortID="741978233">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Neutral" ID="{61654DBD-FBD4-4C61-BD6E-21E419FDE85A}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Darker_Music" ID="{A6AAB194-F908-4445-9823-8EA7D90E5D27}">
+							<ChildrenList>
+								<Action Name="" ID="{F5A850FC-2AD7-40C1-89F9-9AB549F4D099}" ShortID="691232841">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Darker" ID="{A3BC4146-FEF7-4D2F-8AD1-D518040FC035}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Darkest_Music" ID="{96BCEB3C-6CFA-4E2D-8407-C10764E6562A}">
+							<ChildrenList>
+								<Action Name="" ID="{BF0607F9-7BE3-412A-BD4B-63262ED07DEE}" ShortID="884215909">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Darkest" ID="{58B63303-BA32-48A2-802E-E1FCE6488C8C}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music" ID="{89A5D241-CCDC-4C0D-A484-7E5E6CE5D5D4}">
+							<ChildrenList>
+								<Action Name="" ID="{44207F77-ACA1-4862-8EBF-E314BEC12AD7}" ShortID="240968913">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{F007A753-2AEA-4FF0-ADA8-8A7D01EAA4F1}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

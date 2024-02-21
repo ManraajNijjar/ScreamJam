@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8usgfdaw066j"]
+
+[ext_resource type="Texture2D" uid="uid://dxi7dxyccjqbm" path="res://materials/plasticSubwayWall/Plastic005_4K_Roughness.jpg" id="1_er071"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdhju"]
+transparency = 1
+blend_mode = 1
+depth_draw_mode = 1
+albedo_color = Color(1, 1, 1, 0.00392157)
+roughness = 0.0
+roughness_texture = ExtResource("1_er071")
+clearcoat_roughness = 0.75
+refraction_enabled = true
+refraction_scale = 0.01
+
+[sub_resource type="BoxMesh" id="BoxMesh_spolr"]
+material = SubResource("StandardMaterial3D_cdhju")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.48598, 0, 0, 0, 8.06423, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = SubResource("BoxMesh_spolr")

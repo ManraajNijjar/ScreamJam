@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{40256557-8AE0-4FDF-9292-2EBD717AD71E}" SchemaVersion="119">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{40256557-8AE0-4FDF-9292-2EBD717AD71E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{40256557-8AE0-4FDF-9292-2EBD717AD71E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="sanity_switch" ID="{4D391C71-98EE-4861-B17E-A8FF04D5FEF1}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Neutral" ID="{DB091246-9D66-4D8B-BCC5-B85011F4BCED}"/>
+						<Switch Name="Dark" ID="{F993DD12-B3E2-4CB6-AF30-4E2AE1BAE2BD}"/>
+						<Switch Name="Darker" ID="{8F905F88-A7C7-4E1D-B176-7A0AF054B66D}"/>
+						<Switch Name="Darkest" ID="{B1CA89D8-241A-41A0-A9A6-A454D4078475}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}"/>
+						<Curve Name="" ID="{B9194EBB-BE9E-4B71-AD35-180F2DC3F286}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>4</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>25</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>54.96</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>84.96</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>100</XPos>
+									<YPos>1</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

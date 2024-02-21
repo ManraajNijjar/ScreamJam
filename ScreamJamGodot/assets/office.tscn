@@ -1,0 +1,324 @@
+[gd_scene load_steps=27 format=3 uid="uid://exantjwgqt6w"]
+
+[ext_resource type="Script" path="res://assets/office.gd" id="1_7q7d6"]
+[ext_resource type="Material" uid="uid://ciuor5jv1ttgd" path="res://materials/woodFloor/woodfloor.tres" id="1_a32h0"]
+[ext_resource type="Texture2D" uid="uid://b8sa2b1klndau" path="res://materials/brickWall/Bricks051_1K-PNG_Color.png" id="2_6761w"]
+[ext_resource type="Texture2D" uid="uid://bs4d8iaiyrwiw" path="res://materials/brickWall/Bricks051_1K-PNG_Displacement.png" id="3_0uphn"]
+[ext_resource type="Texture2D" uid="uid://dlwgngxxy3re2" path="res://materials/brickWall/Bricks051_1K-PNG_NormalGL.png" id="4_7dfo5"]
+[ext_resource type="Texture2D" uid="uid://din8p0m6nx4e" path="res://materials/brickWall/Bricks051_1K-PNG_Roughness.png" id="5_uhvrp"]
+[ext_resource type="Texture2D" uid="uid://ctxfe1bv86w0k" path="res://materials/ceiling/OfficeCeiling006_1K-PNG_Color.png" id="6_mlndx"]
+[ext_resource type="Texture2D" uid="uid://b4n7lwhonic7f" path="res://materials/ceiling/OfficeCeiling006_1K-PNG_AmbientOcclusion.png" id="7_57sig"]
+[ext_resource type="Texture2D" uid="uid://dqvevk84403on" path="res://materials/ceiling/OfficeCeiling006_1K-PNG_Displacement.png" id="8_xaspw"]
+[ext_resource type="Texture2D" uid="uid://cj4vlig7mvww7" path="res://materials/ceiling/OfficeCeiling006_1K-PNG_NormalGL.png" id="9_dv7rv"]
+[ext_resource type="Texture2D" uid="uid://cymwex4vcewi2" path="res://materials/ceiling/OfficeCeiling006_1K-PNG_Roughness.png" id="10_n24tx"]
+[ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="11_qn8ev"]
+[ext_resource type="PackedScene" uid="uid://c8usgfdaw066j" path="res://assets/Environment/bayWindow.tscn" id="12_2b250"]
+[ext_resource type="Texture2D" uid="uid://h6p5p5xm78f5" path="res://images/officeBackground.png" id="13_xgv7n"]
+[ext_resource type="PackedScene" uid="uid://dff6n644p7stw" path="res://assets/Environment/office_desk.tscn" id="14_diovq"]
+[ext_resource type="PackedScene" uid="uid://bg4v0co12jq05" path="res://3DModels/officeMonitor/officeMonitor.glb" id="16_r2em1"]
+[ext_resource type="PackedScene" uid="uid://mqgtrlmmshd2" path="res://3DModels/officeChair/officeChair.glb" id="17_pd71b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xni8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ovhu4"]
+material = ExtResource("1_a32h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ckyr"]
+albedo_texture = ExtResource("2_6761w")
+roughness_texture = ExtResource("5_uhvrp")
+normal_enabled = true
+normal_texture = ExtResource("4_7dfo5")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_0uphn")
+uv1_scale = Vector3(0.265, 0.265, 0.265)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_1d0yh"]
+material = SubResource("StandardMaterial3D_5ckyr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nw2pa"]
+albedo_texture = ExtResource("6_mlndx")
+roughness_texture = ExtResource("10_n24tx")
+normal_enabled = true
+normal_texture = ExtResource("9_dv7rv")
+ao_enabled = true
+ao_texture = ExtResource("7_57sig")
+heightmap_enabled = true
+heightmap_texture = ExtResource("8_xaspw")
+uv1_scale = Vector3(0.055, 0.055, 0.055)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_fmgd8"]
+material = SubResource("StandardMaterial3D_nw2pa")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ih6xq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_xd4ms"]
+sky_material = SubResource("ProceduralSkyMaterial_ih6xq")
+
+[sub_resource type="Environment" id="Environment_14vhd"]
+background_mode = 2
+sky = SubResource("Sky_xd4ms")
+ambient_light_color = Color(0.529412, 0.670588, 0.87451, 1)
+ambient_light_sky_contribution = 0.6
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Office" type="Node3D"]
+script = ExtResource("1_7q7d6")
+
+[node name="Player" parent="." instance=ExtResource("11_qn8ev")]
+transform = Transform3D(2.38311, 0, 0, 0, 2.38311, 0, 0, 0, 2.38311, -6.48369, 3.11978, -5.1207)
+gravityEnabled = false
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.86538, 0, 0, 0, 1.86538, 0, 0, 0, 1.86538, -3.54167, 12.2012, 22.1461)
+texture = ExtResource("13_xgv7n")
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Floor" type="RigidBody3D" parent="Environment"]
+transform = Transform3D(5.55247, 0, 0, 0, 0.338229, 0, 0, 0, 1.32108, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Floor"]
+transform = Transform3D(15.0155, 0, 0, 0, 1, 0, 0, 0, 15.8074, 0, 0, 0)
+shape = SubResource("BoxShape3D_0xni8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Floor/CollisionShape3D"]
+mesh = SubResource("BoxMesh_ovhu4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 22.1013, 0, 0, 0, 23.1569, 12.6173, 2.27591, -1.21941)
+mesh = SubResource("BoxMesh_1d0yh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(-4.37114e-08, 0, -53.724, 0, 22.5997, 0, 1, 0, -2.34835e-06, -5.39107, 2.27591, -11.0028)
+mesh = SubResource("BoxMesh_1d0yh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 17.9439, 0, 0, 0, 23.1569, -24.5086, 2.27591, -1.21941)
+mesh = SubResource("BoxMesh_1d0yh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(48.6044, 0, 0, 0, 1, 0, 0, 0, 23.0682, 0, 11.0124, -1.11301)
+mesh = SubResource("BoxMesh_fmgd8")
+skeleton = NodePath("../..")
+
+[node name="Node3D" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, -22, 5.07857, 10.4005)
+
+[node name="Node3D2" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, -17.4081, 5.07857, 10.4005)
+
+[node name="Node3D3" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, -12.8704, 5.07857, 10.4005)
+
+[node name="Node3D4" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, -8.25154, 5.07857, 10.4005)
+
+[node name="Node3D5" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, -3.63829, 5.07857, 10.4005)
+
+[node name="Node3D6" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, 1.00459, 5.07857, 10.4005)
+
+[node name="Node3D7" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, 5.61519, 5.07857, 10.4005)
+
+[node name="Node3D8" parent="Environment" instance=ExtResource("12_2b250")]
+transform = Transform3D(1, 0, 0, 0, 1.51729, 0, 0, 0, 1, 10.2885, 5.07857, 10.4005)
+
+[node name="officeDesk" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -6.39639, 0.169114, -2.56578)
+
+[node name="officeDesk2" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -0.286706, 0.169114, -2.56578)
+
+[node name="officeDesk3" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -12.483, 0.169114, -2.56578)
+
+[node name="officeDesk4" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -18.5045, 0.169114, -2.56578)
+
+[node name="officeDesk5" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, 5.77553, 0.169114, -2.56578)
+
+[node name="officeDesk6" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -6.39639, 0.169114, 7.82971)
+
+[node name="officeDesk7" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -0.286706, 0.169114, 7.82971)
+
+[node name="officeDesk8" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -12.483, 0.169114, 7.82971)
+
+[node name="officeDesk9" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -18.5045, 0.169114, 7.82971)
+
+[node name="officeDesk10" parent="Environment" instance=ExtResource("14_diovq")]
+transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, 5.77553, 0.169114, 7.82971)
+
+[node name="MonitorSetup" type="Node3D" parent="Environment"]
+
+[node name="officeMonitor" parent="Environment/MonitorSetup" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup2" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05159, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup2" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup2" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup3" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1753, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup3" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup3" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup4" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95518, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup4" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup4" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup5" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0984, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup5" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup5" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup6" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup6" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup6" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup7" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05159, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup7" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup7" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup8" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1753, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup8" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup8" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup9" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95518, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup9" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup9" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup10" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0984, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup10" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup10" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74685, 9.988, -6.26453)
+omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1639, 9.988, -6.26453)
+omni_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74685, 9.988, 10.0256)
+omni_range = 10.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1639, 9.988, 10.0256)
+omni_range = 10.0
+
+[node name="Chairs" type="Node3D" parent="."]
+transform = Transform3D(0.490994, 0, 0, 0, 0.490994, 0, 0, 0, 0.490994, 5.5261, 0.107254, 4.58713)
+
+[node name="officeChair" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.801013, 0, -0.598646, 0, 1, 0, 0.598646, 0, 0.801013, 0, 0, 0)
+
+[node name="officeChair2" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.973191, 0, 0.229999, 0, 1, 0, -0.229999, 0, 0.973191, -11.5709, 0, 0)
+
+[node name="officeChair3" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7905, 0, 3.29414)
+
+[node name="officeChair4" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.687, 0, 0)
+
+[node name="officeChair5" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(-0.992753, 0, -0.120171, 0, 1, 0, 0.120171, 0, -0.992753, -47.8769, 0, 0)
+
+[node name="officeChair6" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.721095, 0, -0.692836, 0, 1, 0, 0.692836, 0, 0.721095, 0, 0, -22.6729)
+
+[node name="officeChair7" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.78365, 0, 0.621202, 0, 1, 0, -0.621202, 0, 0.78365, -11.5709, 0, -22.6729)
+
+[node name="officeChair8" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7905, 0, -22.6729)
+
+[node name="officeChair9" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.14629, 0, -0.989242, 0, 1, 0, 0.989242, 0, 0.14629, -35.687, 0, -22.6729)
+
+[node name="officeChair10" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.427563, 0, 0.903985, 0, 1, 0, -0.903985, 0, 0.427563, -47.8769, 0, -22.6729)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -6.52557, 10.0495, -6.63966)
+visible = false
+light_energy = 16.0
+spot_range = 11.041
+spot_angle = 34.72
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_14vhd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.978148, 0.125414, -0.165827, 0, 0.797584, 0.603208, 0.207912, -0.590026, 0.780155, 0, 0, 19.982)
+light_energy = 0.0
+shadow_enabled = true

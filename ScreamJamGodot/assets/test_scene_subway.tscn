@@ -73,6 +73,8 @@ material = ExtResource("1_0bc31")
 transform = Transform3D(-1.53497, 0, -0.00112521, 0, 1.53497, 0, 0.00112521, 0, -1.53497, 11.5848, 2.24904, 0)
 yClamp = 45
 
+[node name="AkListener3D" type="AkListener3D" parent="Player"]
+
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.275852, -0.35629, -1.36766, 1.39384e-08, 4.41485, -0.110666, 5.36021, 0.0183357, 0.0703837, 116.848, 13.3037, -5.0986)
 
@@ -134,3 +136,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7912, 2.59674, 0)
 modulate = Color(0.419608, 0.0705882, 0.352941, 1)
 billboard = 2
 texture = ExtResource("9_2hvmc")
+
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+load_on = 1
+
+[node name="AkBank_Main" type="AkBank" parent="AkBank_Init"]
+bank = {
+"id": 534561221,
+"name": "MainSoundbank"
+}
+load_on = 1
+
+[node name="SubwayEnvLoop" type="AkEvent3D" parent="."]
+event = {
+"id": 1699039505,
+"name": "SubwayEnvLoop"
+}
+trigger_on = 1
+is_environment_aware = true
+
+[node name="Music" type="AkEvent2D" parent="."]
+event = {
+"id": 3991942870,
+"name": "Music"
+}
+trigger_on = 1
+
+[node name="AkSwitch" type="AkSwitch" parent="."]
+ak_event = NodePath("../Music")
+switch_group = {
+"id": 361494514,
+"name": "sanity_switch"
+}
+switch_value = {
+"id": 670611050,
+"name": "Neutral"
+}
+trigger_on = 1

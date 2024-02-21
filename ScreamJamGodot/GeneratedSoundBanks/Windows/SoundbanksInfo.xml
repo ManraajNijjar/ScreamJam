@@ -9,24 +9,319 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{75C386D1-CA7B-717D-1CE8-512FD02DC33D}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{EBF32EEC-CD56-5EC0-7C64-1D5A31611D7C}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
-				<File Id="810854900" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Whip Transition.wav</ShortName>
-					<CachePath>SFX/Whip Transition_818F3B66.wem</CachePath>
+				<File Id="15237878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>03_Dark_Music_bpm75_D-RimTaps.wav</ShortName>
+					<CachePath>SFX/03_Dark_Music_bpm75_D-RimTaps_56CEF360.wem</CachePath>
+				</File>
+				<File Id="65579422" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>02_Dark_Music_bpm75_D-Kick.wav</ShortName>
+					<CachePath>SFX/02_Dark_Music_bpm75_D-Kick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="97095806" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>04_Dark_Music_bpm75_D-AnalogPad.wav</ShortName>
+					<CachePath>SFX/04_Dark_Music_bpm75_D-AnalogPad_56CEF360.wem</CachePath>
+				</File>
+				<File Id="111014613" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>01_Dark_Music_bpm75_D-Cymbols.wav</ShortName>
+					<CachePath>SFX/01_Dark_Music_bpm75_D-Cymbols_56CEF360.wem</CachePath>
+				</File>
+				<File Id="174987227" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>06_Dark_Music_bpm75_D-Drone2.wav</ShortName>
+					<CachePath>SFX/06_Dark_Music_bpm75_D-Drone2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="193138130" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>04_Neutral_Music_bpm75_D-Drone2.wav</ShortName>
+					<CachePath>SFX/04_Neutral_Music_bpm75_D-Drone2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="234497861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phone Ringtone W Vibrate Final.wav</ShortName>
+					<CachePath>SFX/Phone Ringtone W Vibrate Final_2C9019F0.wem</CachePath>
+				</File>
+				<File Id="263734778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>06_Darkest_Music_bpm75_D-Drone1.wav</ShortName>
+					<CachePath>SFX/06_Darkest_Music_bpm75_D-Drone1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="293201565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>04_Darkest_Music_bpm75_D-AnalogPad.wav</ShortName>
+					<CachePath>SFX/04_Darkest_Music_bpm75_D-AnalogPad_56CEF360.wem</CachePath>
+				</File>
+				<File Id="312757205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>09_Neutral_Music_bpm75_D-GuitarChordR.wav</ShortName>
+					<CachePath>SFX/09_Neutral_Music_bpm75_D-GuitarChordR_56CEF360.wem</CachePath>
+				</File>
+				<File Id="329810522" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>02_Neutral_Music_bpm75_D-AnalogPad.wav</ShortName>
+					<CachePath>SFX/02_Neutral_Music_bpm75_D-AnalogPad_56CEF360.wem</CachePath>
+				</File>
+				<File Id="339036602" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>13_Dark_Music_bpm75_D-GTSoloA.wav</ShortName>
+					<CachePath>SFX/13_Dark_Music_bpm75_D-GTSoloA_56CEF360.wem</CachePath>
+				</File>
+				<File Id="453812450" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10_Dark_Music_bpm75_D-BSDrone.wav</ShortName>
+					<CachePath>SFX/10_Dark_Music_bpm75_D-BSDrone_56CEF360.wem</CachePath>
+				</File>
+				<File Id="462939780" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>05_Neutral_Music_bpm75_D-SynthTrumpetlead.wav</ShortName>
+					<CachePath>SFX/05_Neutral_Music_bpm75_D-SynthTrumpetlead_56CEF360.wem</CachePath>
+				</File>
+				<File Id="463295132" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>06_Darker_Music_bpm75_D-SynthPulse.wav</ShortName>
+					<CachePath>SFX/06_Darker_Music_bpm75_D-SynthPulse_56CEF360.wem</CachePath>
+				</File>
+				<File Id="487993875" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>01_Neutral_Music_bpm75_D-RimTaaps.wav</ShortName>
+					<CachePath>SFX/01_Neutral_Music_bpm75_D-RimTaaps_56CEF360.wem</CachePath>
+				</File>
+				<File Id="503519355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>09_Darker_Music_bpm75_D-GTRSoloA.wav</ShortName>
+					<CachePath>SFX/09_Darker_Music_bpm75_D-GTRSoloA_56CEF360.wem</CachePath>
+				</File>
+				<File Id="529527188" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>03_Darker_Music_bpm75_D-RimTapswav.wav</ShortName>
+					<CachePath>SFX/03_Darker_Music_bpm75_D-RimTapswav_56CEF360.wem</CachePath>
+				</File>
+				<File Id="538413495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>11_Dark_Music_bpm75_D-FTSoloC.wav</ShortName>
+					<CachePath>SFX/11_Dark_Music_bpm75_D-FTSoloC_56CEF360.wem</CachePath>
+				</File>
+				<File Id="540156152" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>01_Darker_Music_bpm75_D-Kick.wav</ShortName>
+					<CachePath>SFX/01_Darker_Music_bpm75_D-Kick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="542651587" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>00_Neutral_Music_bpm75_D-GuitarSoloB.wav</ShortName>
+					<CachePath>SFX/00_Neutral_Music_bpm75_D-GuitarSoloB_56CEF360.wem</CachePath>
+				</File>
+				<File Id="586210713" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>05_Dark_Music_bpm75_D-Drone1.wav</ShortName>
+					<CachePath>SFX/05_Dark_Music_bpm75_D-Drone1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="599640542" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07_Darker_Music_bpm75_D-BSPad2.wav</ShortName>
+					<CachePath>SFX/07_Darker_Music_bpm75_D-BSPad2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="645295004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TV Static Final.wav</ShortName>
+					<CachePath>SFX/TV Static Final_56CEF360.wem</CachePath>
+				</File>
+				<File Id="663361065" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>11_Darker_Music_bpm75_D-GTRNoiseA.wav</ShortName>
+					<CachePath>SFX/11_Darker_Music_bpm75_D-GTRNoiseA_56CEF360.wem</CachePath>
+				</File>
+				<File Id="668831372" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>05_Darkest_Music_bpm75_D-Snare.wav</ShortName>
+					<CachePath>SFX/05_Darkest_Music_bpm75_D-Snare_56CEF360.wem</CachePath>
+				</File>
+				<File Id="689002223" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>06_Neutral_Music_bpm75_D-KeysLead.wav</ShortName>
+					<CachePath>SFX/06_Neutral_Music_bpm75_D-KeysLead_56CEF360.wem</CachePath>
+				</File>
+				<File Id="705086918" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07_Dark_Music_bpm75_D-SynthPulse.wav</ShortName>
+					<CachePath>SFX/07_Dark_Music_bpm75_D-SynthPulse_56CEF360.wem</CachePath>
+				</File>
+				<File Id="712826778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Phone Alarm w Vibrate Final .wav</ShortName>
+					<CachePath>SFX/Phone Alarm w Vibrate Final _8E324C96.wem</CachePath>
+				</File>
+				<File Id="759859640" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>01_Darkest_Music_bpm75_D-Kick.wav</ShortName>
+					<CachePath>SFX/01_Darkest_Music_bpm75_D-Kick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="764507355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>09_Darkest_Music_bpm75_D-GTR1.wav</ShortName>
+					<CachePath>SFX/09_Darkest_Music_bpm75_D-GTR1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="790704285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10_Darkest_Music_bpm75_D-SynthPulse.wav</ShortName>
+					<CachePath>SFX/10_Darkest_Music_bpm75_D-SynthPulse_56CEF360.wem</CachePath>
+				</File>
+				<File Id="802978156" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>08_Neutral_Music_bpm75_D-GuitarChordL.wav</ShortName>
+					<CachePath>SFX/08_Neutral_Music_bpm75_D-GuitarChordL_56CEF360.wem</CachePath>
+				</File>
+				<File Id="842782129" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07_Darkest_Music_bpm75_D-BSPad1.wav</ShortName>
+					<CachePath>SFX/07_Darkest_Music_bpm75_D-BSPad1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="862213603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>03_Darkest_Music_bpm75_D-RimTaps.wav</ShortName>
+					<CachePath>SFX/03_Darkest_Music_bpm75_D-RimTaps_56CEF360.wem</CachePath>
+				</File>
+				<File Id="891264234" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>09_Dark_Music_bpm75_D-TrumpetLead.wav</ShortName>
+					<CachePath>SFX/09_Dark_Music_bpm75_D-TrumpetLead_56CEF360.wem</CachePath>
+				</File>
+				<File Id="896732948" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>04_Darker_Music_bpm75_D-AnalogPad.wav</ShortName>
+					<CachePath>SFX/04_Darker_Music_bpm75_D-AnalogPad_56CEF360.wem</CachePath>
+				</File>
+				<File Id="916314934" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10_Neutral_Music_bpm75_D-Giuitar SoloA.wav</ShortName>
+					<CachePath>SFX/10_Neutral_Music_bpm75_D-Giuitar SoloA_56CEF360.wem</CachePath>
+				</File>
+				<File Id="917822457" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>12_Dark_Music_bpm75_D_GTSoloB.wav</ShortName>
+					<CachePath>SFX/12_Dark_Music_bpm75_D_GTSoloB_56CEF360.wem</CachePath>
+				</File>
+				<File Id="936359435" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mom_Dialog_Final.wav</ShortName>
+					<CachePath>SFX/Mom_Dialog_Final_56CEF360.wem</CachePath>
+				</File>
+				<File Id="937904889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Subway Environment Loop_Final.wav</ShortName>
+					<CachePath>SFX/Subway Environment Loop_Final_480B9934.wem</CachePath>
+				</File>
+				<File Id="951307008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>03_Neutral_Music_bpm75_D-Drone1.wav</ShortName>
+					<CachePath>SFX/03_Neutral_Music_bpm75_D-Drone1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="951919252" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>10_Darker_Music_bpm75_D-GTRSoloB.wav</ShortName>
+					<CachePath>SFX/10_Darker_Music_bpm75_D-GTRSoloB_56CEF360.wem</CachePath>
+				</File>
+				<File Id="968057695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>02_Darker_Music_bpm75_D-Cymbols.wav</ShortName>
+					<CachePath>SFX/02_Darker_Music_bpm75_D-Cymbols_56CEF360.wem</CachePath>
+				</File>
+				<File Id="998732060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>02_Darkest_Music_bpm75_D-Cymbols.wav</ShortName>
+					<CachePath>SFX/02_Darkest_Music_bpm75_D-Cymbols_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1039061696" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>12_Darker_Music_bpm75_D-GTRNoiseB.wav</ShortName>
+					<CachePath>SFX/12_Darker_Music_bpm75_D-GTRNoiseB_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1044035442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>05_Darker_Music_bpm75_D-Drone1.wav</ShortName>
+					<CachePath>SFX/05_Darker_Music_bpm75_D-Drone1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1059303621" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>07_Neutral_Music_bpm75_D-007.wav</ShortName>
+					<CachePath>SFX/07_Neutral_Music_bpm75_D-007_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1071015646" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>08_Darker_Music_bpm75_D-BSPad.wav</ShortName>
+					<CachePath>SFX/08_Darker_Music_bpm75_D-BSPad_56CEF360.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3157003241" Name="TEST">
+				<Event Id="1968116890" Name="Cat_Meow"/>
+				<Event Id="546191921" Name="Mom_Dialog">
 					<MediaRefs>
-						<MediaRef Id="810854900"/>
+						<MediaRef Id="936359435"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3991942870" Name="Music">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="361494514" Id="1925914845"/>
+							<MediaRefs>
+								<MediaRef Id="15237878"/>
+								<MediaRef Id="65579422"/>
+								<MediaRef Id="97095806"/>
+								<MediaRef Id="111014613"/>
+								<MediaRef Id="174987227"/>
+								<MediaRef Id="339036602"/>
+								<MediaRef Id="453812450"/>
+								<MediaRef Id="538413495"/>
+								<MediaRef Id="586210713"/>
+								<MediaRef Id="705086918"/>
+								<MediaRef Id="891264234"/>
+								<MediaRef Id="917822457"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="361494514" Id="2377330132"/>
+							<MediaRefs>
+								<MediaRef Id="463295132"/>
+								<MediaRef Id="503519355"/>
+								<MediaRef Id="529527188"/>
+								<MediaRef Id="540156152"/>
+								<MediaRef Id="599640542"/>
+								<MediaRef Id="663361065"/>
+								<MediaRef Id="896732948"/>
+								<MediaRef Id="951919252"/>
+								<MediaRef Id="968057695"/>
+								<MediaRef Id="1039061696"/>
+								<MediaRef Id="1044035442"/>
+								<MediaRef Id="1071015646"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="361494514" Id="3859883579"/>
+							<MediaRefs>
+								<MediaRef Id="263734778"/>
+								<MediaRef Id="293201565"/>
+								<MediaRef Id="668831372"/>
+								<MediaRef Id="759859640"/>
+								<MediaRef Id="764507355"/>
+								<MediaRef Id="790704285"/>
+								<MediaRef Id="842782129"/>
+								<MediaRef Id="862213603"/>
+								<MediaRef Id="998732060"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="361494514" Id="670611050"/>
+							<MediaRefs>
+								<MediaRef Id="193138130"/>
+								<MediaRef Id="312757205"/>
+								<MediaRef Id="329810522"/>
+								<MediaRef Id="462939780"/>
+								<MediaRef Id="487993875"/>
+								<MediaRef Id="542651587"/>
+								<MediaRef Id="689002223"/>
+								<MediaRef Id="802978156"/>
+								<MediaRef Id="916314934"/>
+								<MediaRef Id="951307008"/>
+								<MediaRef Id="1059303621"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="423885916" Name="Phone_Alert">
+					<MediaRefs>
+						<MediaRef Id="712826778"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4265022948" Name="Phone_Ringtone">
+					<MediaRefs>
+						<MediaRef Id="234497861"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1699039505" Name="SubwayEnvLoop">
+					<MediaRefs>
+						<MediaRef Id="937904889"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1436086644" Name="TV_Static">
+					<MediaRefs>
+						<MediaRef Id="645295004"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2938993575" Name="sanity"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="361494514" Name="sanity_switch">
+					<GameParameterRef Id="2938993575"/>
+					<Switches>
+						<Switch Id="670611050" Name="Neutral"/>
+						<Switch Id="1925914845" Name="Dark"/>
+						<Switch Id="2377330132" Name="Darker"/>
+						<Switch Id="3859883579" Name="Darkest"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{80AA3125-B4C7-2DBE-1BF1-31EE7B72A930}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9D658730-82D2-2A76-0FD0-BDBF93DCA0A5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -38,6 +333,20 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="2938993575" Name="sanity"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="361494514" Name="sanity_switch">
+					<GameParameterRef Id="2938993575"/>
+					<Switches>
+						<Switch Id="670611050" Name="Neutral"/>
+						<Switch Id="1925914845" Name="Dark"/>
+						<Switch Id="2377330132" Name="Darker"/>
+						<Switch Id="3859883579" Name="Darkest"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -168,5 +477,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{009338FA-2757-E435-35FA-27E7963A8538}</FileHash>
+	<FileHash>{A18514B8-703B-0C8C-CB7D-B23AE5D1B579}</FileHash>
 </SoundBanksInfo>
