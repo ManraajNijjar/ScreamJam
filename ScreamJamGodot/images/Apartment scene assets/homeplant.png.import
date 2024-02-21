@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7b3i44lx645e"
-path="res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"
+uid="uid://cji1c7hoqpkob"
+path="res://.godot/imported/homeplant.png-bca1bfacd49538f23c6fb892f8113ab9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/officeBackground.png"
-dest_files=["res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"]
+source_file="res://images/Apartment scene assets/homeplant.png"
+dest_files=["res://.godot/imported/homeplant.png-bca1bfacd49538f23c6fb892f8113ab9.ctex"]
 
 [params]
 

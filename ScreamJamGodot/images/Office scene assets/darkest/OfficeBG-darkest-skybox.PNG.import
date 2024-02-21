@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7b3i44lx645e"
-path="res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"
+uid="uid://djs1112oxi5bg"
+path="res://.godot/imported/OfficeBG-darkest-skybox.PNG-0b332feea2aaab90c94c50f761b120bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/officeBackground.png"
-dest_files=["res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"]
+source_file="res://images/Office scene assets/darkest/OfficeBG-darkest-skybox.PNG"
+dest_files=["res://.godot/imported/OfficeBG-darkest-skybox.PNG-0b332feea2aaab90c94c50f761b120bc.ctex"]
 
 [params]
 

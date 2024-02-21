@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7b3i44lx645e"
-path="res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"
+uid="uid://hh1wixid1x2g"
+path="res://.godot/imported/ScottAvatar-neutral.png-c69b2d5b3263d57d9b0dcb17a1356754.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/officeBackground.png"
-dest_files=["res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"]
+source_file="res://images/Character portraits/ScottAvatar-neutral.png"
+dest_files=["res://.godot/imported/ScottAvatar-neutral.png-c69b2d5b3263d57d9b0dcb17a1356754.ctex"]
 
 [params]
 

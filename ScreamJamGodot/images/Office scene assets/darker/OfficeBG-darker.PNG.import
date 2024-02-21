@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7b3i44lx645e"
-path="res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"
+uid="uid://crvoch14u7v67"
+path="res://.godot/imported/OfficeBG-darker.PNG-7db2ac13373a88194d99675c03b378bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/officeBackground.png"
-dest_files=["res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"]
+source_file="res://images/Office scene assets/darker/OfficeBG-darker.PNG"
+dest_files=["res://.godot/imported/OfficeBG-darker.PNG-7db2ac13373a88194d99675c03b378bf.ctex"]
 
 [params]
 

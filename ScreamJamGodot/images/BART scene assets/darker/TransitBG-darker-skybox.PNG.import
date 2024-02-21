@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7b3i44lx645e"
-path="res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"
+uid="uid://g3bpsrg1vx5s"
+path="res://.godot/imported/TransitBG-darker-skybox.PNG-b29c792fdca63770aa8912327ac9ba51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/officeBackground.png"
-dest_files=["res://.godot/imported/officeBackground.png-177d6d86d18ae73e47242241afe0bd25.ctex"]
+source_file="res://images/BART scene assets/darker/TransitBG-darker-skybox.PNG"
+dest_files=["res://.godot/imported/TransitBG-darker-skybox.PNG-b29c792fdca63770aa8912327ac9ba51.ctex"]
 
 [params]
 

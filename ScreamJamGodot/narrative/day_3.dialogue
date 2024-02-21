@@ -104,7 +104,9 @@ else:
 	The day is unusually dark. The walk to the train seemed weird. 
 	Scott is unusually sweaty.
 	The empty train seems weird in the middle of rush hour, but Scott is glad to sit and ride home in silence.
-	
+
+do emit("toHousePM")
+=> END!
 
 ~ day_3_house_pm
 
