@@ -1,4 +1,5 @@
 ~ day_1_house_am
+
 It’s a little cloudy, like the sky filled with salt water. He rubs his eyes more than usual this morning. 
 Scott realizes he’s hit snooze a few times more than usual. The grey skies didn’t allow the sun to warm his skin and wake him. 
 Gambit didn’t even paw at his face this morning yet, but once Scott’s fully awake, with glasses on, he sees his cat pacing back and forth around his food bowl. 
@@ -27,7 +28,7 @@ do emit("toOffice")
 ~ day_1_office
 His desk has been in the same place for a while now, ever since he joined the company. Even though there’s been a few reorganizations, you can’t really reorg the Payroll department and move it under Engineering or Marketing or anything. 
 The best part of his work is that every day, lunch is catered. They pick a few restaurants and subsidize the bulk of the meal. 
-He orders the Black and Bleu salad from the local chain, his favorite. 
+He orders the Black and Bleu salad from Green Seeds, his favorite local farm to table place. 
 When it shows up, he eats at his desk while going over the last pay period’s numbers so he can make sure there’s no unapproved time cards. 
 There’s always one manager he has to chase down, and after a few messages on the work approved chat app, he’s got his work done for today.
 do emit("toTrainPM")
@@ -83,6 +84,7 @@ Scott: Sure. Have a good night.
 Mom: I love you. Bye!
 
 ~ post_phone_call_1
+Scott sighs.
 He feeds Gambit who, by now, has been yowling for food for half an hour.
 Gambit settles down to eat, and Scott gets ready for bed. 
 He washes his face again, and reapplies the lotion even though the SPF isn’t going to help him right now.

@@ -93,12 +93,12 @@ if sanity == 100:
 	[i](Come on, Scott, you've already done everything perfectly this week.)[/i]
 	[i][shake rate=20 level=10](Why would you mess it up now?)[/shake][/i]
 	=> pick_up_call_mom
-if sanity >=55:
-	test
-if sanity >=25:
-	test
 else:
-	test
+	if missedCalls == 3:
+		[i](Why would I pick up now?)[/i]
+	else:
+		[i](I'll call her back later.)[/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while.
 => post_phone_call_5
 
 ~ pick_up_call_mom
@@ -139,14 +139,33 @@ if sanity == 100:
 	Mom: You're in the eye of the hurricane.
 	Mom: Well, I have to go. Your dad wants me to make him dinner.
 	Mom: I love you. Bye!
-if sanity >=55:
-	test
 if sanity >=25:
-	test
-else:
+	Mom: Scott, are you okay?
+	- Scott: No.
+	- Scott: Yeah, why?
+	Mom: You haven't been picking up the phone when I call you...
+	- Scott: Yes, I have.
+	- Scott: I'm sorry.
+	Mom: It makes me really worry about you. 
+	Mom: You live so far from me. And I miss you so much.
+	- Scott: Mom, do you even know me? [if sanity <= 41]
+	- Scott: Mom, you haven't seen me in 10 years. [if sanity <= 51]
+	- Scott: Mom, I miss you too. [if sanity <= 71]
+	- Scott: Yeah, I know.
+	Mom: I just... want to make sure you're okay.
+	Mom: Anyway, do you remember Joanie? She was in your grade in high school. Her mom lives right by us.
+	- Scott: Not at all.
+	- Scott: Yep.
+	Mom: It turns out she's friends with this guy who is going to jail because he was selling drugs.
+	Mom: Did you hear about that?
+	- Scott: No.
+	- Scott: Yes.
+elseMom: It was on the news today! 
 	Mom: ...
 	Scott: Hello, mom? Are you there?
-	[i]()[/i]
+	[i](There's no one there?)[/i]
+	Scott looks down at his phone.
+	Scott: Whatever.
 => post_phone_call_5
 
 

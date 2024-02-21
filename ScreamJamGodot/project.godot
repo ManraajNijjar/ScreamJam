@@ -24,6 +24,8 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 [dialogue_manager]
 
 general/states=["PlayerVariables"]
+general/custom_test_scene_path="res://narrative/balloon_test_scene.tscn"
+general/balloon_path="res://narrative/balloon.tscn"
 
 [editor_plugins]
 
