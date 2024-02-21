@@ -27,6 +27,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="CoffeeShopEnvLoop" ID="{7E836A0D-21C0-49DF-BCAC-68D028BC0DA5}">
+							<ChildrenList>
+								<Action Name="" ID="{8A156AD0-FD52-44C1-8440-82D5E304A5A3}" ShortID="1059915861">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="HomeEnvLoop" ID="{F9A6654F-3D2C-4BD4-B748-83536186657D}">
+							<ChildrenList>
+								<Action Name="" ID="{DEC3B788-CC17-4EEC-8075-B61418B40164}" ShortID="869518976">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="OfficeEnvLoop" ID="{C9FABD87-A70C-4818-93FB-77761319158F}">
+							<ChildrenList>
+								<Action Name="" ID="{47E78656-EE15-4B0A-B69D-4894D55AA190}" ShortID="460604212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Cat_Meow" ID="{027D2CC5-4752-418D-A1FD-EACB518D0776}"/>
@@ -131,8 +164,42 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Transition_Music" ID="{F6CB5431-4C65-4021-997B-9AE10C81D54A}">
+							<ChildrenList>
+								<Action Name="" ID="{5A663AF1-252B-48EC-B7A5-1023E3DBA32B}" ShortID="114722637">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TransitionMusic" ID="{F98D70F3-C60C-484B-855C-F348B307CB99}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="DialogLoop" ID="{031CE56A-A764-44AF-8518-4EF18E7E3D13}">
+					<ChildrenList>
+						<Action Name="" ID="{A0A6F089-5EF2-4C3C-8365-2C425775ACEE}" ShortID="1026038748">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="General Dialog" ID="{BCD2E9C2-AD82-46D1-A795-EB3141DEF716}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="AlarmClockLoop" ID="{8D6CB936-E4D7-4745-B07D-19B8D49A2BBE}">
+					<ChildrenList>
+						<Action Name="" ID="{CC7ABFED-11B3-45CA-B333-D71B48DB720C}" ShortID="315418833">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alarm" ID="{FC548CC7-9DA5-424F-9C09-EAB33068FCE2}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jump_Scare" ID="{3D375E15-1BF9-41BB-A360-F9DF29BBC336}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

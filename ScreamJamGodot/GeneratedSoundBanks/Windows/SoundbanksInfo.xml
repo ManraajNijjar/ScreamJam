@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{C1784630-1C6A-F1A2-5A1E-B10D186A6DB6}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{7BE10FF9-DF0C-1F70-5B42-CDD8E1D10754}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -242,6 +242,51 @@
 						<MediaRef Id="820840143"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1142103033" Name="Dark_Music">
+					<MediaRefs>
+						<MediaRef Id="15237878"/>
+						<MediaRef Id="65579422"/>
+						<MediaRef Id="97095806"/>
+						<MediaRef Id="111014613"/>
+						<MediaRef Id="174987227"/>
+						<MediaRef Id="339036602"/>
+						<MediaRef Id="453812450"/>
+						<MediaRef Id="538413495"/>
+						<MediaRef Id="586210713"/>
+						<MediaRef Id="705086918"/>
+						<MediaRef Id="891264234"/>
+						<MediaRef Id="917822457"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="152155504" Name="Darker_Music">
+					<MediaRefs>
+						<MediaRef Id="463295132"/>
+						<MediaRef Id="503519355"/>
+						<MediaRef Id="529527188"/>
+						<MediaRef Id="540156152"/>
+						<MediaRef Id="599640542"/>
+						<MediaRef Id="663361065"/>
+						<MediaRef Id="896732948"/>
+						<MediaRef Id="951919252"/>
+						<MediaRef Id="968057695"/>
+						<MediaRef Id="1039061696"/>
+						<MediaRef Id="1044035442"/>
+						<MediaRef Id="1071015646"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2983829731" Name="Darkest_Music">
+					<MediaRefs>
+						<MediaRef Id="263734778"/>
+						<MediaRef Id="293201565"/>
+						<MediaRef Id="668831372"/>
+						<MediaRef Id="759859640"/>
+						<MediaRef Id="764507355"/>
+						<MediaRef Id="790704285"/>
+						<MediaRef Id="842782129"/>
+						<MediaRef Id="862213603"/>
+						<MediaRef Id="998732060"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="644163603" Name="DialogLoop">
 					<MediaRefs>
 						<MediaRef Id="739877464"/>
@@ -252,6 +297,7 @@
 						<MediaRef Id="56846897"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2589581548" Name="Jump_Scare"/>
 				<Event Id="546191921" Name="Mom_Dialog">
 					<MediaRefs>
 						<MediaRef Id="936359435"/>
@@ -325,6 +371,21 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="3875690554" Name="Neutral_Music">
+					<MediaRefs>
+						<MediaRef Id="193138130"/>
+						<MediaRef Id="312757205"/>
+						<MediaRef Id="329810522"/>
+						<MediaRef Id="462939780"/>
+						<MediaRef Id="487993875"/>
+						<MediaRef Id="542651587"/>
+						<MediaRef Id="689002223"/>
+						<MediaRef Id="802978156"/>
+						<MediaRef Id="916314934"/>
+						<MediaRef Id="951307008"/>
+						<MediaRef Id="1059303621"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="276187956" Name="OfficeEnvLoop">
 					<MediaRefs>
 						<MediaRef Id="540861004"/>
@@ -343,6 +404,12 @@
 				<Event Id="1699039505" Name="SubwayEnvLoop">
 					<MediaRefs>
 						<MediaRef Id="937904889"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3735096532" Name="Transition_Music">
+					<MediaRefs>
+						<MediaRef Id="193138130"/>
+						<MediaRef Id="951307008"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1436086644" Name="TV_Static">
@@ -522,5 +589,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4782861F-0452-32F6-F874-B47EB13BA873}</FileHash>
+	<FileHash>{C6380958-9C3E-82FC-B956-A3BF871BF597}</FileHash>
 </SoundBanksInfo>

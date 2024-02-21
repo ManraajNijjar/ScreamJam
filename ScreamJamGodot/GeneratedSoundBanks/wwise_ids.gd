@@ -19,6 +19,8 @@ class EVENTS:
 	const OFFICEENVLOOP = 276187956
 	const DIALOGLOOP = 644163603
 	const ALARMCLOCKLOOP = 487701040
+	const JUMP_SCARE = 2589581548
+	const TRANSITION_MUSIC = 3735096532
 
 	const _dict = {
 		"Dark_Music": DARK_MUSIC,
@@ -37,7 +39,9 @@ class EVENTS:
 		"CoffeeShopEnvLoop": COFFEESHOPENVLOOP,
 		"OfficeEnvLoop": OFFICEENVLOOP,
 		"DialogLoop": DIALOGLOOP,
-		"AlarmClockLoop": ALARMCLOCKLOOP
+		"AlarmClockLoop": ALARMCLOCKLOOP,
+		"Jump_Scare": JUMP_SCARE,
+		"Transition_Music": TRANSITION_MUSIC
 	}
 
 class STATES:

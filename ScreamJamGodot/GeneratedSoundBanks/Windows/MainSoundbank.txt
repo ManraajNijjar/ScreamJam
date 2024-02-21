@@ -1,14 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
+	152155504	Darker_Music			\Default Work Unit\Music\Darker_Music	
 	276187956	OfficeEnvLoop			\Default Work Unit\Environments\OfficeEnvLoop	
 	423885916	Phone_Alert			\Default Work Unit\Phone_Alert	
 	487701040	AlarmClockLoop			\Default Work Unit\AlarmClockLoop	
 	546191921	Mom_Dialog			\Default Work Unit\Mom_Dialog	
 	644163603	DialogLoop			\Default Work Unit\DialogLoop	
 	1123806448	CoffeeShopEnvLoop			\Default Work Unit\Environments\CoffeeShopEnvLoop	
+	1142103033	Dark_Music			\Default Work Unit\Music\Dark_Music	
 	1436086644	TV_Static			\Default Work Unit\TV_Static	
 	1699039505	SubwayEnvLoop			\Default Work Unit\Environments\SubwayEnvLoop	
 	1929201915	HomeEnvLoop			\Default Work Unit\Environments\HomeEnvLoop	
 	1968116890	Cat_Meow			\Default Work Unit\Cat_Meow	
+	2589581548	Jump_Scare			\Default Work Unit\Jump_Scare	
+	2983829731	Darkest_Music			\Default Work Unit\Music\Darkest_Music	
+	3735096532	Transition_Music			\Default Work Unit\Music\Transition_Music	
+	3875690554	Neutral_Music			\Default Work Unit\Music\Neutral_Music	
 	3991942870	Music			\Default Work Unit\Music\Music	
 	4265022948	Phone_Ringtone			\Default Work Unit\Phone_Ringtone	
 
@@ -31,7 +37,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	97095806	04_Dark_Music_bpm75_D-AnalogPad	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\04_Dark_Music_bpm75_D-AnalogPad_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Dark\Dark\04_Dark_Music_bpm75_D-AnalogPad		811970
 	111014613	01_Dark_Music_bpm75_D-Cymbols	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\01_Dark_Music_bpm75_D-Cymbols_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Dark\Dark\01_Dark_Music_bpm75_D-Cymbols		1493668
 	174987227	06_Dark_Music_bpm75_D-Drone2	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\06_Dark_Music_bpm75_D-Drone2_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Dark\Dark\06_Dark_Music_bpm75_D-Drone2		755985
-	193138130	04_Neutral_Music_bpm75_D-Drone2	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\04_Neutral_Music_bpm75_D-Drone2_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Neutral\Neutral\04_Neutral_Music_bpm75_D-Drone2		757105
+	193138130	04_Neutral_Music_bpm75_D-Drone2	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\04_Neutral_Music_bpm75_D-Drone2_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TransitionMusic\Transition\04_Neutral_Music_bpm75_D-Drone2		757105
 	234497861	Phone Ringtone	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Phone Ringtone W Vibrate Final_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Phone\Phone Ringtone		140698
 	263734778	06_Darkest_Music_bpm75_D-Drone1	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\06_Darkest_Music_bpm75_D-Drone1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Darkest\Darkest\06_Darkest_Music_bpm75_D-Drone1		750261
 	293201565	04_Darkest_Music_bpm75_D-AnalogPad	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\04_Darkest_Music_bpm75_D-AnalogPad_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Darkest\Darkest\04_Darkest_Music_bpm75_D-AnalogPad		724369
@@ -71,7 +77,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	917822457	11_Dark_Music_bpm75_D-FTSoloC	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\12_Dark_Music_bpm75_D_GTSoloB_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Dark\Dark\11_Dark_Music_bpm75_D-FTSoloC		735328
 	936359435	Mom Dialog	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Mom_Dialog_Final_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialog\Mom Dialog		183561
 	937904889	SubwayBaseLoop	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\Subway Environment Loop_Final_480B9934.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environments\Subway\SubwayEnvLoop\SubwayBaseLoop		880624
-	951307008	03_Neutral_Music_bpm75_D-Drone1	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\03_Neutral_Music_bpm75_D-Drone1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Neutral\Neutral\03_Neutral_Music_bpm75_D-Drone1		785074
+	951307008	03_Neutral_Music_bpm75_D-Drone1	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\03_Neutral_Music_bpm75_D-Drone1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TransitionMusic\Transition\03_Neutral_Music_bpm75_D-Drone1		785074
 	951919252	09_Darker_Music_bpm75_D-GTRSoloA	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\10_Darker_Music_bpm75_D-GTRSoloB_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Darker\Darker\09_Darker_Music_bpm75_D-GTRSoloA		750719
 	968057695	02_Darker_Music_bpm75_D-Cymbols	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\02_Darker_Music_bpm75_D-Cymbols_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Darker\Darker\02_Darker_Music_bpm75_D-Cymbols		1535043
 	998732060	02_Darkest_Music_bpm75_D-Cymbols	C:\Users\asher\Documents\Godot Projects\Game Jams\ScreamJam\ScreamJamWwise\ScreamJam\.cache\Windows\SFX\02_Darkest_Music_bpm75_D-Cymbols_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Darkest\Darkest\02_Darkest_Music_bpm75_D-Cymbols		833680
