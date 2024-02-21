@@ -3,6 +3,8 @@ extends Control
 @onready var button1 = $VBoxContainer/GridContainer/Button
 @onready var momCallScreen = $MomCallScreen
 
+@onready var phoneRingtone = $Phone_Ringtone
+@onready var phoneAlert = $Phone_Alert
 
 var filename ="";
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +13,7 @@ func _ready():
 
 func showMomCall():
 	momCallScreen.visible = true;
+	phoneRingtone.post_event();
 	if PlayerVariables.day == 0:
 		filename = "res://narrative/start.dialogue"
 	else:
@@ -18,10 +21,14 @@ func showMomCall():
 
 func _on_mom_reject_pressed():
 	momCallScreen.visible = false;
+	phoneRingtone.stop_event();
+	phoneAlert.post_event();
 	DialogueManager.show_example_dialogue_balloon(load(filename), "deny_call_mom")
 	pass # Replace with function body.
 
 func _on_mom_pickup_pressed():
 	momCallScreen.visible = false;
+	phoneRingtone.stop_event();
+	phoneAlert.post_event();
 	DialogueManager.show_example_dialogue_balloon(load(filename), "pick_up_call_mom")
 	pass # Replace with function body.

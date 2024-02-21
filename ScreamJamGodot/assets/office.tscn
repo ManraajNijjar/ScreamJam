@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://exantjwgqt6w"]
+[gd_scene load_steps=27 format=3 uid="uid://exantjwgqt6w"]
 
 [ext_resource type="Script" path="res://assets/office.gd" id="1_7q7d6"]
 [ext_resource type="Material" uid="uid://ciuor5jv1ttgd" path="res://materials/woodFloor/woodfloor.tres" id="1_a32h0"]
@@ -15,19 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://c8usgfdaw066j" path="res://assets/Environment/bayWindow.tscn" id="12_2b250"]
 [ext_resource type="Texture2D" uid="uid://h6p5p5xm78f5" path="res://images/officeBackground.png" id="13_xgv7n"]
 [ext_resource type="PackedScene" uid="uid://dff6n644p7stw" path="res://assets/Environment/office_desk.tscn" id="14_diovq"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ih6xq"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_xd4ms"]
-sky_material = SubResource("ProceduralSkyMaterial_ih6xq")
-
-[sub_resource type="Environment" id="Environment_14vhd"]
-background_mode = 2
-sky = SubResource("Sky_xd4ms")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="PackedScene" uid="uid://bg4v0co12jq05" path="res://3DModels/officeMonitor/officeMonitor.glb" id="16_r2em1"]
+[ext_resource type="PackedScene" uid="uid://mqgtrlmmshd2" path="res://3DModels/officeChair/officeChair.glb" id="17_pd71b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0xni8"]
 
@@ -66,24 +55,33 @@ uv2_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_fmgd8"]
 material = SubResource("StandardMaterial3D_nw2pa")
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ih6xq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_xd4ms"]
+sky_material = SubResource("ProceduralSkyMaterial_ih6xq")
+
+[sub_resource type="Environment" id="Environment_14vhd"]
+background_mode = 2
+sky = SubResource("Sky_xd4ms")
+ambient_light_color = Color(0.529412, 0.670588, 0.87451, 1)
+ambient_light_sky_contribution = 0.6
+tonemap_mode = 2
+glow_enabled = true
+
 [node name="Office" type="Node3D"]
 script = ExtResource("1_7q7d6")
 
 [node name="Player" parent="." instance=ExtResource("11_qn8ev")]
-transform = Transform3D(2.38311, 0, 0, 0, 2.38311, 0, 0, 0, 2.38311, -6.48369, 2.47116, -2.88022)
+transform = Transform3D(2.38311, 0, 0, 0, 2.38311, 0, 0, 0, 2.38311, -6.48369, 3.11978, -5.1207)
+gravityEnabled = false
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1.47984, 0, 0, 0, 1.47984, 0, 0, 0, 1.47984, -3.54167, 12.2012, 22.1461)
+transform = Transform3D(1.86538, 0, 0, 0, 1.86538, 0, 0, 0, 1.86538, -3.54167, 12.2012, 22.1461)
 texture = ExtResource("13_xgv7n")
 
 [node name="Environment" type="Node3D" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
-environment = SubResource("Environment_14vhd")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(0.978148, 0.125414, -0.165827, 0, 0.797584, 0.603208, 0.207912, -0.590026, 0.780155, 0, 0, 19.982)
-shadow_enabled = true
 
 [node name="Floor" type="RigidBody3D" parent="Environment"]
 transform = Transform3D(5.55247, 0, 0, 0, 0.338229, 0, 0, 0, 1.32108, 0, 0, 0)
@@ -169,3 +167,158 @@ transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, -18.5045
 
 [node name="officeDesk10" parent="Environment" instance=ExtResource("14_diovq")]
 transform = Transform3D(0.740201, 0, 0, 0, 0.740201, 0, 0, 0, 0.740201, 5.77553, 0.169114, 7.82971)
+
+[node name="MonitorSetup" type="Node3D" parent="Environment"]
+
+[node name="officeMonitor" parent="Environment/MonitorSetup" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup2" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05159, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup2" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup2" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup3" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1753, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup3" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup3" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup4" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95518, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup4" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup4" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup5" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0984, 0, 0)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup5" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup5" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup6" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup6" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup6" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup7" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05159, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup7" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup7" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup8" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1753, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup8" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup8" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup9" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95518, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup9" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup9" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="MonitorSetup10" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0984, 0, 10.9501)
+
+[node name="officeMonitor" parent="Environment/MonitorSetup10" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.507989, 0, -0.18407, 0, 0.540309, 0, 0.18407, 0, -0.507989, -5.21205, 2.73837, -2.3666)
+
+[node name="officeMonitor2" parent="Environment/MonitorSetup10" instance=ExtResource("16_r2em1")]
+transform = Transform3D(-0.504857, 0, 0.192493, 0, 0.540309, 0, -0.192493, 0, -0.504857, -7.64424, 2.73837, -2.3666)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74685, 9.988, -6.26453)
+omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1639, 9.988, -6.26453)
+omni_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.74685, 9.988, 10.0256)
+omni_range = 10.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1639, 9.988, 10.0256)
+omni_range = 10.0
+
+[node name="Chairs" type="Node3D" parent="."]
+transform = Transform3D(0.490994, 0, 0, 0, 0.490994, 0, 0, 0, 0.490994, 5.5261, 0.107254, 4.58713)
+
+[node name="officeChair" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.801013, 0, -0.598646, 0, 1, 0, 0.598646, 0, 0.801013, 0, 0, 0)
+
+[node name="officeChair2" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.973191, 0, 0.229999, 0, 1, 0, -0.229999, 0, 0.973191, -11.5709, 0, 0)
+
+[node name="officeChair3" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7905, 0, 3.29414)
+
+[node name="officeChair4" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.687, 0, 0)
+
+[node name="officeChair5" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(-0.992753, 0, -0.120171, 0, 1, 0, 0.120171, 0, -0.992753, -47.8769, 0, 0)
+
+[node name="officeChair6" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.721095, 0, -0.692836, 0, 1, 0, 0.692836, 0, 0.721095, 0, 0, -22.6729)
+
+[node name="officeChair7" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.78365, 0, 0.621202, 0, 1, 0, -0.621202, 0, 0.78365, -11.5709, 0, -22.6729)
+
+[node name="officeChair8" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7905, 0, -22.6729)
+
+[node name="officeChair9" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.14629, 0, -0.989242, 0, 1, 0, 0.989242, 0, 0.14629, -35.687, 0, -22.6729)
+
+[node name="officeChair10" parent="Chairs" instance=ExtResource("17_pd71b")]
+transform = Transform3D(0.427563, 0, 0.903985, 0, 1, 0, -0.903985, 0, 0.427563, -47.8769, 0, -22.6729)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -6.52557, 10.0495, -6.63966)
+visible = false
+light_energy = 16.0
+spot_range = 11.041
+spot_angle = 34.72
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_14vhd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.978148, 0.125414, -0.165827, 0, 0.797584, 0.603208, 0.207912, -0.590026, 0.780155, 0, 0, 19.982)
+light_energy = 0.0
+shadow_enabled = true

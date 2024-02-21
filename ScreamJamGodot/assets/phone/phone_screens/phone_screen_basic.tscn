@@ -104,6 +104,18 @@ offset_bottom = 366.0
 scale = Vector2(2.2695, 3.13981)
 text = "deny"
 
+[node name="Phone_Ringtone" type="AkEvent3D" parent="."]
+event = {
+"id": 4265022948,
+"name": "Phone_Ringtone"
+}
+
+[node name="Phone_Alert" type="AkEvent3D" parent="."]
+event = {
+"id": 423885916,
+"name": "Phone_Alert"
+}
+
 [connection signal="focus_entered" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MomCallScreen/MomPickup" to="." method="_on_mom_pickup_pressed"]

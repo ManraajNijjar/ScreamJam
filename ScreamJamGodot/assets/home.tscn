@@ -83,7 +83,7 @@ transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065
 transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 21.397, 2.35783, 0.557103)
 
 [node name="wall9" parent="environment" instance=ExtResource("2_q8ejy")]
-transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 21.397, 2.35783, -12.7154)
+transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 21.397, 2.35783, -14.3885)
 
 [node name="wall4" parent="environment" instance=ExtResource("2_q8ejy")]
 transform = Transform3D(-6.56348e-07, 0, -1.04793, 0, 1, 0, 15.0155, 0, -4.58065e-08, 7.0792, 2.35783, -4.96386)
@@ -116,3 +116,43 @@ transform = Transform3D(-3.22235e-08, 0, 0.737187, 0, 0.737187, 0, -0.737187, 0,
 
 [node name="couch" parent="." instance=ExtResource("8_ic7bh")]
 transform = Transform3D(9.09523e-08, 0, -0.693582, 0, 0.693582, 0, 0.693582, 0, 9.09523e-08, 17.8371, 0.5, 3.49692)
+
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+
+[node name="AkBank_MainSoundbank" type="AkBank" parent="AkBank_Init"]
+bank = {
+"id": 534561221,
+"name": "MainSoundbank"
+}
+
+[node name="Cat_Meow" type="AkEvent3D" parent="."]
+event = {
+"id": 1968116890,
+"name": "Cat_Meow"
+}
+
+[node name="Dark_Music" type="AkEvent3D" parent="."]
+event = {
+"id": 1142103033,
+"name": "Dark_Music"
+}
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42117, 3.29792, 0)
+
+[node name="TV_Static" type="AkEvent3D" parent="."]
+event = {
+"id": 1436086644,
+"name": "TV_Static"
+}
+
+[node name="MorningSpawnLocation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92467, 2.7995, 0.860808)
+
+[node name="BedSpawnLocation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92467, 2.7995, -2.58379)
+
+[node name="PMSpawnLocation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4149, 2.7995, -9.54782)

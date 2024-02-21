@@ -92,3 +92,5 @@ transform = Transform3D(0.281113, 0, 0, 0, 0.281113, 0, 0, 0, 0.281113, 0.367247
 libraries = {
 "": SubResource("AnimationLibrary_qq7fs")
 }
+
+[node name="AkListener3D" type="AkListener3D" parent="."]
