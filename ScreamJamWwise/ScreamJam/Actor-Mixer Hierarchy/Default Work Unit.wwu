@@ -50,7 +50,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -114,7 +114,51 @@
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Coffee Shop" ID="{0CD8EAAC-4F7A-44EF-868B-DD82D804B319}" ShortID="119241000"/>
+						<Folder Name="Coffee Shop" ID="{0CD8EAAC-4F7A-44EF-868B-DD82D804B319}" ShortID="119241000">
+							<ChildrenList>
+								<Sound Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" ShortID="732394644">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="OfficeEnvLoop" ID="{011709E1-2D5D-4CD7-954C-53B33416B9CD}">
+											<Language>SFX</Language>
+											<AudioFile>OfficeEnvLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="761729882"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="CoffeeShopEnvLoop" ID="{D15AF959-37A0-48F4-BBD1-81412B0853D2}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="72.6173056495278"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CoffeeShopEnvLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="820840143"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CoffeeShopEnvLoop" ID="{D15AF959-37A0-48F4-BBD1-81412B0853D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 						<Folder Name="Home" ID="{654B98F8-040B-4AB9-8198-F940E9032508}" ShortID="60349978">
 							<ChildrenList>
 								<Sound Name="TV Static" ID="{E486F7EA-DF2D-4510-858C-FABC50A53AA9}" ShortID="952365209">
@@ -147,9 +191,83 @@
 										<ActiveSource Name="TV Static Final" ID="{A65577D4-4827-4A5E-8594-06BB6D1D4993}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" ShortID="603486124">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HomeEnvLoop" ID="{E2FBD3E8-CE48-4CCD-988E-5886CAB79B06}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="114.100584795322"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.949707602339181"/>
+												<Property Name="TrimEnd" Type="Real64" Value="114.778947368421"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>HomeEnvLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="56846897"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HomeEnvLoop" ID="{E2FBD3E8-CE48-4CCD-988E-5886CAB79B06}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Office" ID="{413E124E-1987-4D50-A744-96877245EAF9}" ShortID="978149425"/>
+						<Folder Name="Office" ID="{413E124E-1987-4D50-A744-96877245EAF9}" ShortID="978149425">
+							<ChildrenList>
+								<Sound Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" ShortID="635479689">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="OfficeEnvLoop" ID="{8954C1ED-B4DA-4CE0-B3EA-C36DC762FA64}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="115.753322700691"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="61.4226475279107"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>OfficeEnvLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="540861004"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="OfficeEnvLoop" ID="{8954C1ED-B4DA-4CE0-B3EA-C36DC762FA64}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Phone" ID="{5AA5DBDA-7528-4EB0-AD5D-2E8A239D877D}" ShortID="553327522">
@@ -165,6 +283,11 @@
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -204,6 +327,11 @@
 										<Value>30</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -226,11 +354,48 @@
 								<ActiveSource Name="Phone Alarm w Vibrate Final" ID="{6292A282-05C9-4CB6-8BFF-610E34308287}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Alarm" ID="{FC548CC7-9DA5-424F-9C09-EAB33068FCE2}" ShortID="701652963">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Alarm Clock" ID="{0C1AF3CC-5DF6-4B52-AF81-2BF3B661ED26}">
+									<Language>SFX</Language>
+									<AudioFile>Alarm Clock.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="345701569"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Alarm Clock" ID="{0C1AF3CC-5DF6-4B52-AF81-2BF3B661ED26}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cat" ID="{7ED9DB3D-8F7F-4E72-B24D-68FA6F3ED369}" ShortID="745644633">
 					<ChildrenList>
 						<RandomSequenceContainer Name="Cat_Meow" ID="{3381A8D9-AFE8-496A-B12B-ED29ED37E36E}" ShortID="490814320">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
@@ -393,8 +558,43 @@
 								<ActiveSource Name="Mom_Dialog_Final" ID="{EABCE646-81A9-4AC1-819E-D0E44595BF03}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="General Dialog" ID="{BCD2E9C2-AD82-46D1-A795-EB3141DEF716}" ShortID="595698711">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dialog SFX" ID="{50B1950D-C4D8-42EE-8B79-4AD65CE35A4A}">
+									<Language>SFX</Language>
+									<AudioFile>Dialog SFX.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="739877464"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Dialog SFX" ID="{50B1950D-C4D8-42EE-8B79-4AD65CE35A4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Sound Name="JumpScare" ID="{E5D6A308-47FD-48D2-9B88-26F9728FBC21}" ShortID="897232827">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
+						</Reference>
+					</ReferenceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -1,0 +1,223 @@
+# import "res://narrative/day_2.dialogue" as snippets
+
+~ day_4_house_am
+if sanity == 100:
+	The clear blue sky has started to stretch for miles around.
+	The sun is brighter than Scott remembers it can be. It feels like years since he’s seen the sun, and seen so clearly.
+elif sanity >= 80:
+	The cloudy sky feels as he expected it would\: normal for San Francisco. 
+else:
+	It’s probably going to rain, isn’t it?
+	
+
+Scott does his normal shower routine and feeds Gambit before grabbing his stuff and leaving the apartment.
+
+do emit("showCoffee")
+At the coffee shop, there’s a longer line than usual. He waits, knowing that his order won’t take that long. A line starts to fill in behind him.
+When he gets up to the register, the barista shakes her head slowly at him.
+Barista: Sorry, Scott. We ran out of the regular coffee you get so I don’t have any brewed right now. 
+Barista: Do you want a pour over instead? It’ll take 5-7 minutes.
+Scott thinks for a second. He’ll have his coffee, but he might miss the train and end up late to work.
+- Scott: Sure, that’s fine.
+	Barista: I got you. With one cream.
+	She smiles again, and walks off to start the pour over.
+	Man: Are you serious?
+	Scott turns around. 
+	The man behind him rolls his eyes.
+	Man: The rest of us want our coffee too. I don’t know why you’d order something that will make us all have to wait. 
+	Scott: Sorry.
+	Man: It’s just rude.
+	Scott walks over to the side area of the show and watches the barista pour the water over the filter.
+	It really only takes her a minute to pour the water, and then the coffee needs to seep through the filter.
+	She’s back to serving the other customers almost within a minute, but Scott doesn’t feel okay again until she hands him the cup.
+	[i](We all have to pretend that didn’t happen. But it happened.)[/i]
+	He forces a smile at her and waves goodbye.
+- Scott: I don’t think I have the time. But thanks!
+	do sanity -= 5
+	Barista: I’m sorry! I’ll owe you for next time.
+	Scott: It’s fine. No worries!
+	He walks to the train station and grabs a coffee from the big chain cafe right next to the entrance.
+	Scott: Hello. Medium coffee, one cream.
+	"Barista": What?
+	Scott: Medium coffee, one cream.
+	She punches some buttons on the computer and then makes his coffee.
+	When she hands him the coffee, it burns his hands even through the styrofoam cup.
+	He waves goodbye, even though she’s no longer looking.
+	As he walks up to the train, he takes a sip.
+	It’s somehow chunky and sweet, like she used expired cream and a ton of sugar packets.
+
+
+do emit("toTrainAM")
+=> END!
+# lowest possible sanity here is 50
+
+~ day_4_train_am
+if sanity == 100:
+	The clear sky and crowded train 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
+else:
+	test
+do emit("toOffice")
+=> END!
+
+~ day_4_office
+if sanity == 100:
+	The clear sky and crowded train 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
+else:
+	test
+	
+Alexis walks up to Scott's desk and puts her phone directly in his face.
+Scott: Yes?
+Alexis: Did you see this article?
+
+The article says "Green Seeds restaurant known to be sourcing ingredients from non-local sources and pretending they are farm to table."
+Alexis: This your favorite place to eat?
+[i](Fuck. That's the salad place I always order from.)[/i]
+Scott: Yeah...
+Alexis: You order from there every day, don't you?
+Scott: Yeah...
+Alexis: Did you put in your order yet today?
+Scott: No.
+She looks at her phone.
+Alexis: Oh shit, I need to put in my order too. Bye, Scott.
+
+Scott goes to his computer and orders lunch.
+- order the Black and Bleu salad from Green Seeds
+	Scott sighs and orders his salad.
+	[i](It's fine. It's fine. It's just a salad.)[/i]
+	When everyone's food is delivered, he goes to the office kitchen.
+	There are fewer orders for Green Seeds today than usual.
+	He grabs his salad and sits back down on his desk.
+	Scott works while eating. 
+	He looks down at his salad, trying to pick up an optimal bite of steak, lettuce, tomato, and bleu cheese, and notices something.
+	!
+	It moves, slightly.
+	He uses his fork to push the salad around in the bowl, and finds nothing.
+	He spends the rest of the afternoon feeling awful.
+- order the steak salad from the other restaurant
+	do sanity -= 10
+	Scott feels a sharp pain in his throat.
+	If he knew any better, he'd call it anxiety.
+	But he orders the salad anyway, and spends the morning hurriedly trying to finish up the pay cards.
+	When everyone's food is delivered, he goes to the office kitchen.
+	As he walks by the Green Seeds delivery, he sees Alexis's food.
+	[i](It's the salad... she ordered the salad...)[/i]
+	She gives him a big smile as she picks up her food and walks by.
+	His salad looks wilted in comparison, and they didn't honor his request for no red onions.
+	He picks around them, and eats what he can, but he spends the rest of the afternoon feeling awful.
+do emit("toTrainPM")
+=> END!
+# lowest possible sanity here is 40
+
+~ day_4_train_pm
+
+if sanity == 100:
+	The clear sky and crowded train 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
+else:
+	test
+	
+do emit("toHousePM")
+=> END!
+
+~ day_4_house_pm
+
+if sanity == 100:
+	The clear sky and crowded train 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
+else:
+	test
+
+do emit("showCall")
+=> END!
+
+~ deny_call_mom
+if missed_calls >= 0:
+	do sanity -= 10
+	do missedCalls += 1
+	Something in the back of his neck twinges.
+	[i](I'll call her back later.)[/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+if missed_calls == 1:
+	do sanity -= 15
+	do missedCalls += 1
+	The sides of his face feel flush and hot, like something is tearing inside him.
+	[i](I'll get back to her, eventually.)[/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while.
+if missed_calls == 2:
+	do sanity -= 20
+	do missedCalls += 1
+	As he hangs up on his mother for the third time this week, in a row, he thinks about the time the therapist asked him...
+	Therapist: When you feel anger, where is it in your body?
+	He didn't understand what she meant at the time, but he knows now. 
+	In the back of his neck, his cheeks, the sides of his throat. They feel sore.
+	They burn, and he takes a deep breath through it.
+	[i][shake rate=20 level=10](When's the last time she actually showed interest in me?)[/shake][/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! I'm starting to worry but I'm sure you're okay. So... call me back! Love you, bye!") but he's too mad to watch any more television.. 
+=> post_phone_call_4
+
+~ pick_up_call_mom
+Scott: Hi, mom.
+=> phone_call_4 
+
+~ phone_call_4
+
+Mom: Hi, Scott. Just wanted to check in.
+Scott: Sure, I’m doing okay.
+Mom: Great! I had such an awful day running errands today.
+- Scott: Oh yeah?
+- Scott: ...
+Mom: There was a car that almost smashed into me on Rose St. You know where that hardware store just opened up?
+- Scott: Mom, I haven't been home in 10 years. [if sanity <= 71]
+- Scott: Nope. 
+- Scott: Yep. 
+Mom: There's no left turn there, but this guy just didn't care and almost hit me.
+Mom: I swear, old people can't drive any more.
+Mom: You know, eventually I'm going to be too old to drive.
+Mom: I'll have to hire a driver! Can you imagine? 
+- Scott: Couldn't dad just drive you around?
+- Scott: I definitely can.
+if missed_calls >= 0:
+	Mom: Make sure you pick up when I call. Okay?
+	Mom: I get worried when you don't.
+	Scott: I know.
+Mom: Well, it's late here. You know the time zones make it hard to call you sometimes.
+Mom: But I wouldn't miss it for a day.
+Mom: I love you. Bye!
+=> post_phone_call_4
+
+# lowest possible sanity here is 20
+~ post_phone_call_4
+Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
+
+
+~ day_4_bed
+if sanity == 100:
+	The clear sky and crowded train 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
+else:
+	test
+
+# => day_x+1_house_am
+
+#=> snippets/day_2_train_am
+
+do day += 1
+do time = TIMEOFDAY.MORNING
+do emit("toHouseAM")

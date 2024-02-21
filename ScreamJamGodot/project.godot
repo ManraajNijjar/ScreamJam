@@ -24,6 +24,8 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 [dialogue_manager]
 
 general/states=["PlayerVariables"]
+general/custom_test_scene_path="res://narrative/balloon_test_scene.tscn"
+general/balloon_path="res://narrative/balloon.tscn"
 
 [editor_plugins]
 
@@ -89,7 +91,7 @@ viewPhone={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://narrative/start.dialogue", "res://narrative/day_2.dialogue", "res://narrative/template.dialogue", "res://narrative/day_3.dialogue")
+locale/translations_pot_files=PackedStringArray("res://narrative/start.dialogue", "res://narrative/day_2.dialogue", "res://narrative/template.dialogue", "res://narrative/day_3.dialogue", "res://narrative/day_4.dialogue", "res://narrative/day_5.dialogue")
 
 [wwise]
 

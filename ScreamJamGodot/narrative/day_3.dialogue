@@ -64,7 +64,8 @@ Dylan: Remember the other day when you said we should go get lunch together?
 - Scott: Sure.
 Dylan: Can you go today?
 - Scott: I meant we'd both order from the app and then sit together.
-	Dylan: Oh, I thought we'd go outside.
+	Dylan: So you can order that Green Seeds salad for the umpteenth time?
+	Dylan: I thought we'd go outside.
 	if sanity == 100:
 		Dylan: It's such a nice day. Come on, we should go.
 		Dylan is insistent, emphatic. 
@@ -104,7 +105,9 @@ else:
 	The day is unusually dark. The walk to the train seemed weird. 
 	Scott is unusually sweaty.
 	The empty train seems weird in the middle of rush hour, but Scott is glad to sit and ride home in silence.
-	
+
+do emit("toHousePM")
+=> END!
 
 ~ day_3_house_pm
 
@@ -122,11 +125,15 @@ do emit("showCall")
 ~ deny_call_mom
 if missed_calls >= 0:
 	do sanity -= 10
+	do missedCalls += 1
+	Something in the back of his neck twinges.
 	[i](I'll call her back later.)[/i]
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 if missed_calls == 1:
 	do sanity -= 15
-	[i](I'll call her back later.)[/i]
+	do missedCalls += 1
+	The sides of his face feel flush and hot, like something is tearing inside him.
+	[i](I'll get back to her, eventually.)[/i]
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 => post_phone_call_3
 
@@ -168,11 +175,13 @@ Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 
 ~ day_3_bed
 if sanity == 100:
-	things should be brighter
-elif sanity >=80:
-	things should be middle
+	test 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
 else:
-	things should seem bad
+	test
 
 # => day_x+1_house_am
 

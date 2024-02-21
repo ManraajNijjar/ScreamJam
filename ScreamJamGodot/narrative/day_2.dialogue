@@ -60,7 +60,7 @@ He pops his dinner in the microwave and then sits on the couch.
 - watch chess videos while you eat
 - watch a cooking video
 
-He completely zones out eats while as usual Gambit attempts to steal some.
+He completely zones out and eats while as usual Gambit attempts to steal some.
 Scott: Hey! Back off.
 Gambit hisses and moves back, but then starts licking his paws like nothing happened. 
 do emit("showCall")
@@ -68,6 +68,8 @@ do emit("showCall")
 
 ~ deny_call_mom
 do sanity -= 10
+do missedCalls += 1
+Something in the back of his neck twinges.
 [i](I'll call her back later.)[/i]
 He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 => post_phone_call_2
@@ -99,6 +101,8 @@ Mom: I love you. Bye!
 # lowest possible sanity here is 90
 
 ~ post_phone_call_2
+if sanity == 100:
+	[i](I don't know why she even calls me.)[/i]
 Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 
 ~ day_2_bed

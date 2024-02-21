@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://co2ktstqpgolr"]
 
 [ext_resource type="Material" uid="uid://c6gmlk1yx8ss8" path="res://materials/plasticSubwayFloor/plasticMaterialFloor.tres" id="1_0bc31"]
-[ext_resource type="Texture2D" uid="uid://ck2ax8hwnkyda" path="res://images/subwayBackground.png" id="2_1phr6"]
+[ext_resource type="Texture2D" uid="uid://bxm77wbj53yl1" path="res://images/subwayBackground.png" id="2_1phr6"]
 [ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="2_ujo2v"]
 [ext_resource type="PackedScene" uid="uid://jui036ps8dan" path="res://assets/Environment/subway_wall.tscn" id="5_ejrho"]
 [ext_resource type="PackedScene" uid="uid://7pxjhvjgqfhm" path="res://assets/Environment/subway_ceiling.tscn" id="6_0weqf"]
@@ -73,7 +73,7 @@ material = ExtResource("1_0bc31")
 transform = Transform3D(-1.53497, 0, -0.00112521, 0, 1.53497, 0, 0.00112521, 0, -1.53497, 11.5848, 2.24904, 0)
 yClamp = 45
 
-[node name="AkListener3D" type="AkListener3D" parent="Player"]
+[node name="AkListener3D2" type="AkListener3D" parent="Player"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.275852, -0.35629, -1.36766, 1.39384e-08, 4.41485, -0.110666, 5.36021, 0.0183357, 0.0703837, 116.848, 13.3037, -5.0986)

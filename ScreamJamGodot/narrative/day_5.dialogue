@@ -1,0 +1,189 @@
+# import "res://narrative/day_2.dialogue" as snippets
+
+~ day_5_house_am
+if sanity == 100:
+	Scott has never seen weather like this in his years in San Francisco. 
+	He’s so used to the fog that it almost chills him to the bone to see the sun, so many days in a row. He enjoys it, of course, as does Gambit. 
+	Gambit sits in a little sun puddle, enjoying the morning.
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+	
+
+
+do emit("showCoffee")
+if sanity == 100:
+	Barista: Hey, Scott! Have a good day.
+
+	He smiles back at her, and waves as he walks away.
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+	
+do emit("toTrainAM")
+=> END!
+
+
+~ day_5_train_am
+if sanity == 100:
+	 He stares at his phone, scrolling through the news and social media. He drinks his coffee and finishes it as he’s getting off the train.
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+
+do emit("toOffice")
+=> END!
+
+~ day_5_office
+if sanity == 100:
+	test
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+do emit("toTrainPM")
+=> END!
+
+
+~ day_5_train_pm
+
+if sanity == 100:
+	He has to stand due to rush hour traffic on the train, but he faces the direction the train is going and gets a good look out the window. 
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+do emit("toHousePM")
+=> END!
+
+~ day_5_house_pm
+
+if sanity == 100:
+	He cooks himself dinner from the premade meals package he gets delivered. He pretends he’s ordering for four people, to get the discount, but it means he eats the same meals over and over. 
+	Luckily, these are completely precooked, so he doesn’t have to do anything except fend off Gambit from eating the bits of chicken he doesn’t get to quickly.
+
+	He flips through Youtube videos on chess and history that are catered to him algorithmically. 
+
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+	
+do emit("showCall")
+=> END!
+
+~ deny_call_mom
+if sanity == 100:
+	[i](Pick up the phone.)[/i]
+	[i](Come on, Scott, you've already done everything perfectly this week.)[/i]
+	[i][shake rate=20 level=10](Why would you mess it up now?)[/shake][/i]
+	=> pick_up_call_mom
+else:
+	if missedCalls == 3:
+		[i](Why would I pick up now?)[/i]
+	else:
+		[i](I'll call her back later.)[/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while.
+=> post_phone_call_5
+
+~ pick_up_call_mom
+Scott: Hi, mom.
+=> phone_call_5 
+
+~ phone_call_5
+if sanity == 100:
+	Mom: Hi, Scott. Just wanted to check in.
+	Scott: Sure, I’m doing okay.
+	Mom: Great! Did you see that Martin Remowitz is running for president?
+	- Scott: Really?
+	- Scott: That's wild!
+	Mom: I know! With the scandals he's seen as a liberal actor, I'd never think he'd go that far.
+	- Scott: Uh huh...
+	- Scott: Yep.
+	Mom: How's the weather there?
+	- Scott: What?
+		Mom: What do you mean what?
+		- Scott: You can hear me?
+			[i](She laughs at me. She's laughing again...][/i]
+			[i][shake rate=20 level=10](it hurts)[/shake][/i]
+			Mom: Of course I can hear you!
+		- Scott: You don't usually ask me anything...
+			[i](She sighs, exasperatedly at me.)[/i]
+			[i][shake rate=20 level=10](i hate it)[/shake][/i]
+			Mom: Oh my god. Don't be that way.
+		Mom: I call you every day! 
+		Mom: I obviously care about you.
+		Mom: Anyway, answer my question.
+	- Scott: It's fine.
+		Mom: That's great!
+	Mom: It's been raining on and off here for a while.
+	Scott: I'm not sure why, but it's been so clear here.
+	Mom: Oh, I know why!
+	Scott: You do?
+	Mom: Yeah.
+	Mom: You're in the eye of the hurricane.
+	Mom: Well, I have to go. Your dad wants me to make him dinner.
+	Mom: I love you. Bye!
+if sanity >=25:
+	Mom: Scott, are you okay?
+	- Scott: No.
+	- Scott: Yeah, why?
+	Mom: You haven't been picking up the phone when I call you...
+	- Scott: Yes, I have.
+	- Scott: I'm sorry.
+	Mom: It makes me really worry about you. 
+	Mom: You live so far from me. And I miss you so much.
+	- Scott: Mom, do you even know me? [if sanity <= 41]
+	- Scott: Mom, you haven't seen me in 10 years. [if sanity <= 51]
+	- Scott: Mom, I miss you too. [if sanity <= 71]
+	- Scott: Yeah, I know.
+	Mom: I just... want to make sure you're okay.
+	Mom: Anyway, do you remember Joanie? She was in your grade in high school. Her mom lives right by us.
+	- Scott: Not at all.
+	- Scott: Yep.
+	Mom: It turns out she's friends with this guy who is going to jail because he was selling drugs.
+	Mom: Did you hear about that?
+	- Scott: No.
+	- Scott: Yes.
+elseMom: It was on the news today! 
+	Mom: ...
+	Scott: Hello, mom? Are you there?
+	[i](There's no one there?)[/i]
+	Scott looks down at his phone.
+	Scott: Whatever.
+=> post_phone_call_5
+
+
+~ post_phone_call_5
+
+
+~ day_5_bed
+if sanity == 100:
+	He stares out at the clear sky.
+if sanity >=55:
+	test
+if sanity >=25:
+	test
+else:
+	test
+# => day_x+1_house_am
+
+#=> snippets/day_2_train_am
+
+
+# ENDING

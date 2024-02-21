@@ -1,9 +1,9 @@
 [gd_scene load_steps=24 format=3 uid="uid://co2ktstqpgolr"]
 
 [ext_resource type="Script" path="res://assets/subway.gd" id="1_cfmxi"]
-[ext_resource type="Texture2D" uid="uid://miof3h4f1dch" path="res://images/subwaySkyBackground.png" id="1_xu01s"]
+[ext_resource type="Texture2D" uid="uid://dri0esr35otpi" path="res://images/subwaySkyBackground.png" id="1_xu01s"]
 [ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="2_ej5hr"]
-[ext_resource type="Texture2D" uid="uid://ck2ax8hwnkyda" path="res://images/subwayBackground.png" id="3_hwwqo"]
+[ext_resource type="Texture2D" uid="uid://bxm77wbj53yl1" path="res://images/subwayBackground.png" id="3_hwwqo"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="4_5bv6r"]
 [ext_resource type="PackedScene" uid="uid://jui036ps8dan" path="res://assets/Environment/subway_wall.tscn" id="5_vn4p8"]
 [ext_resource type="PackedScene" uid="uid://7pxjhvjgqfhm" path="res://assets/Environment/subway_ceiling.tscn" id="6_p04xs"]
@@ -90,8 +90,6 @@ material = ExtResource("7_xm20a")
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_cfmxi")
 fogMachineCap = 0.363
-player = Object(CharacterBody3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(-1.53497, 0, -0.00112521, 0, 1.53497, 0, 0.00112521, 0, -1.53497, 10.8572, 2.99065, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":1,"collision_mask":1,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"axis_lock_linear_x":false,"axis_lock_linear_y":false,"axis_lock_linear_z":false,"axis_lock_angular_x":false,"axis_lock_angular_y":false,"axis_lock_angular_z":false,"motion_mode":0,"up_direction":Vector3(0, 1, 0),"slide_on_ceiling":true,"velocity":Vector3(0, 0, 0),"max_slides":6,"wall_min_slide_angle":0.261799,"floor_stop_on_slope":true,"floor_constant_speed":false,"floor_block_on_wall":true,"floor_max_angle":0.785398,"floor_snap_length":0.1,"platform_on_leave":0,"platform_floor_layers":4294967295,"platform_wall_layers":0,"safe_margin":0.001,"script":Resource("res://assets/player/player.gd"),"canMove":true,"lockMouseOnStart":true,"xClamp":90,"clampY":false,"yClamp":45,"gravityEnabled":false)
-
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.899557, -0.26409, 0.347926, 0, 0.79653, 0.604599, -0.436802, -0.543872, 0.716525, 21.828, 2.50491, -50.4794)

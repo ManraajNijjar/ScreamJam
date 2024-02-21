@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cymwex4vcewi2" path="res://materials/ceiling/OfficeCeiling006_1K-PNG_Roughness.png" id="10_n24tx"]
 [ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="11_qn8ev"]
 [ext_resource type="PackedScene" uid="uid://c8usgfdaw066j" path="res://assets/Environment/bayWindow.tscn" id="12_2b250"]
-[ext_resource type="Texture2D" uid="uid://h6p5p5xm78f5" path="res://images/officeBackground.png" id="13_xgv7n"]
+[ext_resource type="Texture2D" uid="uid://7b3i44lx645e" path="res://images/officeBackground.png" id="13_xgv7n"]
 [ext_resource type="PackedScene" uid="uid://dff6n644p7stw" path="res://assets/Environment/office_desk.tscn" id="14_diovq"]
 [ext_resource type="PackedScene" uid="uid://bg4v0co12jq05" path="res://3DModels/officeMonitor/officeMonitor.glb" id="16_r2em1"]
 [ext_resource type="PackedScene" uid="uid://mqgtrlmmshd2" path="res://3DModels/officeChair/officeChair.glb" id="17_pd71b"]
