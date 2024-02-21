@@ -2,24 +2,32 @@ class_name AK
 
 class EVENTS:
 
-	const TEST = 3157003241
-	const SUBWAYENVLOOP = 1699039505
 	const PHONE_RINGTONE = 4265022948
-	const CAT_MEOW = 1968116890
 	const PHONE_ALERT = 423885916
+	const SUBWAYENVLOOP = 1699039505
 	const MOM_DIALOG = 546191921
-	const TV_STATIC = 1436086644
 	const DARK_MUSIC = 1142103033
+	const TEST = 3157003241
+	const CAT_MEOW = 1968116890
+	const TV_STATIC = 1436086644
+	const MUSIC = 3991942870
+	const NEUTRAL_MUSIC = 3875690554
+	const DARKER_MUSIC = 152155504
+	const DARKEST_MUSIC = 2983829731
 
 	const _dict = {
-		"TEST": TEST,
-		"SubwayEnvLoop": SUBWAYENVLOOP,
 		"Phone_Ringtone": PHONE_RINGTONE,
-		"Cat_Meow": CAT_MEOW,
 		"Phone_Alert": PHONE_ALERT,
+		"SubwayEnvLoop": SUBWAYENVLOOP,
 		"Mom_Dialog": MOM_DIALOG,
+		"Dark_Music": DARK_MUSIC,
+		"TEST": TEST,
+		"Cat_Meow": CAT_MEOW,
 		"TV_Static": TV_STATIC,
-		"Dark_Music": DARK_MUSIC
+		"Music": MUSIC,
+		"Neutral_Music": NEUTRAL_MUSIC,
+		"Darker_Music": DARKER_MUSIC,
+		"Darkest_Music": DARKEST_MUSIC
 	}
 
 class STATES:
@@ -28,11 +36,34 @@ class STATES:
 
 class SWITCHES:
 
-	const _dict = {}
+	class SANITY_SWITCH:
+		const GROUP = 361494514
+
+		class SWITCH:
+			const DARKER = 2377330132
+			const DARKEST = 3859883579
+			const DARK = 1925914845
+			const NEUTRAL = 670611050
+
+	const _dict = {
+		"sanity_switch": {
+			"GROUP": 361494514,
+			"SWITCH": {
+				"Darker": 2377330132,
+				"Darkest": 3859883579,
+				"Dark": 1925914845,
+				"Neutral": 670611050
+			}
+		}
+	}
 
 class GAME_PARAMETERS:
 
-	const _dict = {}
+	const SANITY = 2938993575
+
+	const _dict = {
+		"sanity": SANITY
+	}
 
 class TRIGGERS:
 

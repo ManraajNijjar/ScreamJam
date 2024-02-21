@@ -1,3 +1,12 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	361494514	sanity_switch			\Default Work Unit\sanity_switch	
+
+Switch	ID	Name	Switch Group			Notes
+	670611050	Neutral	sanity_switch			
+	1925914845	Dark	sanity_switch			
+	2377330132	Darker	sanity_switch			
+	3859883579	Darkest	sanity_switch			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	

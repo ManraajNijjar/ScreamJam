@@ -159,9 +159,21 @@ event = {
 trigger_on = 1
 is_environment_aware = true
 
-[node name="Dark_Music_Test" type="AkEvent2D" parent="."]
+[node name="Music" type="AkEvent2D" parent="."]
 event = {
-"id": 1142103033,
-"name": "Dark_Music"
+"id": 3991942870,
+"name": "Music"
+}
+trigger_on = 1
+
+[node name="AkSwitch" type="AkSwitch" parent="."]
+ak_event = NodePath("../Music")
+switch_group = {
+"id": 361494514,
+"name": "sanity_switch"
+}
+switch_value = {
+"id": 670611050,
+"name": "Neutral"
 }
 trigger_on = 1

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2F5E48C4-1853-4520-BCF5-0F57E5F06363}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{2F5E48C4-1853-4520-BCF5-0F57E5F06363}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2F5E48C4-1853-4520-BCF5-0F57E5F06363}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

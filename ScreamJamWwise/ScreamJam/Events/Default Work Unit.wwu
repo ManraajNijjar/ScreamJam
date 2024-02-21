@@ -81,7 +81,51 @@
 								<Action Name="" ID="{25442244-E38E-4007-A24F-F762A1252C92}" ShortID="746945027">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Dark Music Seg" ID="{57329BC0-FB2F-4F80-A766-3D470F7E1C44}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+											<ObjectRef Name="Dark" ID="{BB674E28-A47F-4086-A2D1-D98FC88B431F}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Neutral_Music" ID="{93176A15-1EFF-48C7-820C-9EDB8A22252F}">
+							<ChildrenList>
+								<Action Name="" ID="{91FF2941-D522-4853-BF8D-E548BC5D9649}" ShortID="741978233">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Neutral" ID="{61654DBD-FBD4-4C61-BD6E-21E419FDE85A}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Darker_Music" ID="{A6AAB194-F908-4445-9823-8EA7D90E5D27}">
+							<ChildrenList>
+								<Action Name="" ID="{F5A850FC-2AD7-40C1-89F9-9AB549F4D099}" ShortID="691232841">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Darker" ID="{A3BC4146-FEF7-4D2F-8AD1-D518040FC035}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Darkest_Music" ID="{96BCEB3C-6CFA-4E2D-8407-C10764E6562A}">
+							<ChildrenList>
+								<Action Name="" ID="{BF0607F9-7BE3-412A-BD4B-63262ED07DEE}" ShortID="884215909">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Darkest" ID="{58B63303-BA32-48A2-802E-E1FCE6488C8C}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music" ID="{89A5D241-CCDC-4C0D-A484-7E5E6CE5D5D4}">
+							<ChildrenList>
+								<Action Name="" ID="{44207F77-ACA1-4862-8EBF-E314BEC12AD7}" ShortID="240968913">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{F007A753-2AEA-4FF0-ADA8-8A7D01EAA4F1}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
