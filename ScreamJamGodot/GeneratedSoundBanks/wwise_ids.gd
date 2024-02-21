@@ -2,32 +2,42 @@ class_name AK
 
 class EVENTS:
 
-	const PHONE_RINGTONE = 4265022948
-	const PHONE_ALERT = 423885916
-	const SUBWAYENVLOOP = 1699039505
-	const MOM_DIALOG = 546191921
 	const DARK_MUSIC = 1142103033
-	const TEST = 3157003241
-	const CAT_MEOW = 1968116890
-	const TV_STATIC = 1436086644
 	const MUSIC = 3991942870
-	const NEUTRAL_MUSIC = 3875690554
-	const DARKER_MUSIC = 152155504
+	const TEST = 3157003241
+	const MOM_DIALOG = 546191921
+	const TV_STATIC = 1436086644
 	const DARKEST_MUSIC = 2983829731
+	const SUBWAYENVLOOP = 1699039505
+	const DARKER_MUSIC = 152155504
+	const PHONE_ALERT = 423885916
+	const NEUTRAL_MUSIC = 3875690554
+	const PHONE_RINGTONE = 4265022948
+	const CAT_MEOW = 1968116890
+	const HOMEENVLOOP = 1929201915
+	const COFFEESHOPENVLOOP = 1123806448
+	const OFFICEENVLOOP = 276187956
+	const DIALOGLOOP = 644163603
+	const ALARMCLOCKLOOP = 487701040
 
 	const _dict = {
-		"Phone_Ringtone": PHONE_RINGTONE,
-		"Phone_Alert": PHONE_ALERT,
-		"SubwayEnvLoop": SUBWAYENVLOOP,
-		"Mom_Dialog": MOM_DIALOG,
 		"Dark_Music": DARK_MUSIC,
-		"TEST": TEST,
-		"Cat_Meow": CAT_MEOW,
-		"TV_Static": TV_STATIC,
 		"Music": MUSIC,
-		"Neutral_Music": NEUTRAL_MUSIC,
+		"TEST": TEST,
+		"Mom_Dialog": MOM_DIALOG,
+		"TV_Static": TV_STATIC,
+		"Darkest_Music": DARKEST_MUSIC,
+		"SubwayEnvLoop": SUBWAYENVLOOP,
 		"Darker_Music": DARKER_MUSIC,
-		"Darkest_Music": DARKEST_MUSIC
+		"Phone_Alert": PHONE_ALERT,
+		"Neutral_Music": NEUTRAL_MUSIC,
+		"Phone_Ringtone": PHONE_RINGTONE,
+		"Cat_Meow": CAT_MEOW,
+		"HomeEnvLoop": HOMEENVLOOP,
+		"CoffeeShopEnvLoop": COFFEESHOPENVLOOP,
+		"OfficeEnvLoop": OFFICEENVLOOP,
+		"DialogLoop": DIALOGLOOP,
+		"AlarmClockLoop": ALARMCLOCKLOOP
 	}
 
 class STATES:
@@ -40,8 +50,8 @@ class SWITCHES:
 		const GROUP = 361494514
 
 		class SWITCH:
-			const DARKER = 2377330132
 			const DARKEST = 3859883579
+			const DARKER = 2377330132
 			const DARK = 1925914845
 			const NEUTRAL = 670611050
 
@@ -49,8 +59,8 @@ class SWITCHES:
 		"sanity_switch": {
 			"GROUP": 361494514,
 			"SWITCH": {
-				"Darker": 2377330132,
 				"Darkest": 3859883579,
+				"Darker": 2377330132,
 				"Dark": 1925914845,
 				"Neutral": 670611050
 			}
@@ -93,12 +103,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const SYSTEM = 3859886410
 	const NO_OUTPUT = 2317455096
+	const SYSTEM = 3859886410
 
 	const _dict = {
-		"System": SYSTEM,
-		"No_Output": NO_OUTPUT
+		"No_Output": NO_OUTPUT,
+		"System": SYSTEM
 	}
 
 class EXTERNAL_SOURCES:

@@ -9,13 +9,17 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{EBF32EEC-CD56-5EC0-7C64-1D5A31611D7C}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{C1784630-1C6A-F1A2-5A1E-B10D186A6DB6}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
 				<File Id="15237878" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>03_Dark_Music_bpm75_D-RimTaps.wav</ShortName>
 					<CachePath>SFX/03_Dark_Music_bpm75_D-RimTaps_56CEF360.wem</CachePath>
+				</File>
+				<File Id="56846897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HomeEnvLoop.wav</ShortName>
+					<CachePath>SFX/HomeEnvLoop_88E4D6A1.wem</CachePath>
 				</File>
 				<File Id="65579422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>02_Dark_Music_bpm75_D-Kick.wav</ShortName>
@@ -61,6 +65,10 @@
 					<ShortName>13_Dark_Music_bpm75_D-GTSoloA.wav</ShortName>
 					<CachePath>SFX/13_Dark_Music_bpm75_D-GTSoloA_56CEF360.wem</CachePath>
 				</File>
+				<File Id="345701569" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alarm Clock.wav</ShortName>
+					<CachePath>SFX/Alarm Clock_56CEF360.wem</CachePath>
+				</File>
 				<File Id="453812450" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>10_Dark_Music_bpm75_D-BSDrone.wav</ShortName>
 					<CachePath>SFX/10_Dark_Music_bpm75_D-BSDrone_56CEF360.wem</CachePath>
@@ -92,6 +100,10 @@
 				<File Id="540156152" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>01_Darker_Music_bpm75_D-Kick.wav</ShortName>
 					<CachePath>SFX/01_Darker_Music_bpm75_D-Kick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="540861004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>OfficeEnvLoop.wav</ShortName>
+					<CachePath>SFX/OfficeEnvLoop_1E73176F.wem</CachePath>
 				</File>
 				<File Id="542651587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>00_Neutral_Music_bpm75_D-GuitarSoloB.wav</ShortName>
@@ -129,6 +141,10 @@
 					<ShortName>Phone Alarm w Vibrate Final .wav</ShortName>
 					<CachePath>SFX/Phone Alarm w Vibrate Final _8E324C96.wem</CachePath>
 				</File>
+				<File Id="739877464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dialog SFX.wav</ShortName>
+					<CachePath>SFX/Dialog SFX_56CEF360.wem</CachePath>
+				</File>
 				<File Id="759859640" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>01_Darkest_Music_bpm75_D-Kick.wav</ShortName>
 					<CachePath>SFX/01_Darkest_Music_bpm75_D-Kick_56CEF360.wem</CachePath>
@@ -144,6 +160,10 @@
 				<File Id="802978156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>08_Neutral_Music_bpm75_D-GuitarChordL.wav</ShortName>
 					<CachePath>SFX/08_Neutral_Music_bpm75_D-GuitarChordL_56CEF360.wem</CachePath>
+				</File>
+				<File Id="820840143" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CoffeeShopEnvLoop.wav</ShortName>
+					<CachePath>SFX/CoffeeShopEnvLoop_2F9BBA53.wem</CachePath>
 				</File>
 				<File Id="842782129" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>07_Darkest_Music_bpm75_D-BSPad1.wav</ShortName>
@@ -211,7 +231,27 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="487701040" Name="AlarmClockLoop">
+					<MediaRefs>
+						<MediaRef Id="345701569"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1968116890" Name="Cat_Meow"/>
+				<Event Id="1123806448" Name="CoffeeShopEnvLoop">
+					<MediaRefs>
+						<MediaRef Id="820840143"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="644163603" Name="DialogLoop">
+					<MediaRefs>
+						<MediaRef Id="739877464"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1929201915" Name="HomeEnvLoop">
+					<MediaRefs>
+						<MediaRef Id="56846897"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="546191921" Name="Mom_Dialog">
 					<MediaRefs>
 						<MediaRef Id="936359435"/>
@@ -284,6 +324,11 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="276187956" Name="OfficeEnvLoop">
+					<MediaRefs>
+						<MediaRef Id="540861004"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="423885916" Name="Phone_Alert">
 					<MediaRefs>
@@ -477,5 +522,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A18514B8-703B-0C8C-CB7D-B23AE5D1B579}</FileHash>
+	<FileHash>{4782861F-0452-32F6-F874-B47EB13BA873}</FileHash>
 </SoundBanksInfo>
