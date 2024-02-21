@@ -87,9 +87,8 @@ material = SubResource("ShaderMaterial_rolh0")
 [sub_resource type="BoxMesh" id="BoxMesh_5banw"]
 material = ExtResource("7_xm20a")
 
-[node name="Node3D" type="Node3D" node_paths=PackedStringArray("player")]
+[node name="Node3D" type="Node3D"]
 script = ExtResource("1_cfmxi")
-player = NodePath("")
 fogMachineCap = 0.363
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

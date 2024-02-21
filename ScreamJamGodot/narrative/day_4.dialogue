@@ -148,18 +148,25 @@ do emit("showCall")
 if missed_calls >= 0:
 	do sanity -= 10
 	do missedCalls += 1
+	Something in the back of his neck twinges.
 	[i](I'll call her back later.)[/i]
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 if missed_calls == 1:
 	do sanity -= 15
 	do missedCalls += 1
-	[i](I'll call her back later.)[/i]
+	The sides of his face feel flush and hot, like something is tearing inside him.
+	[i](I'll get back to her, eventually.)[/i]
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while.
 if missed_calls == 2:
 	do sanity -= 20
 	do missedCalls += 1
-	[i](I'll call her back later.)[/i]
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! I'm starting to worry but I'm sure you're okay. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+	As he hangs up on his mother for the third time this week, in a row, he thinks about the time the therapist asked him...
+	Therapist: When you feel anger, where is it in your body?
+	He didn't understand what she meant at the time, but he knows now. 
+	In the back of his neck, his cheeks, the sides of his throat. They feel sore.
+	They burn, and he takes a deep breath through it.
+	[i][shake rate=20 level=10](When's the last time she actually showed interest in me?)[/shake][/i]
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! I'm starting to worry but I'm sure you're okay. So... call me back! Love you, bye!") but he's too mad to watch any more television.. 
 => post_phone_call_4
 
 ~ pick_up_call_mom
@@ -199,11 +206,13 @@ Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 
 ~ day_4_bed
 if sanity == 100:
-	things should be brighter
-elif sanity >=80:
-	things should be middle
+	The clear sky and crowded train 
+if sanity >=80:
+	test
+if sanity >=55:
+	test
 else:
-	things should seem bad
+	test
 
 # => day_x+1_house_am
 

@@ -126,12 +126,14 @@ do emit("showCall")
 if missed_calls >= 0:
 	do sanity -= 10
 	do missedCalls += 1
+	Something in the back of his neck twinges.
 	[i](I'll call her back later.)[/i]
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 if missed_calls == 1:
 	do sanity -= 15
 	do missedCalls += 1
-	[i](I'll call her back later.)[/i]
+	The sides of his face feel flush and hot, like something is tearing inside him.
+	[i](I'll get back to her, eventually.)[/i]
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 => post_phone_call_3
 
