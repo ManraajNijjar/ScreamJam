@@ -47,32 +47,36 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
-		var portrait_path: String = "res://images/Character portraits/%s.png" % dialogue_line.character.to_lower()
+		var portrait_path: String = "res://narrative/%s.png" % dialogue_line.character.to_lower()
+		
 		
 		if dialogue_line.character == "Scott":
-			if PlayerVariables.sanity == 100:
+			if PlayerVariables.sanity >= 80:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-neutral.png")
-			elif PlayerVariables.sanity >= 80:
-				portrait.texture = load("res://images/Character portraits/ScottAvatar-dark.PNG")
 			elif PlayerVariables.sanity >= 55:
+				portrait.texture = load("res://images/Character portraits/ScottAvatar-dark.PNG")
+			elif PlayerVariables.sanity >= 25:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-darker.png")
 			else:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-darkest.PNG")
 		else:
 			portrait.texture = null
 			# ^ comment out this line/switch to "pass" if we want him to always be visible
-			
-		if dialogue_line.character == "Mom":
-			if PlayerVariables.sanity == 100:
-				mom_portrait.texture = load("res://images/Apartment scene assets/familyphoto.png")
-			elif PlayerVariables.sanity >= 80:
-				mom_portrait.texture  = load("res://images/Apartment scene assets/familyphoto-dark.png")
-			elif PlayerVariables.sanity >= 55:
-				mom_portrait.texture = load("res://images/Apartment scene assets/familyphoto-darker.png")
-			else:
-				mom_portrait.texture = load("res://images/Apartment scene assets/familyphoto-darkest.png")
+		if FileAccess.file_exists(portrait_path):
+			mom_portrait.texture = load(portrait_path)
 		else:
 			mom_portrait.texture = null
+		#if dialogue_line.character == "Mom":
+			#if PlayerVariables.sanity == 100:
+				#mom_portrait.texture = load("res://images/Apartment scene assets/familyphoto.png")
+			#elif PlayerVariables.sanity >= 80:
+				#mom_portrait.texture  = load("res://images/Apartment scene assets/familyphoto-dark.png")
+			#elif PlayerVariables.sanity >= 55:
+				#mom_portrait.texture = load("res://images/Apartment scene assets/familyphoto-darker.png")
+			#else:
+				#mom_portrait.texture = load("res://images/Apartment scene assets/familyphoto-darkest.png")
+		#else:
+			#mom_portrait.texture = null
 
 
 		dialogue_label.hide()

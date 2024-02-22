@@ -2,11 +2,18 @@
 
 ~ day_3_house_am
 if sanity == 100:
-	Scott wakes up and sees the blue sky, stocked with clouds. The weather seems to be getting nicer each day.
+	Scott wakes up and sees the blue sky, stocked with clouds. 
+	The weather seems to be getting nicer each day.
+	Scott: Hey buddy!
+	He pets Gambit.
+	Scott: Having a nice morning?
+	He pays a little more attention to his hair today.
+	Scott: I think it's time for a haircut.
+	There’s almost no use. It doesn’t look great, but he’s done the best he can with it.
 else:
 	Another morning of grey clouds. Scott sighs.
-	
-He gets up and takes a shower, and scrubs his skin. 
+	Scott: It's cool. I got this.
+	He gets up and takes a shower, and scrubs his skin. 
 
 Gambit needs to be fed, of course. Scott gets dressed and heads to work.
 
@@ -38,23 +45,27 @@ do emit("toTrainAM")
 if sanity == 100:
 	The train is a little more crowded than it has been, but it's probably due to the weather clearing up.
 else:
-	The mostly empty train is a welcome sight. He takes a seat.
+	The mostly empty train is a welcome sight. He takes a seat. 
+A man comes on and starts asking him for money.
+Stranger: Do you have any money?
+Scott: No, sorry. I don't carry cash.
+The stranger walks away, calmly, not a threat at all.
 
 do emit("toOffice")
 => END!
 
 ~ day_3_office
 if sanity == 100:
-	The office seems busier than normal, and everyone is in good spirits. 
-
+	The office seems busier than normal, and everyone is in good spirits.
+	The other people on his team are having meetings about training material for new employees.
+	Scott: I'm so glad I don't have to do those presentations.
+	Scott: I love talking in front of a crowd, but not about insurance benefits.
+	Alexis: Next time, I'm going to make you help me. 
+	Scott: Nope, not in my job description!
 else:
 	Scott notices a few of his colleagues are out, having said they'd work from home today.
-
-The other people on his team are having meetings about training material for new employees..
-[i](I'm so glad I don't have to do those presentations. I love talking in front of a crowd, but not about insurance benefits.)[/i]
-The amount of work he has to do is light, and he finds himself reading the news instead.
-
-!
+	The amount of work he has to do is light, and he finds himself reading the news instead.
+[wait=1] ! [wait=1]
 Scott feels a hand clasp his shoulder. He looks up and sees his boss, Dylan, smiling down at him.
 Dylan: Hey, man. What's up?
 - Scott: Not much. Just working on next pay period.
@@ -111,13 +122,12 @@ do emit("toHousePM")
 
 ~ day_3_house_pm
 
-if sanity == 100:
-	things should be brighter
-elif sanity >=80:
-	things should be middle
-else:
-	things should seem bad
-	
+Scott: Chicken teriyaki... again. But I chose this life.
+Gambit meows again.
+Scott: I assume you're okay with it.
+if sanity <=80:
+	Scott still feels strangely sweaty, but tries to brush it off.
+
 
 do emit("showCall")
 => END!
@@ -127,13 +137,13 @@ if missed_calls >= 0:
 	do sanity -= 10
 	do missedCalls += 1
 	Something in the back of his neck twinges.
-	[i](I'll call her back later.)[/i]
+	Scott: I'll call her back later.
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
-if missed_calls == 1:
-	do sanity -= 15
+elif missed_calls == 1:
+	do sanity -= 10
 	do missedCalls += 1
 	The sides of his face feel flush and hot, like something is tearing inside him.
-	[i](I'll get back to her, eventually.)[/i]
+	Scott: I'll get back to her, eventually.
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 => post_phone_call_3
 
@@ -169,19 +179,25 @@ Mom: I love you. Bye!
 
 
 ~ post_phone_call_3
-# lowest possible sanity here is 55
+# lowest possible sanity here is 60
 Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
+Scott: Okay, okay.
+Scott's more tired than he expected, but he finishes his nightly routine. 
 
 
 ~ day_3_bed
-if sanity == 100:
-	test 
-if sanity >=80:
-	test
-if sanity >=55:
-	test
-else:
-	test
+Scott curls up in bed, and scrolls on his phone for a while.
+Gambit yowls and tosses around a toy for a few minutes before lying on top of his feet.
+if sanity <=80:
+	He tries to recall the events of the day. 
+	Grey clouds. 
+	The train.
+	Work.
+	The train.
+	Dinner.
+	Television.
+	The phone.
+Soon, he's asleep.
 
 # => day_x+1_house_am
 

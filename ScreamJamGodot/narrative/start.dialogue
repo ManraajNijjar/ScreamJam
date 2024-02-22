@@ -9,40 +9,55 @@ Gambit begins eating immediately, and Scott goes to take a shower.
 He keeps the water just warm enough so he doesn’t cause steam on the mirror. Afterwards, he washes his face, meticulously, with his favorite face scrub. 
 He puts on an expensive lotion recommended to him by the lady at the Korean skin care place down the street from his work. 
 Scott gets dressed in his favorite work outfit, a button up with khakis, and packs up his laptop to head to work. It feels weird to carry a backpack around, like a child, but he’s found it to be the best option.
+Scott: It's Monday. I got this.
 do emit("showCoffee")
 On the way to work, he grabs a coffee from the small local shop near the train station. There’s no one in the cafe when he gets there. The barista knows him, and she greets him with an open smile. 
 He always gets his coffee black with one cream. It’s quick and easy to make, and she’s got it in her hand almost immediately.
 Barista: Hey, Scott! Have a good day.
-
+Scott: Thanks! See you soon.
 He smiles back at her, and waves as he walks away.
 do emit("toTrainAM")
 => END!
 
 ~ day_1_train_am
 
-Scott sits in a forward facing seat, and looks out the window. The cloudy morning hasn’t let up, and there’s almost a fog permeating his view. 
+Scott sits in a forward facing seat, and looks out the window. 
+The cloudy morning hasn’t let up, and there’s almost a fog permeating his view. 
 He stares at his phone, scrolling through the news and social media. He drinks his coffee and finishes it as he’s getting off the train.
 do emit("toOffice")
 => END!
 
 ~ day_1_office
-His desk has been in the same place for a while now, ever since he joined the company. Even though there’s been a few reorganizations, you can’t really reorg the Payroll department and move it under Engineering or Marketing or anything. 
+His desk has been in the same place for a while now, ever since he joined the company. 
+Even though there’s been a few reorganizations, you can’t really reorg the Payroll department and move it under Engineering or Marketing or anything. 
+Alexis is the only other one in today, at least.
+Alexis: What's up, Scott?
+Scott: Not much. Just... doing payroll stuff.
+Alexis: Like you do.
+Scott: Of course. 
 The best part of his work is that every day, lunch is catered. They pick a few restaurants and subsidize the bulk of the meal. 
 He orders the Black and Bleu salad from Green Seeds, his favorite local farm to table place. 
 When it shows up, he eats at his desk while going over the last pay period’s numbers so he can make sure there’s no unapproved time cards. 
-There’s always one manager he has to chase down, and after a few messages on the work approved chat app, he’s got his work done for today.
+There’s always one manager he has to chase down and luckily this week it's John, who sits close enough to him that he can just yell across the office.
+Scott: Hey, John?
+John: Yeah?
+Scott: Time cards.
+John: Oh shoot! Sorry.
+Scott: No worries! Next time, you owe me five bucks though.
 do emit("toTrainPM")
 => END!
 
 ~ day_1_train_pm
 He has to stand due to rush hour traffic on the train, but he faces the direction the train is going and gets a good look out the window. 
-The sky looks a little more clear, and he lets the bit of sun reflect off his face. He hopes his glasses aren’t reflecting into anyone’s eyes, like a little beam of blinding light.
+The sky looks a little more clear, and he lets the bit of sun reflect off his face. 
+He hopes his glasses aren’t reflecting into anyone’s eyes, like a little beam of blinding light.
 do emit("toHousePM")
 => END!
 
 ~ day_1_house_pm
 
 He cooks himself dinner from the premade meals package he gets delivered. He pretends he’s ordering for four people, to get the discount, but it means he eats the same meals over and over. 
+Scott: Chicken teriyaki for four nights this week? Not too bad.
 Luckily, these are completely precooked, so he doesn’t have to do anything except fend off Gambit from eating the bits of chicken he doesn’t get to quickly.
 
 He flips through Youtube videos on chess and history that are catered to him algorithmically. 
@@ -57,6 +72,7 @@ Scott: Hi, mom.
 ~ deny_call_mom
 He gets a gnawing feeling in the pit of his stomach, swirling and dizzy.
 Scott: I really should pick up.
+[wait=1]
 => phone_call_1
 
 ~ phone_call_1
@@ -73,10 +89,7 @@ Mom: I also had someone try to ask for a discount on renewal because he was sick
 - Scott: For real? That's not your fault.
 Mom: Everyone wants luxury even if they can't afford it. I wouldn't sign up if I couldn't pay.
 Mom: I think I'm getting too old for this. But I'll still be working for a while...
-He loves his mom, but sometimes he regrets picking up the phone. 
-She’s not very self aware and she tends to hold him hostage on the phone every night. 
-He endures it because he knows she’s lonely. 
-But he's lonely too.
+[wait=1]
 Mom: Oh, wait. Do I hear Gambit?
 Scott: Yeah, mom. It's his dinner time.
 Mom: Okay, kiddo. I'll let you go. I'll talk to you tomorrow.
@@ -85,10 +98,14 @@ Mom: I love you. Bye!
 
 ~ post_phone_call_1
 Scott sighs.
+Scott: She's just doing her best. She's just doing her best.
+He loves his mom, but sometimes he regrets picking up the phone. 
+She’s not very self aware and she tends to hold him hostage on the phone every night. 
+He endures it because he knows she’s lonely. 
+But he's lonely too.
 He feeds Gambit who, by now, has been yowling for food for half an hour.
 Gambit settles down to eat, and Scott gets ready for bed. 
 He washes his face again, and reapplies the lotion even though the SPF isn’t going to help him right now.
-
 ~ day_1_bed
 
 Scott gets back on his phone, and stares at the screen in the dark until his eyes start to droop. 

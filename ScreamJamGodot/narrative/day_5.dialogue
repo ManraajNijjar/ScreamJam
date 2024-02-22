@@ -5,67 +5,82 @@ if sanity == 100:
 	Scott has never seen weather like this in his years in San Francisco. 
 	He’s so used to the fog that it almost chills him to the bone to see the sun, so many days in a row. He enjoys it, of course, as does Gambit. 
 	Gambit sits in a little sun puddle, enjoying the morning.
-if sanity >=55:
-	test
-if sanity >=25:
-	test
+	Scott does his normal morning routine. He's almost out of shower gel, so he writes that on his grocery list.
+elif sanity >=25:
+	He almost doesn't want to go to work today. Everything this week has felt difficult.
+	He showers, but upon closer inspection, he sees a break out starting on his chin.
+	Scott decides not to shave. 
 else:
-	test
+	Scott: There's somewhere to go.
+	Scott: Something I was supposed to do.
+	Something in the house is missing, but I can't remember what.
 	
 
 
 do emit("showCoffee")
-if sanity == 100:
-	Barista: Hey, Scott! Have a good day.
 
+if sanity == 100:
+	As he steps into the crowded cafe, the barista hands him a coffee.
+	Scott: One cream?
+	Barista: Of course, Scott! Have a good day.
 	He smiles back at her, and waves as he walks away.
-if sanity >=55:
-	test
-if sanity >=25:
-	test
+elif sanity >=25:
+	As he steps into the crowded cafe, the barista hands him a coffee.
+	Scott: Thanks!
+	He smiles back at her, and waves as he walks away.
 else:
-	test
-	
+	He's trying to remember what kind of coffee he drinks, when he steps into the cafe.
+	Barista: Hi! What can I get you?
+	Scott: What would you suggest?
+	Barista: How about our house blend?
+	Scott: Do you think I'd like that?
+	Barista: Would you like to try it?
+	- Scott: Okay! Can you put in one cream?
+	Barista: Sure!
+	Barista: Have a great day!
 do emit("toTrainAM")
 => END!
 
 
 ~ day_5_train_am
-if sanity == 100:
-	 He stares at his phone, scrolling through the news and social media. He drinks his coffee and finishes it as he’s getting off the train.
-if sanity >=55:
-	test
-if sanity >=25:
-	test
+if sanity <= 25:
+	Scott: I'm pretty sure this is the way. 
+	The inside of his mouth hurts but he can't stop chewing his inner lips.
+	He sits on the train for what feels like forever.
+	Don't leave. I think you should stay here longer.
 else:
-	test
+	He stares at his phone, scrolling through the news and social media. He drinks his coffee and finishes it as he’s getting off the train.
 
 do emit("toOffice")
 => END!
 
 ~ day_5_office
-if sanity == 100:
-	test
-if sanity >=55:
-	test
-if sanity >=25:
-	test
+if sanity <= 25:
+	Scott: What am I supposed to be doing today?
+	What kind of job did he have?
+	He does it, for a while.
 else:
-	test
+	Dylan, Alexis and Paul start arguing over something silly about their favorite movie. 
+	Scott keeps his head down and works.
+	Dylan: Scott?
+	[wait=1] ! [wait=1]
+	Scott: Yeah?
+	Dylan: Want to go out to the bar with us tonight?
+	Scott: Nah, I gotta get home.
+	Alexis: But it's Friday night!
+	Scott smiles.
+	He finishes ordering his Black and Bleu salad, eats it as normal, and finishes up his work.
+
+	
 do emit("toTrainPM")
 => END!
 
 
 ~ day_5_train_pm
-
-if sanity == 100:
-	He has to stand due to rush hour traffic on the train, but he faces the direction the train is going and gets a good look out the window. 
-if sanity >=55:
-	test
-if sanity >=25:
-	test
+if sanity <= 25:
+	He goes home, by reflex, without thinking about it.
 else:
-	test
+	He has to stand due to rush hour traffic on the train, but he faces the direction the train is going and gets a good look out the window.
 do emit("toHousePM")
 => END!
 
@@ -74,31 +89,33 @@ do emit("toHousePM")
 if sanity == 100:
 	He cooks himself dinner from the premade meals package he gets delivered. He pretends he’s ordering for four people, to get the discount, but it means he eats the same meals over and over. 
 	Luckily, these are completely precooked, so he doesn’t have to do anything except fend off Gambit from eating the bits of chicken he doesn’t get to quickly.
-
 	He flips through Youtube videos on chess and history that are catered to him algorithmically. 
-
-if sanity >=55:
-	test
-if sanity >=25:
+elif sanity >=25:
 	test
 else:
-	test
-	
+	He cooks himself dinner from ??? that he finds in the fridge. 
+	Luckily, these are completely precooked, so he doesn’t have to do anything except fend off [shake rate=20 level=10]????[/shake] from eating the bits of chicken he doesn’t get to quickly.
+	Scott: This seems okay.
 do emit("showCall")
 => END!
 
 ~ deny_call_mom
 if sanity == 100:
-	[i](Pick up the phone.)[/i]
-	[i](Come on, Scott, you've already done everything perfectly this week.)[/i]
-	[i][shake rate=20 level=10](Why would you mess it up now?)[/shake][/i]
+	Scott: Pick up the phone.
+	Scott: Come on, Scott, you've already done everything perfectly this week.
+	Scott: [shake rate=20 level=10](Why would you mess it up now?)[/shake]
 	=> pick_up_call_mom
 else:
 	if missedCalls == 3:
-		[i](Why would I pick up now?)[/i]
+		Scott: [shake rate=20 level=10](Why would I pick up now?)[/shake]
+		Scott: I've never told this story, but I might as well now.
+		Scott: Actually, I don't think I can.
+		Scott: I was thinking about this thing that happened to me when I was in school.
+		Scott: But honestly, now that I'm trying to remember it, I can't.
+		Scott: I could make something up instead. But I don't think that'll benefit anyone.
 	else:
-		[i](I'll call her back later.)[/i]
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while.
+		Scott: It's slipping away. Thankfully.
+	No one leaves a voicemail.
 => post_phone_call_5
 
 ~ pick_up_call_mom
@@ -139,7 +156,7 @@ if sanity == 100:
 	Mom: You're in the eye of the hurricane.
 	Mom: Well, I have to go. Your dad wants me to make him dinner.
 	Mom: I love you. Bye!
-if sanity >=25:
+elif sanity >=25:
 	Mom: Scott, are you okay?
 	- Scott: No.
 	- Scott: Yeah, why?
@@ -160,10 +177,15 @@ if sanity >=25:
 	Mom: Did you hear about that?
 	- Scott: No.
 	- Scott: Yes.
-elseMom: It was on the news today! 
-	Mom: ...
-	Scott: Hello, mom? Are you there?
-	[i](There's no one there?)[/i]
+	Mom: It was on the news today!
+	Mom: Well, anyway, I gotta go.
+	Mom: I miss you so much.
+	Scott: I'm sure you do.
+	Mom: I love you. Bye!
+else:
+	...
+	Scott: Hello? Who is this? Are you there?
+	Scott: [shake rate=20 level=10]There's no one there?[/shake]
 	Scott looks down at his phone.
 	Scott: Whatever.
 => post_phone_call_5
@@ -174,13 +196,21 @@ elseMom: It was on the news today!
 
 ~ day_5_bed
 if sanity == 100:
-	He stares out at the clear sky.
-if sanity >=55:
-	test
-if sanity >=25:
-	test
+	Scott stares out at the clear sky. 
+	The buildings stretch for what feels like miles out the window.
+	He plugs in his phone to charge. 
+	Gambit jumps up and hides in the crook of his legs.
+	As he's drifting off to sleep, he smells, softly, from what feels like years ago, his mom's hair.
+elif sanity >=25:
+	The sky, slick with fog, 
 else:
-	test
+	In the dark, in the fog, Scott breathes softly.
+	The small twinges of pain he's felt through out the week feels like little scratches across his body.
+	Hundreds of little cuts.
+	Some one was supposed to call, him, maybe, tonight?
+	Something was supposed to be with him here.
+	
+	
 # => day_x+1_house_am
 
 #=> snippets/day_2_train_am
