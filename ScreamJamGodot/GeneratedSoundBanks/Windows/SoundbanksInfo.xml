@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{DF3D3F96-8338-9A3E-82FC-B03CB23E4118}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{97D65358-6558-3DC6-E3E5-1BFE7AB04647}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -35,7 +35,7 @@
 				</File>
 				<File Id="174823540" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>JumpScare Final.wav</ShortName>
-					<CachePath>SFX/JumpScare Final_4AD2FE8D.wem</CachePath>
+					<CachePath>SFX/JumpScare Final_D3D5F299.wem</CachePath>
 				</File>
 				<File Id="174987227" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>06_Dark_Music_bpm75_D-Drone2.wav</ShortName>
@@ -625,5 +625,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A776C465-88FC-C1C4-BC81-D5A7CAF2D96C}</FileHash>
+	<FileHash>{CB59EC91-503D-B30D-2D73-5A86A738F55E}</FileHash>
 </SoundBanksInfo>
