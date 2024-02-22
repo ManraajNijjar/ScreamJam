@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{7BE10FF9-DF0C-1F70-5B42-CDD8E1D10754}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{A7A2B976-10AF-49A8-9596-30E6FD437AE4}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -19,7 +19,7 @@
 				</File>
 				<File Id="56846897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HomeEnvLoop.wav</ShortName>
-					<CachePath>SFX/HomeEnvLoop_88E4D6A1.wem</CachePath>
+					<CachePath>SFX/HomeEnvLoop_3599B9C8.wem</CachePath>
 				</File>
 				<File Id="65579422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>02_Dark_Music_bpm75_D-Kick.wav</ShortName>
@@ -89,6 +89,10 @@
 					<ShortName>09_Darker_Music_bpm75_D-GTRSoloA.wav</ShortName>
 					<CachePath>SFX/09_Darker_Music_bpm75_D-GTRSoloA_56CEF360.wem</CachePath>
 				</File>
+				<File Id="525604546" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cat_1.wav</ShortName>
+					<CachePath>SFX/Cat_1_8E324C96.wem</CachePath>
+				</File>
 				<File Id="529527188" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>03_Darker_Music_bpm75_D-RimTapswav.wav</ShortName>
 					<CachePath>SFX/03_Darker_Music_bpm75_D-RimTapswav_56CEF360.wem</CachePath>
@@ -103,11 +107,15 @@
 				</File>
 				<File Id="540861004" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>OfficeEnvLoop.wav</ShortName>
-					<CachePath>SFX/OfficeEnvLoop_1E73176F.wem</CachePath>
+					<CachePath>SFX/OfficeEnvLoop_BCC3A2B7.wem</CachePath>
 				</File>
 				<File Id="542651587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>00_Neutral_Music_bpm75_D-GuitarSoloB.wav</ShortName>
 					<CachePath>SFX/00_Neutral_Music_bpm75_D-GuitarSoloB_56CEF360.wem</CachePath>
+				</File>
+				<File Id="581961004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cat_3.wav</ShortName>
+					<CachePath>SFX/Cat_3_8E324C96.wem</CachePath>
 				</File>
 				<File Id="586210713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>05_Dark_Music_bpm75_D-Drone1.wav</ShortName>
@@ -141,6 +149,10 @@
 					<ShortName>Phone Alarm w Vibrate Final .wav</ShortName>
 					<CachePath>SFX/Phone Alarm w Vibrate Final _8E324C96.wem</CachePath>
 				</File>
+				<File Id="722041978" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cat_5.wav</ShortName>
+					<CachePath>SFX/Cat_5_8E324C96.wem</CachePath>
+				</File>
 				<File Id="739877464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dialog SFX.wav</ShortName>
 					<CachePath>SFX/Dialog SFX_56CEF360.wem</CachePath>
@@ -153,9 +165,17 @@
 					<ShortName>09_Darkest_Music_bpm75_D-GTR1.wav</ShortName>
 					<CachePath>SFX/09_Darkest_Music_bpm75_D-GTR1_56CEF360.wem</CachePath>
 				</File>
+				<File Id="783317810" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cat_4.wav</ShortName>
+					<CachePath>SFX/Cat_4_8E324C96.wem</CachePath>
+				</File>
 				<File Id="790704285" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>10_Darkest_Music_bpm75_D-SynthPulse.wav</ShortName>
 					<CachePath>SFX/10_Darkest_Music_bpm75_D-SynthPulse_56CEF360.wem</CachePath>
+				</File>
+				<File Id="797826999" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Cat_2.wav</ShortName>
+					<CachePath>SFX/Cat_2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="802978156" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>08_Neutral_Music_bpm75_D-GuitarChordL.wav</ShortName>
@@ -236,7 +256,15 @@
 						<MediaRef Id="345701569"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1968116890" Name="Cat_Meow"/>
+				<Event Id="1968116890" Name="Cat_Meow">
+					<MediaRefs>
+						<MediaRef Id="525604546"/>
+						<MediaRef Id="581961004"/>
+						<MediaRef Id="722041978"/>
+						<MediaRef Id="783317810"/>
+						<MediaRef Id="797826999"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1123806448" Name="CoffeeShopEnvLoop">
 					<MediaRefs>
 						<MediaRef Id="820840143"/>
@@ -589,5 +617,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C6380958-9C3E-82FC-B956-A3BF871BF597}</FileHash>
+	<FileHash>{B4AA4F09-E847-1E25-8835-92FE75A1E226}</FileHash>
 </SoundBanksInfo>

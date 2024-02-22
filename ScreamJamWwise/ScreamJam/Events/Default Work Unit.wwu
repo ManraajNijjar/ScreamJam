@@ -62,7 +62,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Cat_Meow" ID="{027D2CC5-4752-418D-A1FD-EACB518D0776}"/>
+				<Event Name="Cat_Meow" ID="{027D2CC5-4752-418D-A1FD-EACB518D0776}">
+					<ChildrenList>
+						<Action Name="" ID="{F91006E4-603E-4779-984B-D7642F7FCA54}" ShortID="656487155">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat_Meow" ID="{3381A8D9-AFE8-496A-B12B-ED29ED37E36E}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Phone_Ringtone" ID="{B87D3A6A-E69D-469B-A933-53E343980FF5}">
 					<ChildrenList>
 						<Action Name="" ID="{A274DAC8-EF01-495D-AC6E-2F06CF9DD45A}" ShortID="85030328">
