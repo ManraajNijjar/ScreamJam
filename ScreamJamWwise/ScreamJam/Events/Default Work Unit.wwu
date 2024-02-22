@@ -209,7 +209,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Jump_Scare" ID="{3D375E15-1BF9-41BB-A360-F9DF29BBC336}"/>
+				<Event Name="Jump_Scare" ID="{3D375E15-1BF9-41BB-A360-F9DF29BBC336}">
+					<ChildrenList>
+						<Action Name="" ID="{9685FD37-4B42-46BB-A20E-583F48B18706}" ShortID="1050841838">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JumpScare" ID="{E5D6A308-47FD-48D2-9B88-26F9728FBC21}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

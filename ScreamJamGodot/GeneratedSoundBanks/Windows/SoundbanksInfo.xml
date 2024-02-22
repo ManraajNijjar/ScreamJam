@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{A7A2B976-10AF-49A8-9596-30E6FD437AE4}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{DF3D3F96-8338-9A3E-82FC-B03CB23E4118}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -32,6 +32,10 @@
 				<File Id="111014613" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>01_Dark_Music_bpm75_D-Cymbols.wav</ShortName>
 					<CachePath>SFX/01_Dark_Music_bpm75_D-Cymbols_56CEF360.wem</CachePath>
+				</File>
+				<File Id="174823540" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>JumpScare Final.wav</ShortName>
+					<CachePath>SFX/JumpScare Final_4AD2FE8D.wem</CachePath>
 				</File>
 				<File Id="174987227" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>06_Dark_Music_bpm75_D-Drone2.wav</ShortName>
@@ -325,7 +329,11 @@
 						<MediaRef Id="56846897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2589581548" Name="Jump_Scare"/>
+				<Event Id="2589581548" Name="Jump_Scare">
+					<MediaRefs>
+						<MediaRef Id="174823540"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="546191921" Name="Mom_Dialog">
 					<MediaRefs>
 						<MediaRef Id="936359435"/>
@@ -617,5 +625,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B4AA4F09-E847-1E25-8835-92FE75A1E226}</FileHash>
+	<FileHash>{A776C465-88FC-C1C4-BC81-D5A7CAF2D96C}</FileHash>
 </SoundBanksInfo>

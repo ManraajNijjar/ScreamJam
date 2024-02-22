@@ -119,9 +119,14 @@
 								<Sound Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" ShortID="732394644">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -194,6 +199,11 @@
 								<Sound Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" ShortID="603486124">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>60</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>12</Value>
@@ -233,10 +243,20 @@
 							<ChildrenList>
 								<Sound Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" ShortID="635479689">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -392,7 +412,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -586,6 +606,18 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="JumpScare" ID="{E5D6A308-47FD-48D2-9B88-26F9728FBC21}" ShortID="897232827">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>14</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
@@ -594,6 +626,24 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{91DB70F1-4E43-44D8-9578-12CD8B09F6BD}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="JumpScare Final" ID="{037A6FBA-11E2-4714-8F0C-18B6FC8CA05D}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0750090308069793"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.465176401763"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.130015653398764"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>JumpScare Final.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="174823540"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="JumpScare Final" ID="{037A6FBA-11E2-4714-8F0C-18B6FC8CA05D}" Platform="Linked"/>
+					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
 		</WorkUnit>

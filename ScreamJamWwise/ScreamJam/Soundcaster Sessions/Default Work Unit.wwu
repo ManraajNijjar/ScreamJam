@@ -7,7 +7,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}"/>
-							<Value>13</Value>
+							<Value>20.3932926829268</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
