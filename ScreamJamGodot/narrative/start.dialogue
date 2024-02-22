@@ -44,6 +44,7 @@ John: Yeah?
 Scott: Time cards.
 John: Oh shoot! Sorry.
 Scott: No worries! Next time, you owe me five bucks though.
+do time = TIMEOFDAY.NIGHT
 do emit("toTrainPM")
 => END!
 
@@ -81,15 +82,20 @@ Scott: Sure, I’m doing okay.
 Mom: Great! Well, today at work some guy called and complained about how the download time was too long on his app. 
 Mom: I told him I can’t control his internet speed. 
 Mom: He said he wasn’t even on the internet because he was - get this - on his phone!
+do emit("showMouseSignal")
 - Scott: Wow... what an idiot.
 - Scott: Well, maybe he doesn't think that's the internet.
+do emit("hideMouseSignal")
 Mom: It's so surprising how your generation doesn't even get the technology they grew up with.
 Mom: I also had someone try to ask for a discount on renewal because he was sick and couldn't use the service as much.
+do emit("showMouseSignal")
 - Scott: Did you give it to him?
 - Scott: For real? That's not your fault.
+do emit("hideMouseSignal")
 Mom: Everyone wants luxury even if they can't afford it. I wouldn't sign up if I couldn't pay.
 Mom: I think I'm getting too old for this. But I'll still be working for a while...
 [wait=1]
+do emit("catMeow")
 Mom: Oh, wait. Do I hear Gambit?
 Scott: Yeah, mom. It's his dinner time.
 Mom: Okay, kiddo. I'll let you go. I'll talk to you tomorrow.
@@ -107,7 +113,7 @@ He feeds Gambit who, by now, has been yowling for food for half an hour.
 Gambit settles down to eat, and Scott gets ready for bed. 
 He washes his face again, and reapplies the lotion even though the SPF isn’t going to help him right now.
 ~ day_1_bed
-
+do emit("goToBed")
 Scott gets back on his phone, and stares at the screen in the dark until his eyes start to droop. 
 He feels Gambit jump up onto the bed and lie down in the crook of his knees. The warmth of the cat urges him even more quickly into sleep, and he plugs his phone in, and drifts off.
 do day += 1

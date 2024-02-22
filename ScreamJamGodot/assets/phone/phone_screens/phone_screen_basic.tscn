@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://1ucq783b85rq"]
+[gd_scene load_steps=5 format=3 uid="uid://1ucq783b85rq"]
 
 [ext_resource type="Script" path="res://assets/phone/phone_screens/phone_screen_basic.gd" id="1_yka7p"]
-[ext_resource type="Texture2D" uid="uid://wbmgraxic1us" path="res://icon.svg" id="2_qbksp"]
+[ext_resource type="Texture2D" uid="uid://b85px31g0br1e" path="res://images/Misc assets/phonebg.png" id="2_5emwn"]
+[ext_resource type="Texture2D" uid="uid://bebam4ugihv0f" path="res://images/Misc assets/phonebg-icons.png" id="3_djpkx"]
+[ext_resource type="Texture2D" uid="uid://coj1kl3a1rtin" path="res://images/Apartment scene assets/familyphoto.png" id="4_xqwdy"]
 
 [node name="PhoneScreenBasic" type="Control"]
 layout_mode = 3
@@ -73,6 +75,21 @@ layout_mode = 2
 text = "Button
 "
 
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Phonebg" type="Sprite2D" parent="."]
+position = Vector2(238, 309)
+scale = Vector2(0.471557, 0.338063)
+texture = ExtResource("2_5emwn")
+
+[node name="Phonebgicons" type="Sprite2D" parent="."]
+position = Vector2(224, 251)
+scale = Vector2(0.349599, 0.250631)
+texture = ExtResource("3_djpkx")
+
 [node name="MomCallScreen" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -81,10 +98,10 @@ offset_top = 1.52588e-05
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Sprite2D" type="Sprite2D" parent="MomCallScreen"]
-position = Vector2(264, 140)
+[node name="momPhoto" type="Sprite2D" parent="MomCallScreen"]
+position = Vector2(-77.9999, 178)
 scale = Vector2(2.59449, 1.86001)
-texture = ExtResource("2_qbksp")
+texture = ExtResource("4_xqwdy")
 
 [node name="MomPickup" type="Button" parent="MomCallScreen"]
 layout_mode = 0
@@ -116,7 +133,12 @@ event = {
 "name": "Phone_Alert"
 }
 
+[node name="DenyTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="focus_entered" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MomCallScreen/MomPickup" to="." method="_on_mom_pickup_pressed"]
 [connection signal="pressed" from="MomCallScreen/MomReject" to="." method="_on_mom_reject_pressed"]
+[connection signal="timeout" from="DenyTimer" to="." method="_on_deny_timer_timeout"]

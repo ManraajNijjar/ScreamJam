@@ -2,8 +2,10 @@
 
 ~ day_3_house_am
 if sanity == 100:
-	Scott wakes up and sees the blue sky, stocked with clouds. 
+	Scott wakes up and sees the blue sky, stocked with clouds.
+	do emit("turnOffAlarm") 
 	The weather seems to be getting nicer each day.
+	do emit("catMeow")
 	Scott: Hey buddy!
 	He pets Gambit.
 	Scott: Having a nice morning?
@@ -12,6 +14,7 @@ if sanity == 100:
 	There’s almost no use. It doesn’t look great, but he’s done the best he can with it.
 else:
 	Another morning of grey clouds. Scott sighs.
+	do emit("turnOffAlarm")
 	Scott: It's cool. I got this.
 	He gets up and takes a shower, and scrubs his skin. 
 
@@ -21,10 +24,14 @@ do emit("showCoffee")
 As usual, he stops in at the cafe on his way to the train. There's a few people already working at tables, but no one in line.
 
 Barista: Hi, Scott! Black coffee with one cream?
+do emit("showMouseSignal")
 - Scott: Yep, the usual please.
 - Scott: What's the seasonal latte?
+	do emit("hideMouseSignal")
 	Barista: Well, it's made with oatmilk and a house mint syrup we make. I really like it.
+	do emit("showMouseSignal")
 	- Scott: Sure, I'll try that.
+		do emit("hideMouseSignal")
 		do sanity -= 10
 		[i](Almost instantly, my stomach hurts. I feel woozy.)[/i]
 		The barista doesn't notice his face go a little pale.
@@ -34,6 +41,7 @@ Barista: Hi, Scott! Black coffee with one cream?
 		While it's not as quick as his usual order, he's out the door, with a wave.
 		He does have to run to make sure he doesn't miss his normal train.
 	- Scott: Eh. The usual is fine.
+		do emit("hideMouseSignal")
 		Barista: You got it.
 		She turns around and almost instantly turns back, holding his normal coffee.
 		He smiles and waves, and walks into the clear day.
@@ -68,13 +76,19 @@ else:
 [wait=1] ! [wait=1]
 Scott feels a hand clasp his shoulder. He looks up and sees his boss, Dylan, smiling down at him.
 Dylan: Hey, man. What's up?
+do emit("showMouseSignal")
 - Scott: Not much. Just working on next pay period.
 - Scott: I don't really have a lot to do, but--
+do emit("hideMouseSignal")
 Dylan: Remember the other day when you said we should go get lunch together?
+do emit("showMouseSignal")
 - Scott: No?
 - Scott: Sure.
+do emit("hideMouseSignal")
 Dylan: Can you go today?
+do emit("showMouseSignal")
 - Scott: I meant we'd both order from the app and then sit together.
+	do emit("hideMouseSignal")
 	Dylan: So you can order that Green Seeds salad for the umpteenth time?
 	Dylan: I thought we'd go outside.
 	if sanity == 100:
@@ -82,11 +96,14 @@ Dylan: Can you go today?
 		Dylan is insistent, emphatic. 
 		=> day_3_lunch_dec
 - Scott: No, I'm way too busy. 
+	do emit("hideMouseSignal")
 	Dylan: Scott, I'm your boss. I know you're not.
 	=> day_3_lunch_dec
 	
 ~ day_3_lunch_dec
+do emit("showMouseSignal")
 - Scott: Okay, you got me.
+	do emit("hideMouseSignal")
 	do sanity -= 10
 	Scott feels something twist inside him. He gasps.
 	Dylan doesn't notice.
@@ -95,11 +112,13 @@ Dylan: Can you go today?
 	The walk back from the restaurant seems gloomy.
 	Dylan: You think it's going to rain?
 - Scott: Sorry, I already ordered from the app.
+	do emit("hideMouseSignal")
 	Dylan: Bummer, man. Ah well. We can go another day.
 	Scott eats his salad for lunch the same way he always does\: he pours the dressing in, puts the lid back on, and shakes it.
 	
 The rest of the day is slow and brutal as Scott runs out of things to work on.
 # lowest possible sanity here is 70
+do time = TIMEOFDAY.NIGHT
 do emit("toTrainPM")
 => END!
 
@@ -135,13 +154,13 @@ do emit("showCall")
 ~ deny_call_mom
 if missed_calls >= 0:
 	do sanity -= 10
-	do missedCalls += 1
+	do missed_calls += 1
 	Something in the back of his neck twinges.
 	Scott: I'll call her back later.
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
 elif missed_calls == 1:
 	do sanity -= 10
-	do missedCalls += 1
+	do missed_calls += 1
 	The sides of his face feel flush and hot, like something is tearing inside him.
 	Scott: I'll get back to her, eventually.
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
@@ -156,18 +175,24 @@ Scott: Hi, mom.
 Mom: Hi, Scott. Just wanted to check in.
 Scott: Sure, I’m doing okay.
 Mom: Great! I had such an awful day running errands today.
+do emit("showMouseSignal")
 - Scott: Oh yeah?
 - Scott: ...
+do emit("hideMouseSignal")
 Mom: There was a car that almost smashed into me on Rose St. You know where that hardware store just opened up?
+do emit("showMouseSignal")
 - Scott: Mom, I haven't been home in 10 years. [if sanity <= 71]
 - Scott: Nope. 
-- Scott: Yep. 
+- Scott: Yep.
+do emit("hideMouseSignal") 
 Mom: There's no left turn there, but this guy just didn't care and almost hit me.
 Mom: I swear, old people can't drive any more.
 Mom: You know, eventually I'm going to be too old to drive.
 Mom: I'll have to hire a driver! Can you imagine? 
+do emit("showMouseSignal")
 - Scott: Couldn't dad just drive you around?
 - Scott: I definitely can.
+do emit("hideMouseSignal")
 if missed_calls >= 0:
 	Mom: Make sure you pick up when I call. Okay?
 	Mom: I get worried when you don't.
@@ -186,6 +211,7 @@ Scott's more tired than he expected, but he finishes his nightly routine.
 
 
 ~ day_3_bed
+do emit("goToBed")
 Scott curls up in bed, and scrolls on his phone for a while.
 Gambit yowls and tosses around a toy for a few minutes before lying on top of his feet.
 if sanity <=80:

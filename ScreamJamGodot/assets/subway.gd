@@ -8,9 +8,15 @@ extends Node3D
 @onready var sittingSpawn = $SeatSpawnLocation
 @onready var standingSpawn = $StandSpawnLocation
 
+@onready var foreground = $foreground
+@onready var foreground2 = $foreground2
+@onready var foreground3 = $foreground3
+
 
 signal toOffice
 signal toHousePM
+signal showMouseSignal
+signal hideMouseSignal
 
 var currentColor : Color = Color("d5bf8e");
 var transitionToRed : bool = false;
@@ -22,11 +28,15 @@ var fogMachineDensity : float = 0.0;
 
 var lightSpinEnabled : bool = false;
 
+var previousSanity = 100;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
 	toOffice.connect(goToOffice);
 	toHousePM.connect(goToHousePM);
+	showMouseSignal.connect(showMouse);
+	hideMouseSignal.connect(hideMouse);
 
 	var timeOfDayString = "";
 	if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
@@ -38,19 +48,20 @@ func _ready():
 
 	if(PlayerVariables.day == 0):
 		if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
-			DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_train_am")
+			DialogueManager.show_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_train_am")
 		elif(PlayerVariables.time == PlayerVariables.TIMEOFDAY.NIGHT):
-			DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_train_pm")
+			DialogueManager.show_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_train_pm")
 	else:
-		DialogueManager.show_example_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_train_"+timeOfDayString)
+		DialogueManager.show_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_train_"+timeOfDayString)
 	
 	soundbankSubwayEnvLoop.post_event();
-	standSpawn();
+	sitSpawn();
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	processSanityChanges();
 	if(transitionToRed):
 		var blendedColor = currentColor.lerp(Color.RED, transitionToRedPercent * 0.05);
 		worldEnvironment.environment.ambient_light_color = blendedColor;
@@ -70,11 +81,35 @@ func _process(delta):
 		pass
 	pass
 
+func processSanityChanges():
+	if PlayerVariables.sanity != previousSanity:
+		previousSanity = PlayerVariables.sanity;
+		Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.SANITY, PlayerVariables.sanity, $Music);
+		if PlayerVariables.sanity <= 55:
+			foreground.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
+			foreground2.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
+			foreground3.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
+			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/darkest/TransitBG-darkest-skybox.PNG")
+			
+		elif PlayerVariables.sanity < 80:
+			foreground.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
+			foreground2.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
+			foreground3.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
+			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/darker/TransitBG-darker-skybox.PNG")
+		elif PlayerVariables.sanity < 100:
+			foreground.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
+			foreground2.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
+			foreground3.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
+			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/dark/TransitBG-dark-skybox.PNG")
+	
+
 func goToOffice():
+	soundbankSubwayEnvLoop.stop_event();
 	get_tree().change_scene_to_file("res://assets/office.tscn")
 	pass
 
 func goToHousePM():
+	soundbankSubwayEnvLoop.stop_event();
 	get_tree().change_scene_to_file("res://assets/home.tscn")
 	pass
 
@@ -113,3 +148,14 @@ func sitSpawn():
 func standSpawn():
 	player.global_transform.origin = standingSpawn.global_transform.origin
 	player.canMove = false;
+
+func altBackground():
+	worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/TransitBG-alt.PNG")
+
+func showMouse():
+	player.selectingOption = true;
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+
+func hideMouse():
+	player.selectingOption = false;
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);

@@ -7,7 +7,7 @@ var weirdness = 0;
 var missed_calls = 0;
 var currentCall = 0;
 var day = 0;
-var time : TIMEOFDAY = TIMEOFDAY.NIGHT;
+var time : TIMEOFDAY = TIMEOFDAY.MORNING;
 
 signal toTrain
 signal displayMomCall

@@ -20,6 +20,8 @@ var phoneInPlace = true;
 
 @onready var phone = $Phone;
 
+var selectingOption = false;
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -28,7 +30,7 @@ func _ready():
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	if event is InputEventMouseMotion && !Input.is_action_pressed("viewPhone"):
+	if event is InputEventMouseMotion && !Input.is_action_pressed("viewPhone") && !selectingOption:
 		rotate_y(deg_to_rad(-event.relative.x * mouseSensitivity))
 		head.rotate_x(deg_to_rad(-event.relative.y * mouseSensitivity))
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-xClamp), deg_to_rad(xClamp))
@@ -41,7 +43,9 @@ func _physics_process(delta):
 	if not is_on_floor() && gravityEnabled:
 		velocity.y -= gravity * delta
 
-	
+	if selectingOption:
+		return;
+
 	if Input.is_action_pressed("viewPhone"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
 		if(phoneInPlace):

@@ -4,18 +4,22 @@
 if sanity == 100:
 	The clear blue sky has started to stretch for miles around.
 	The sun is brighter than Scott remembers it can be. It feels like years since he’s seen the sun, and seen so clearly.
+	do emit("turnOffAlarm")
 	Scott gives himself a good scrub in the shower and makes sure his hair is tight in place with product.
-	Scott: Looking good! 
+	Scott: Looking good!
+	do emit("catMeow") 
 	Gambit meows.
 	Scott: You look great too!
 	He grabs his backpack and runs out the door.
 	Scott: Bye, Gambit!
 elif sanity >= 80:
 	The cloudy sky feels as he expected it would\: normal for San Francisco.
+	do emit("turnOffAlarm")
 	Scott does his normal shower routine and feeds Gambit before grabbing his stuff and leaving the apartment.
 else:
 	It’s probably going to rain, isn’t it?
 	Scott realizes he's overslept a little, and realizes he's going to be late.
+	do emit("turnOffAlarm")
 	When he puts his backpack on, he feels a sharp pain in his hand.
 	He looks down at his fingers and notices a bunch of small scrapes he doesn't remember getting.
 
@@ -28,7 +32,9 @@ When he gets up to the register, the barista shakes her head slowly at him.
 Barista: Sorry, Scott. We ran out of the regular coffee you get so I don’t have any brewed right now. 
 Barista: Do you want a pour over instead? It’ll take 5-7 minutes.
 Scott thinks for a second. He’ll have his coffee, but he might miss the train and end up late to work.
+do emit("showMouseSignal")
 - Scott: Sure, that’s fine.
+	do emit("hideMouseSignal")
 	Barista: I got you. With one cream.
 	She smiles again, and walks off to start the pour over.
 	[wait=1] ! [wait=1]
@@ -44,6 +50,7 @@ Scott thinks for a second. He’ll have his coffee, but he might miss the train 
 	[i](We all have to pretend that didn’t happen. But it happened.)[/i]
 	He forces a smile at her and waves goodbye.
 - Scott: I don’t think I have the time. But thanks!
+	do emit("hideMouseSignal")
 	do sanity -= 10
 	[i](Fuck!)[/i]
 	Barista: I’m sorry! I’ll owe you for next time.
@@ -101,7 +108,9 @@ She looks at her phone.
 Alexis: Oh shit, I need to put in my order too. Bye, Scott.
 
 Scott goes to his computer and orders lunch.
+do emit("showMouseSignal")
 - order the Black and Bleu salad from Green Seeds
+	do emit("hideMouseSignal")
 	Scott sighs and orders his salad.
 	[i](It's fine. It's fine. It's just a salad.)[/i]
 	When everyone's food is delivered, he goes to the office kitchen.
@@ -114,6 +123,7 @@ Scott goes to his computer and orders lunch.
 	He uses his fork to push the salad around in the bowl, and finds nothing.
 	He spends the rest of the afternoon feeling awful.
 - order the steak salad from the other restaurant
+	do emit("hideMouseSignal")
 	do sanity -= 10
 	Scott feels a sharp pain in his throat.
 	If he knew any better, he'd call it anxiety.
@@ -124,6 +134,7 @@ Scott goes to his computer and orders lunch.
 	She gives him a big smile as she picks up her food and walks by.
 	His salad looks wilted in comparison, and they didn't honor his request for no red onions.
 	He picks around them, and eats what he can, but he spends the rest of the afternoon feeling awful.
+do time = TIMEOFDAY.NIGHT
 do emit("toTrainPM")
 => END!
 # lowest possible sanity here is 40
@@ -143,6 +154,7 @@ do emit("toHousePM")
 ~ day_4_house_pm
 This is his last chicken teriyaki entree of the week.
 Scott: You want a bite?
+do emit("catMeow")
 Gambit yowls.
 Scott puts a bite on the table and Gambit eats it and licks up the sauce.
 
@@ -186,20 +198,26 @@ Scott: Hi, mom.
 Mom: Hi, Scott. Just wanted to check in.
 Scott: Sure, I’m doing okay.
 Mom: Great! I wanted to let you know your cousin, Cheryl, you rememember her?
+do emit("showMouseSignal")
 - Scott: Yes, we grew up together.
 - Scott: Nope. Who's that?
+do emit("hideMouseSignal")
 Mom: She's getting married to that guy she's been dating, I think his name is Bobby.
 Mom: So I wanted to see if you got an invite.
+do emit("showMouseSignal")
 - Scott: I did.
 - Scott: I did not.
+do emit("hideMouseSignal")
 Mom: Dad and I were going to go and wanted to know if you wanted to share a hotel room.
 Mom: Do you have someone you could bring?
 Mom: I'm not trying to pry but it's been so long since you and Josh broke up.
 Mom: I want you to be happy. It's really important to me.
+do emit("showMouseSignal")
 - Scott: Do you even remember what you said to me last time? [if sanity <= 51]
 - Scott: It's not up to you if I'm happy or not. [if sanity <= 71]
 - Scott: I'm okay.
 - Scott: Thanks, mom.
+do emit("hideMouseSignal")
 Mom: We can talk about it more later though.
 Mom: I love you. Bye!
 Scott: Well, she hung up fast this time...
@@ -213,6 +231,7 @@ Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 
 
 ~ day_4_bed
+do emit("goToBed")
 Scott scrolls on his phone shorter than usual tonight. 
 if sanity == 100:
 	Gambit comes right up to him and plops down almost on his head.

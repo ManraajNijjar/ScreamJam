@@ -5,15 +5,18 @@ if sanity == 100:
 	Scott has never seen weather like this in his years in San Francisco. 
 	He’s so used to the fog that it almost chills him to the bone to see the sun, so many days in a row. He enjoys it, of course, as does Gambit. 
 	Gambit sits in a little sun puddle, enjoying the morning.
+	do emit("turnOffAlarm")
 	Scott does his normal morning routine. He's almost out of shower gel, so he writes that on his grocery list.
 elif sanity >=25:
 	He almost doesn't want to go to work today. Everything this week has felt difficult.
+	do emit("turnOffAlarm")
 	He showers, but upon closer inspection, he sees a break out starting on his chin.
 	Scott decides not to shave. 
 else:
 	Scott: There's somewhere to go.
 	Scott: Something I was supposed to do.
 	Something in the house is missing, but I can't remember what.
+	do emit("turnOffAlarm")
 	
 
 
@@ -35,7 +38,9 @@ else:
 	Barista: How about our house blend?
 	Scott: Do you think I'd like that?
 	Barista: Would you like to try it?
+	do emit("showMouseSignal")
 	- Scott: Okay! Can you put in one cream?
+	do emit("hideMouseSignal")
 	Barista: Sure!
 	Barista: Have a great day!
 do emit("toTrainAM")
@@ -71,7 +76,7 @@ else:
 	Scott smiles.
 	He finishes ordering his Black and Bleu salad, eats it as normal, and finishes up his work.
 
-	
+do time = TIMEOFDAY.NIGHT	
 do emit("toTrainPM")
 => END!
 
@@ -106,7 +111,7 @@ if sanity == 100:
 	Scott: [shake rate=20 level=10](Why would you mess it up now?)[/shake]
 	=> pick_up_call_mom
 else:
-	if missedCalls == 3:
+	if missed_calls == 3:
 		Scott: [shake rate=20 level=10](Why would I pick up now?)[/shake]
 		Scott: I've never told this story, but I might as well now.
 		Scott: Actually, I don't think I can.
@@ -127,19 +132,28 @@ if sanity == 100:
 	Mom: Hi, Scott. Just wanted to check in.
 	Scott: Sure, I’m doing okay.
 	Mom: Great! Did you see that Martin Remowitz is running for president?
+	do emit("showMouseSignal")
 	- Scott: Really?
 	- Scott: That's wild!
+	do emit("hideMouseSignal")
 	Mom: I know! With the scandals he's seen as a liberal actor, I'd never think he'd go that far.
+	do emit("showMouseSignal")
 	- Scott: Uh huh...
 	- Scott: Yep.
+	do emit("hideMouseSignal")
 	Mom: How's the weather there?
+	do emit("showMouseSignal")
 	- Scott: What?
+		do emit("hideMouseSignal")
 		Mom: What do you mean what?
+		do emit("showMouseSignal")
 		- Scott: You can hear me?
+			do emit("hideMouseSignal")
 			[i](She laughs at me. She's laughing again...][/i]
 			[i][shake rate=20 level=10](it hurts)[/shake][/i]
 			Mom: Of course I can hear you!
 		- Scott: You don't usually ask me anything...
+			do emit("hideMouseSignal")
 			[i](She sighs, exasperatedly at me.)[/i]
 			[i][shake rate=20 level=10](i hate it)[/shake][/i]
 			Mom: Oh my god. Don't be that way.
@@ -147,6 +161,7 @@ if sanity == 100:
 		Mom: I obviously care about you.
 		Mom: Anyway, answer my question.
 	- Scott: It's fine.
+		do emit("hideMouseSignal")
 		Mom: That's great!
 	Mom: It's been raining on and off here for a while.
 	Scott: I'm not sure why, but it's been so clear here.
@@ -158,25 +173,36 @@ if sanity == 100:
 	Mom: I love you. Bye!
 elif sanity >=25:
 	Mom: Scott, are you okay?
+	do emit("showMouseSignal")
 	- Scott: No.
 	- Scott: Yeah, why?
+	do emit("hideMouseSignal")
 	Mom: You haven't been picking up the phone when I call you...
+	do emit("showMouseSignal")
 	- Scott: Yes, I have.
 	- Scott: I'm sorry.
+	do emit("hideMouseSignal")
 	Mom: It makes me really worry about you. 
 	Mom: You live so far from me. And I miss you so much.
+	do emit("showMouseSignal")
 	- Scott: Mom, do you even know me? [if sanity <= 41]
 	- Scott: Mom, you haven't seen me in 10 years. [if sanity <= 51]
 	- Scott: Mom, I miss you too. [if sanity <= 71]
 	- Scott: Yeah, I know.
+	do emit("hideMouseSignal")
 	Mom: I just... want to make sure you're okay.
 	Mom: Anyway, do you remember Joanie? She was in your grade in high school. Her mom lives right by us.
+	do emit("showMouseSignal")
 	- Scott: Not at all.
 	- Scott: Yep.
+	do emit("hideMouseSignal")
 	Mom: It turns out she's friends with this guy who is going to jail because he was selling drugs.
 	Mom: Did you hear about that?
+	do emit("showMouseSignal")
 	- Scott: No.
 	- Scott: Yes.
+	do emit("catMeow")
+	do emit("hideMouseSignal")
 	Mom: It was on the news today!
 	Mom: Well, anyway, I gotta go.
 	Mom: I miss you so much.
@@ -195,6 +221,7 @@ else:
 
 
 ~ day_5_bed
+do emit("goToBed")
 if sanity == 100:
 	Scott stares out at the clear sky. 
 	The buildings stretch for what feels like miles out the window.

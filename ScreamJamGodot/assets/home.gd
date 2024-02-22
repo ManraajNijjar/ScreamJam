@@ -1,19 +1,35 @@
 extends Node3D
 
 @export var player : Node3D;
-@onready var soundBankDarkMusic = $Dark_Music
+@onready var soundBankDarkMusic = $Music
 @onready var soundBankCatMeow = $Cat_Meow
 @onready var soundBankTVStatic = $TV_Static
+@onready var soundBankHomeEnv = $HomeEnv
+@onready var soundBankJumpScare = $JumpScare
+@onready var soundBankAlarmClock = $AlarmClock
 
 @onready var morningSpawn = $MorningSpawnLocation
 @onready var nightSpawn = $PMSpawnLocation
 @onready var bedSpawn = $BedSpawnLocation
+
+@onready var pictureFrame : Sprite3D = $PictureFrame
+
+@onready var coffeeSceneControl : Control = $CoffeeScene
+
+@onready var timeWipe : Control = $TimeWipe
+@onready var wakeupTimer : Timer = $WakeupTimer
+
+var previousSanity = 100;
 
 signal showCoffee
 signal toTrainAM
 signal showCall
 signal toHouseAM
 signal catMeow
+signal showMouseSignal
+signal hideMouseSignal
+signal goToBed
+signal turnOffAlarm
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,9 +39,12 @@ func _ready():
 	showCall.connect(displayPlayerCall);
 	toHouseAM.connect(goToHouseAM);
 	catMeow.connect(playCatMeow);
+	showMouseSignal.connect(showMouse);
+	hideMouseSignal.connect(hideMouse);
+	goToBed.connect(goToBedFunction);
+	turnOffAlarm.connect(turnOffAlarmFunction);
 
-	Wwise.load_bank("Init");
-	Wwise.load_bank("MainSoundbank");
+	#soundBankDarkMusic.post_event()
 
 	var timeOfDayString = "";
 	if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
@@ -37,27 +56,45 @@ func _ready():
 
 	if(PlayerVariables.day == 0):
 		if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
-			DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_house_am")
+			DialogueManager.show_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_house_am")
 		elif(PlayerVariables.time == PlayerVariables.TIMEOFDAY.NIGHT):
-			DialogueManager.show_example_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_house_pm")
+			DialogueManager.show_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_house_pm")
 	else:
-		DialogueManager.show_example_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_house_"+timeOfDayString)
+		DialogueManager.show_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_house_"+timeOfDayString)
 
-	soundBankDarkMusic.post_event()
-	soundBankTVStatic.post_event()
-	pass # Replace with function body.
+	#soundBankTVStatic.post_event()
+	soundBankHomeEnv.post_event()
+	pass
+
+func _process(delta):
+	processSanityChanges();
+
+
+func processSanityChanges():
+	if PlayerVariables.sanity != previousSanity:
+		previousSanity = PlayerVariables.sanity;
+		Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.SANITY, PlayerVariables.sanity, $Music);
+		if PlayerVariables.sanity <= 55:
+			pictureFrame.texture = load("res://images/Apartment scene assets/familyphoto-darkest.png")
+		elif PlayerVariables.sanity < 80:
+			pictureFrame.texture = load("res://images/Apartment scene assets/familyphoto-darker.png")
+		elif PlayerVariables.sanity < 100:
+			pictureFrame.texture = load("res://images/Apartment scene assets/familyphoto-dark.png")
 
 func displayCoffeeScene():
+	player.canMove = false;
+	coffeeSceneControl.visible = true;
 	pass;
 
 func goToTrain():
-	soundBankDarkMusic.stop_event()
+	timeWipe.visible = true;
+	#soundBankDarkMusic.stop_event()
 	soundBankTVStatic.stop_event()
+	soundBankHomeEnv.stop_event()
 	get_tree().change_scene_to_file("res://assets/subway.tscn")
 	pass;
 
 func displayPlayerCall():
-	#goToBed();
 	player.displayCall();
 	pass;
 
@@ -66,8 +103,31 @@ func playCatMeow():
 	pass;
 
 func goToHouseAM():
+	timeWipe.visible = true;
+	wakeupTimer.start();
+	player.global_transform.origin = morningSpawn.global_transform.origin
+	player.canMove = true;
+	soundBankAlarmClock.post_event()
+	DialogueManager.show_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_house_am")
 	pass;
 
-func goToBed():
+func goToBedFunction():
 	player.global_transform.origin = bedSpawn.global_transform.origin
 	player.canMove = false;
+
+func turnOffAlarmFunction():
+	soundBankAlarmClock.stop_event()
+	pass;
+
+func showMouse():
+	player.selectingOption = true;
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+
+func hideMouse():
+	player.selectingOption = false;
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
+
+func _on_wakeup_timer_timeout():
+	timeWipe.visible = false;
+	pass # Replace with function body.
+	

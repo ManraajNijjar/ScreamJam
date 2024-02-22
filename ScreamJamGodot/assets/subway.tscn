@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://co2ktstqpgolr"]
+[gd_scene load_steps=30 format=3 uid="uid://co2ktstqpgolr"]
 
 [ext_resource type="Script" path="res://assets/subway.gd" id="1_cfmxi"]
-[ext_resource type="Texture2D" uid="uid://dri0esr35otpi" path="res://images/subwaySkyBackground.png" id="1_xu01s"]
+[ext_resource type="Texture2D" uid="uid://2yd7gxtmvf5k" path="res://images/BART scene assets/TransitBG-skybox.PNG" id="2_8rn1o"]
 [ext_resource type="PackedScene" uid="uid://df0f1urbyhljl" path="res://assets/player/player.tscn" id="2_ej5hr"]
 [ext_resource type="Texture2D" uid="uid://bxm77wbj53yl1" path="res://images/subwayBackground.png" id="3_hwwqo"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="4_5bv6r"]
@@ -10,15 +10,22 @@
 [ext_resource type="Material" uid="uid://c6gmlk1yx8ss8" path="res://materials/plasticSubwayFloor/plasticMaterialFloor.tres" id="7_xm20a"]
 [ext_resource type="PackedScene" uid="uid://bytbt8nnkl8ve" path="res://3DModels/SubwayRearDoor/subwayRearDoor.glb" id="8_ivoss"]
 [ext_resource type="PackedScene" uid="uid://b7q65nu2xj4we" path="res://assets/Environment/subway_side_door.tscn" id="9_74ofo"]
+[ext_resource type="Texture2D" uid="uid://b7w7cbtudewhi" path="res://images/BART scene assets/TransitBG-foreground.png" id="11_v3tke"]
+[ext_resource type="Texture2D" uid="uid://boebkk78q82j7" path="res://images/BART scene assets/commuter1.png" id="12_bwk1k"]
+[ext_resource type="Texture2D" uid="uid://bp1x5bterg6rd" path="res://images/BART scene assets/commuter4.png" id="13_nruyd"]
+[ext_resource type="Texture2D" uid="uid://c6nfrvc28fytn" path="res://images/BART scene assets/commuter2.png" id="14_73a7w"]
+[ext_resource type="Texture2D" uid="uid://woojhhngalae" path="res://images/BART scene assets/commuter3.png" id="15_bamm1"]
+[ext_resource type="Texture2D" uid="uid://bsw52ma0bg8j3" path="res://images/Apartment scene assets/Gambit.png" id="16_y7jda"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_8ewgp"]
-panorama = ExtResource("1_xu01s")
+panorama = ExtResource("2_8rn1o")
 
 [sub_resource type="Sky" id="Sky_u77il"]
 sky_material = SubResource("PanoramaSkyMaterial_8ewgp")
 
 [sub_resource type="Environment" id="Environment_fkv4v"]
 background_mode = 2
+background_energy_multiplier = 0.5
 sky = SubResource("Sky_u77il")
 ambient_light_source = 3
 ambient_light_sky_contribution = 0.0
@@ -87,8 +94,9 @@ material = SubResource("ShaderMaterial_rolh0")
 [sub_resource type="BoxMesh" id="BoxMesh_5banw"]
 material = ExtResource("7_xm20a")
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_cfmxi")
+player = NodePath("Player")
 fogMachineCap = 0.363
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -174,3 +182,89 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5484, 2.86639, 0)
 
 [node name="StandSpawnLocation" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9809, 2.4913, -9.93876)
+
+[node name="foreground" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 26.8726, 31.0747)
+texture = ExtResource("11_v3tke")
+
+[node name="foreground3" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 26.8726, 396.585)
+texture = ExtResource("11_v3tke")
+
+[node name="foreground2" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 26.8726, -512.063)
+texture = ExtResource("11_v3tke")
+
+[node name="Commuters" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 14.2725, 1.74428, -32.6804)
+texture = ExtResource("12_bwk1k")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.2476, 1.74428, -29.2528)
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -29.2528)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -23.1913)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -3.65295)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5964, 1.74428, 3.66062)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.486, 1.74428, 4.65411)
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.486, 1.74428, 14.2576)
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 14.2725, 1.74428, 17.3916)
+texture = ExtResource("12_bwk1k")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 15.5088, 1.74428, 12.7777)
+texture = ExtResource("14_73a7w")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 12.436, 1.74428, 8.8844)
+texture = ExtResource("14_73a7w")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 15.1136, 2.27787, -20.7942)
+flip_h = true
+texture = ExtResource("14_73a7w")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 16.4819, 2.27787, -20.7942)
+flip_h = true
+texture = ExtResource("15_bamm1")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 12.4394, 2.27787, -33.8096)
+texture = ExtResource("15_bamm1")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Commuters"]
+transform = Transform3D(0.143682, 0, 0, 0, 0.143682, 0, 0, 0, 0.143682, 13.3954, 1.07803, 8.88618)
+flip_h = true
+texture = ExtResource("15_bamm1")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(-1.51081e-07, 0, -3.45634, 0, 3.45634, 0, 3.45634, 0, -1.51081e-07, 0, -10.6685, 0)
+visible = false
+texture = ExtResource("16_y7jda")
