@@ -38,19 +38,17 @@
 							<ChildrenList>
 								<BlendContainer Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" ShortID="366252467">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>19</Value>
-											</ValueList>
-										</Property>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>53</Value>
+												<Value>37</Value>
 											</ValueList>
 										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="74"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -111,6 +109,37 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{1F5A67D4-F4FF-4FD7-B844-6FB59BE120B3}" ShortID="531151744">
+														<PropertyList>
+															<Property Name="Render" Type="bool">
+																<ValueList>
+																	<Value>True</Value>
+																</ValueList>
+															</Property>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Parametric EQ (Custom)" ID="{4FBB175A-B4D3-413F-ADF2-298EE9DE2628}" ShortID="1015962703" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FrequencyBand1" Type="Real32" Value="144"/>
+																			<Property Name="GainBand1" Type="Real32" Value="10"/>
+																			<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																			<Property Name="OnOffBand3" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>
@@ -118,15 +147,18 @@
 							<ChildrenList>
 								<Sound Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" ShortID="732394644">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>25</Value>
+												<Value>40</Value>
 											</ValueList>
 										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="30"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-13</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -198,15 +230,18 @@
 								</Sound>
 								<Sound Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" ShortID="603486124">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>60</Value>
+												<Value>55</Value>
 											</ValueList>
 										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="31"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -233,6 +268,34 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{43D48121-6628-4C8B-A30D-B9839CC554B8}" ShortID="1061940493">
+														<PropertyList>
+															<Property Name="Render" Type="bool">
+																<ValueList>
+																	<Value>True</Value>
+																</ValueList>
+															</Property>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Gain (Custom)" ID="{ED37D4E4-ED11-4064-ABC9-8ED62D70A263}" ShortID="1598549" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FullBandGain" Type="Real32" Value="24"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="HomeEnvLoop" ID="{E2FBD3E8-CE48-4CCD-988E-5886CAB79B06}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -243,20 +306,23 @@
 							<ChildrenList>
 								<Sound Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" ShortID="635479689">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>17</Value>
+												<Value>24</Value>
 											</ValueList>
 										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>40</Value>
+												<Value>44</Value>
 											</ValueList>
 										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="62"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -282,6 +348,28 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{34DBAF47-58A8-47DC-93CB-4C143A54BD01}" ShortID="881108819">
+														<PropertyList>
+															<Property Name="Bypass" Type="bool">
+																<ValueList>
+																	<Value>True</Value>
+																</ValueList>
+															</Property>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<ObjectRef Name="New_Parametric_EQ" ID="{B33B4671-08D7-42E8-A9FC-6543881C4BDE}" WorkUnitID="{3687339A-70EE-4181-86D0-EDE8613B7D95}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="OfficeEnvLoop" ID="{8954C1ED-B4DA-4CE0-B3EA-C36DC762FA64}" Platform="Linked"/>
 									</ActiveSourceList>
@@ -294,6 +382,8 @@
 					<ChildrenList>
 						<Sound Name="Phone Ringtone" ID="{2A9CBF05-524B-4AAD-B991-CCF03C5B4C1A}" ShortID="160980550">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>34</Value>
@@ -302,16 +392,20 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>30</Value>
+										<Value>31</Value>
 									</ValueList>
 								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Phone" ID="{CDEFC080-1D8C-4333-8B1A-08863265F15D}" WorkUnitID="{7489DCAB-3F7B-4BA6-9A08-378955970A45}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
 								</Reference>
@@ -331,6 +425,14 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{4A91CFE8-8F04-47AE-B63A-B914F0D2B7CE}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="76.0135135135135"/>
+										<Property Name="PanY" Type="Real64" Value="45.6521739130435"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Phone Ringtone W Vibrate Final" ID="{FA6624D2-0940-43B7-9A49-D0AA40B32CB0}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -344,12 +446,12 @@
 								</Property>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>30</Value>
+										<Value>32</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

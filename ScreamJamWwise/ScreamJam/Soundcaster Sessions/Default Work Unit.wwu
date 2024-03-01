@@ -3,16 +3,58 @@
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{8EDA65BB-9860-4239-BF86-82AEC70F95C1}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="Music Testing" ID="{4E9C5E15-2D18-4EB5-9990-3824D26F3573}">
+				<SoundcasterSession Name="Mixing" ID="{4E9C5E15-2D18-4EB5-9990-3824D26F3573}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Music" ID="{F007A753-2AEA-4FF0-ADA8-8A7D01EAA4F1}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dark" ID="{BB674E28-A47F-4086-A2D1-D98FC88B431F}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Phone Ringtone" ID="{2A9CBF05-524B-4AAD-B991-CCF03C5B4C1A}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Darker" ID="{A3BC4146-FEF7-4D2F-8AD1-D518040FC035}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Darkest" ID="{58B63303-BA32-48A2-802E-E1FCE6488C8C}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Neutral" ID="{61654DBD-FBD4-4C61-BD6E-21E419FDE85A}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}"/>
-							<Value>20.3932926829268</Value>
+							<Value>54</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Darkest" ID="{B1CA89D8-241A-41A0-A9A6-A454D4078475}"/>
+						<CurrentSwitchRef Name="Darker" ID="{8F905F88-A7C7-4E1D-B176-7A0AF054B66D}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
