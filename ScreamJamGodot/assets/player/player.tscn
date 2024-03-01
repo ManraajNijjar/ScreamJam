@@ -94,3 +94,4 @@ libraries = {
 }
 
 [node name="AkListener3D" type="AkListener3D" parent="."]
+is_spatial = true

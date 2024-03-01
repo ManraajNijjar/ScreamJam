@@ -40,5 +40,6 @@ event = {
 }
 
 [node name="AkListener3D" type="AkListener3D" parent="."]
+is_spatial = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

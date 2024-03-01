@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{97D65358-6558-3DC6-E3E5-1BFE7AB04647}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{0DC2BAC5-3101-EAD4-952A-BE19F344C714}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -19,7 +19,7 @@
 				</File>
 				<File Id="56846897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HomeEnvLoop.wav</ShortName>
-					<CachePath>SFX/HomeEnvLoop_3599B9C8.wem</CachePath>
+					<CachePath>SFX/HomeEnvLoop_30D5597E.wem</CachePath>
 				</File>
 				<File Id="65579422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>02_Dark_Music_bpm75_D-Kick.wav</ShortName>
@@ -219,7 +219,7 @@
 				</File>
 				<File Id="937904889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Subway Environment Loop_Final.wav</ShortName>
-					<CachePath>SFX/Subway Environment Loop_Final_480B9934.wem</CachePath>
+					<CachePath>SFX/Subway Environment Loop_Final_1756F703.wem</CachePath>
 				</File>
 				<File Id="951307008" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>03_Neutral_Music_bpm75_D-Drone1.wav</ShortName>
@@ -254,6 +254,11 @@
 					<CachePath>SFX/08_Darker_Music_bpm75_D-BSPad_56CEF360.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="3657550167" Name="New_Parametric_EQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="487701040" Name="AlarmClockLoop">
 					<MediaRefs>
@@ -426,6 +431,11 @@
 					<MediaRefs>
 						<MediaRef Id="540861004"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="423885916" Name="Phone_Alert">
 					<MediaRefs>
@@ -469,7 +479,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9D658730-82D2-2A76-0FD0-BDBF93DCA0A5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{465A8CF9-5597-E741-FF8A-893B55DFB77A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -625,5 +635,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CB59EC91-503D-B30D-2D73-5A86A738F55E}</FileHash>
+	<FileHash>{85C14F4E-E972-0623-2128-518C35EB61B9}</FileHash>
 </SoundBanksInfo>

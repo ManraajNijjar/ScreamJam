@@ -2,43 +2,43 @@ class_name AK
 
 class EVENTS:
 
-	const DARK_MUSIC = 1142103033
-	const MUSIC = 3991942870
-	const TEST = 3157003241
 	const MOM_DIALOG = 546191921
-	const TV_STATIC = 1436086644
-	const DARKEST_MUSIC = 2983829731
-	const SUBWAYENVLOOP = 1699039505
-	const DARKER_MUSIC = 152155504
-	const PHONE_ALERT = 423885916
-	const NEUTRAL_MUSIC = 3875690554
-	const PHONE_RINGTONE = 4265022948
+	const COFFEESHOPENVLOOP = 1123806448
 	const CAT_MEOW = 1968116890
 	const HOMEENVLOOP = 1929201915
-	const COFFEESHOPENVLOOP = 1123806448
-	const OFFICEENVLOOP = 276187956
+	const SUBWAYENVLOOP = 1699039505
+	const MUSIC = 3991942870
+	const DARK_MUSIC = 1142103033
 	const DIALOGLOOP = 644163603
+	const OFFICEENVLOOP = 276187956
+	const DARKEST_MUSIC = 2983829731
+	const TV_STATIC = 1436086644
+	const TEST = 3157003241
+	const PHONE_RINGTONE = 4265022948
+	const NEUTRAL_MUSIC = 3875690554
+	const DARKER_MUSIC = 152155504
+	const PHONE_ALERT = 423885916
 	const ALARMCLOCKLOOP = 487701040
 	const JUMP_SCARE = 2589581548
 	const TRANSITION_MUSIC = 3735096532
 
 	const _dict = {
-		"Dark_Music": DARK_MUSIC,
-		"Music": MUSIC,
-		"TEST": TEST,
 		"Mom_Dialog": MOM_DIALOG,
-		"TV_Static": TV_STATIC,
-		"Darkest_Music": DARKEST_MUSIC,
-		"SubwayEnvLoop": SUBWAYENVLOOP,
-		"Darker_Music": DARKER_MUSIC,
-		"Phone_Alert": PHONE_ALERT,
-		"Neutral_Music": NEUTRAL_MUSIC,
-		"Phone_Ringtone": PHONE_RINGTONE,
+		"CoffeeShopEnvLoop": COFFEESHOPENVLOOP,
 		"Cat_Meow": CAT_MEOW,
 		"HomeEnvLoop": HOMEENVLOOP,
-		"CoffeeShopEnvLoop": COFFEESHOPENVLOOP,
-		"OfficeEnvLoop": OFFICEENVLOOP,
+		"SubwayEnvLoop": SUBWAYENVLOOP,
+		"Music": MUSIC,
+		"Dark_Music": DARK_MUSIC,
 		"DialogLoop": DIALOGLOOP,
+		"OfficeEnvLoop": OFFICEENVLOOP,
+		"Darkest_Music": DARKEST_MUSIC,
+		"TV_Static": TV_STATIC,
+		"TEST": TEST,
+		"Phone_Ringtone": PHONE_RINGTONE,
+		"Neutral_Music": NEUTRAL_MUSIC,
+		"Darker_Music": DARKER_MUSIC,
+		"Phone_Alert": PHONE_ALERT,
 		"AlarmClockLoop": ALARMCLOCKLOOP,
 		"Jump_Scare": JUMP_SCARE,
 		"Transition_Music": TRANSITION_MUSIC
@@ -54,18 +54,18 @@ class SWITCHES:
 		const GROUP = 361494514
 
 		class SWITCH:
+			const DARK = 1925914845
 			const DARKEST = 3859883579
 			const DARKER = 2377330132
-			const DARK = 1925914845
 			const NEUTRAL = 670611050
 
 	const _dict = {
 		"sanity_switch": {
 			"GROUP": 361494514,
 			"SWITCH": {
+				"Dark": 1925914845,
 				"Darkest": 3859883579,
 				"Darker": 2377330132,
-				"Dark": 1925914845,
 				"Neutral": 670611050
 			}
 		}
