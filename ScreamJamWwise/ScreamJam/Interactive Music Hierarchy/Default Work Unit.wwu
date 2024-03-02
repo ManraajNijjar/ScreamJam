@@ -7650,7 +7650,9 @@
 										</MusicTrack>
 										<MusicTrack Name="09_Neutral_Music_bpm75_D-GuitarChordR" ID="{4E099367-A965-4596-80DB-9D504345589B}" ShortID="72488847">
 											<PropertyList>
+												<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-8</Value>
@@ -7681,6 +7683,14 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{660A3416-7483-41A0-848A-EDA1ACD42172}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="100"/>
+														<Property Name="PanY" Type="Real64" Value="0.362976406533575"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
 											<ObjectLists>
 												<ObjectList Name="Sequences">
 													<Reference>

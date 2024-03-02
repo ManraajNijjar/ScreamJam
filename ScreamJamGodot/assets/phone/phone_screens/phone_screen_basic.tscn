@@ -126,12 +126,14 @@ event = {
 "id": 4265022948,
 "name": "Phone_Ringtone"
 }
+is_environment_aware = true
 
 [node name="Phone_Alert" type="AkEvent3D" parent="."]
 event = {
 "id": 423885916,
 "name": "Phone_Alert"
 }
+is_environment_aware = true
 
 [node name="DenyTimer" type="Timer" parent="."]
 wait_time = 10.0

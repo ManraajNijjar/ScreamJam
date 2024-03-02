@@ -45,10 +45,10 @@
 												<Value>37</Value>
 											</ValueList>
 										</Property>
-										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="74"/>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="65"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -235,13 +235,13 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>55</Value>
+												<Value>42</Value>
 											</ValueList>
 										</Property>
 										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="31"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -316,7 +316,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>44</Value>
+												<Value>42</Value>
 											</ValueList>
 										</Property>
 										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="62"/>
@@ -383,7 +383,6 @@
 						<Sound Name="Phone Ringtone" ID="{2A9CBF05-524B-4AAD-B991-CCF03C5B4C1A}" ShortID="160980550">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>34</Value>
@@ -456,6 +455,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Phone" ID="{CDEFC080-1D8C-4333-8B1A-08863265F15D}" WorkUnitID="{7489DCAB-3F7B-4BA6-9A08-378955970A45}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
 								</Reference>
@@ -479,6 +481,7 @@
 						<Sound Name="Alarm" ID="{FC548CC7-9DA5-424F-9C09-EAB33068FCE2}" ShortID="701652963">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-9</Value>
@@ -502,6 +505,14 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{6AC3E15E-76F0-460A-9A66-36E18E0DE8DD}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="94.2567567567567"/>
+										<Property Name="PanY" Type="Real64" Value="0.724637681159416"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Alarm Clock" ID="{0C1AF3CC-5DF6-4B52-AF81-2BF3B661ED26}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -512,6 +523,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Cat_Meow" ID="{3381A8D9-AFE8-496A-B12B-ED29ED37E36E}" ShortID="490814320">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-10</Value>
@@ -519,6 +531,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Cat" ID="{00876340-8419-47EE-969D-E4ACA86A5835}" WorkUnitID="{7489DCAB-3F7B-4BA6-9A08-378955970A45}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
 								</Reference>
@@ -645,6 +660,14 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{21D19AA9-A6B5-4B3C-85EF-FB7B1D2FB2E3}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-100"/>
+										<Property Name="PanY" Type="Real64" Value="19.5652173913043"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
@@ -709,6 +732,7 @@
 				</Folder>
 				<Sound Name="JumpScare" ID="{E5D6A308-47FD-48D2-9B88-26F9728FBC21}" ShortID="897232827">
 					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="Lowpass" Type="int16">
 							<ValueList>
 								<Value>14</Value>
@@ -721,6 +745,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Phone" ID="{CDEFC080-1D8C-4333-8B1A-08863265F15D}" WorkUnitID="{7489DCAB-3F7B-4BA6-9A08-378955970A45}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{ED5E4BC6-14EC-4AF2-8BC8-D487985C93AB}"/>
 						</Reference>

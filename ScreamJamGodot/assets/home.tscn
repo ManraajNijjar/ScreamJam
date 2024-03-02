@@ -136,12 +136,6 @@ bank = {
 "name": "MainSoundbank"
 }
 
-[node name="Cat_Meow" type="AkEvent3D" parent="."]
-event = {
-"id": 1968116890,
-"name": "Cat_Meow"
-}
-
 [node name="Music" type="AkEvent3D" parent="."]
 event = {
 "id": 3991942870,
@@ -203,6 +197,14 @@ texture = ExtResource("10_061bl")
 transform = Transform3D(0.138994, 0, 0, 0, 0.138994, 0, 0, 0, 0.138994, 16.6788, 2.95227, 3.57958)
 billboard = 2
 texture = ExtResource("11_vre8s")
+
+[node name="Cat_Meow" type="AkEvent3D" parent="Gambit"]
+event = {
+"id": 1968116890,
+"name": "Cat_Meow"
+}
+is_environment_aware = true
+transform = Transform3D(7.19456, 0, 0, 0, 7.19456, 0, 0, 0, 7.19456, -119.997, -21.2403, -25.7535)
 
 [node name="HousePlant" type="Sprite3D" parent="."]
 transform = Transform3D(0.20759, 0, 0, 0, 0.20759, 0, 0, 0, 0.20759, 10.5731, 4.29223, -8.68925)

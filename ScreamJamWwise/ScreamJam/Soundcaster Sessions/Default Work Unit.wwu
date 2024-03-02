@@ -26,6 +26,10 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Cat_Meow" ID="{3381A8D9-AFE8-496A-B12B-ED29ED37E36E}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
 							<Position X="1" Y="3"/>
 						</Module>

@@ -2,7 +2,7 @@ extends Node3D
 
 @export var player : Node3D;
 @onready var soundBankDarkMusic = $Music
-@onready var soundBankCatMeow = $Cat_Meow
+@onready var soundBankCatMeow = $Gambit/Cat_Meow
 @onready var soundBankTVStatic = $TV_Static
 @onready var soundBankHomeEnv = $HomeEnv
 @onready var soundBankJumpScare = $JumpScare
@@ -39,7 +39,7 @@ signal endGame
 signal jumpScareSound
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
+	
 	showCoffee.connect(displayCoffeeScene);
 	toTrainAM.connect(goToTrain);
 	showCall.connect(displayPlayerCall);
