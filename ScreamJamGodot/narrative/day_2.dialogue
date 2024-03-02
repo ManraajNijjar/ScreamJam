@@ -28,6 +28,7 @@ do emit("toOffice")
 ~ day_2_office
 
 His colleagues stand around him and chatter about some issue going on between two of the Engineering managers. 
+do emit("jumpScareSound")
 [wait=1] ![wait=1] 
 Sandra: Scott.
 Scott: Hmm?
@@ -49,6 +50,7 @@ do emit("showMouseSignal")
 do emit("hideMouseSignal")
 They look up at him, shocked, but only for a second before they turn back toward each other.
 Scott listens to them go back and forth, but tries to focus on his work.
+do emit("jumpScareSound")
 [wait=1] ![wait=1] 
 He only has ten minutes until it's too late to order lunch. 
 do emit("showMouseSignal")
@@ -90,7 +92,7 @@ do sanity -= 10
 do missed_calls += 1
 Something in the back of his neck twinges.
 Scott: I'll call her back later.
-He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to his phone to watch for a while. 
 => post_phone_call_2
 
 ~ pick_up_call_mom

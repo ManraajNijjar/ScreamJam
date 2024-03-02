@@ -12,6 +12,10 @@ extends Node3D
 @onready var foreground2 = $foreground2
 @onready var foreground3 = $foreground3
 
+@onready var group1 = $Commuters/group1
+@onready var group2 = $Commuters/group2
+@onready var group3 = $Commuters
+
 
 signal toOffice
 signal toHousePM
@@ -72,7 +76,7 @@ func _process(delta):
 	if(fogMachineEnabled):
 		worldEnvironment.environment.volumetric_fog_enabled = true;
 		worldEnvironment.environment.volumetric_fog_density = fogMachineDensity;
-		fogMachineDensity += delta * 0.01;
+		fogMachineDensity += delta * 0.1;
 		if(fogMachineDensity >= fogMachineCap):
 			fogMachineEnabled = false;
 
@@ -84,19 +88,26 @@ func _process(delta):
 func processSanityChanges():
 	if PlayerVariables.sanity != previousSanity:
 		previousSanity = PlayerVariables.sanity;
+		print("Sanity: " + str(PlayerVariables.sanity));
 		Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.SANITY, PlayerVariables.sanity, $Music);
+		if PlayerVariables.sanity <= 20:
+			fogMachineEnabled = true;
+
 		if PlayerVariables.sanity <= 55:
+			group3.visible = false;
 			foreground.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
 			foreground2.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
 			foreground3.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
 			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/darkest/TransitBG-darkest-skybox.PNG")
 			
 		elif PlayerVariables.sanity < 80:
+			group2.visible = false;
 			foreground.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
 			foreground2.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
 			foreground3.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
 			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/darker/TransitBG-darker-skybox.PNG")
 		elif PlayerVariables.sanity < 100:
+			group1.visible = false;
 			foreground.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
 			foreground2.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
 			foreground3.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")

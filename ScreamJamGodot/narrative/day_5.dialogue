@@ -68,6 +68,7 @@ else:
 	Dylan, Alexis and Paul start arguing over something silly about their favorite movie. 
 	Scott keeps his head down and works.
 	Dylan: Scott?
+	do emit("jumpScareSound")
 	[wait=1] ! [wait=1]
 	Scott: Yeah?
 	Dylan: Want to go out to the bar with us tonight?
@@ -91,16 +92,15 @@ do emit("toHousePM")
 
 ~ day_5_house_pm
 
-if sanity == 100:
-	He cooks himself dinner from the premade meals package he gets delivered. He pretends he’s ordering for four people, to get the discount, but it means he eats the same meals over and over. 
-	Luckily, these are completely precooked, so he doesn’t have to do anything except fend off Gambit from eating the bits of chicken he doesn’t get to quickly.
-	He flips through Youtube videos on chess and history that are catered to him algorithmically. 
-elif sanity >=25:
-	test
-else:
+if sanity <= 25:
 	He cooks himself dinner from ??? that he finds in the fridge. 
 	Luckily, these are completely precooked, so he doesn’t have to do anything except fend off [shake rate=20 level=10]????[/shake] from eating the bits of chicken he doesn’t get to quickly.
 	Scott: This seems okay.
+else:
+	He cooks himself dinner from the premade meals package he gets delivered. He pretends he’s ordering for four people, to get the discount, but it means he eats the same meals over and over. 
+	Luckily, these are completely precooked, so he doesn’t have to do anything except fend off Gambit from eating the bits of chicken he doesn’t get to quickly.
+	He flips through Youtube videos on chess and history that are catered to him algorithmically. 
+
 do emit("showCall")
 => END!
 
@@ -219,6 +219,7 @@ else:
 
 ~ post_phone_call_5
 
+It's time for bed.
 
 ~ day_5_bed
 do emit("goToBed")
@@ -228,15 +229,26 @@ if sanity == 100:
 	He plugs in his phone to charge. 
 	Gambit jumps up and hides in the crook of his legs.
 	As he's drifting off to sleep, he smells, softly, from what feels like years ago, his mom's hair.
+	Ending 3 of 3
+	do emit("endGame") 
 elif sanity >=25:
-	The sky, slick with fog, 
+	The sky, slick with fog, has left Scott somewhere in what feels like purgatory.
+	It's no use\: he's going through the motions.
+	Living life like this won't help him move on. 
+	In the dark, the changing light from his phone flickers around him.
+	And then, he falls asleep.
+	Ending 2 of 3
+	do emit("endGame") 
 else:
 	In the dark, in the fog, Scott breathes softly.
 	The small twinges of pain he's felt through out the week feels like little scratches across his body.
 	Hundreds of little cuts.
+	He went somewhere this week.
 	Some one was supposed to call, him, maybe, tonight?
 	Something was supposed to be with him here.
-	
+	As he drifts off, he is left with nothing.
+	Ending 1 of 3
+	do emit("endGame") 
 	
 # => day_x+1_house_am
 

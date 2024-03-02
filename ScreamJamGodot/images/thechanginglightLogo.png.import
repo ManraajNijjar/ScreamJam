@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxigo0rfqgkut"
-path.s3tc="res://.godot/imported/goku.png-d60de6fc75dbbc8794d820cc5947ebd9.s3tc.ctex"
+uid="uid://c8xnxxog7nv6l"
+path="res://.godot/imported/thechanginglightLogo.png-876b9c59281de7031f99c6b9b9ed4a3d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://goku.png"
-dest_files=["res://.godot/imported/goku.png-d60de6fc75dbbc8794d820cc5947ebd9.s3tc.ctex"]
+source_file="res://images/thechanginglightLogo.png"
+dest_files=["res://.godot/imported/thechanginglightLogo.png-876b9c59281de7031f99c6b9b9ed4a3d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

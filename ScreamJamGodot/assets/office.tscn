@@ -379,3 +379,9 @@ event = {
 "id": 276187956,
 "name": "OfficeEnvLoop"
 }
+
+[node name="JumpScare" type="AkEvent3D" parent="."]
+event = {
+"id": 2589581548,
+"name": "Jump_Scare"
+}

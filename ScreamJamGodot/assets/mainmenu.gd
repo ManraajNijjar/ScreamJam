@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	time += delta
 	altImage.modulate = Color(1, 1, 1, sin(time/5));
-	print(sin(time));
+	#print(sin(time));
 	pass
 
 

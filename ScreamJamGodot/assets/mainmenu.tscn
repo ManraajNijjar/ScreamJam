@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://pjcfmlbqtqyq"]
+[gd_scene load_steps=6 format=3 uid="uid://pjcfmlbqtqyq"]
 
 [ext_resource type="Texture2D" uid="uid://b72au0civketj" path="res://images/Office scene assets/desktopbg.png" id="1_5g0yg"]
 [ext_resource type="Script" path="res://assets/mainmenu.gd" id="1_6gx3w"]
 [ext_resource type="Texture2D" uid="uid://dr7enu00u8wii" path="res://images/Office scene assets/desktopbg-darkest.png" id="4_ht6b2"]
+[ext_resource type="Texture2D" uid="uid://c8xnxxog7nv6l" path="res://images/thechanginglightLogo.png" id="4_w7yd0"]
+
+[sub_resource type="Theme" id="Theme_45oos"]
+default_font_size = 33
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -26,11 +30,12 @@ texture = ExtResource("4_ht6b2")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 949.0
-offset_top = 351.0
-offset_right = 1005.0
-offset_bottom = 382.0
+offset_left = 784.0
+offset_top = 464.0
+offset_right = 891.0
+offset_bottom = 518.0
 scale = Vector2(3.3212, 3.3212)
+theme = SubResource("Theme_45oos")
 text = "START"
 
 [node name="Music" type="AkEvent3D" parent="."]
@@ -41,5 +46,15 @@ event = {
 
 [node name="AkListener3D" type="AkListener3D" parent="."]
 is_spatial = true
+
+[node name="ThechanginglightLogo" type="Sprite2D" parent="."]
+modulate = Color(0.947199, 0.947199, 0.947199, 1)
+position = Vector2(594, 32)
+texture = ExtResource("4_w7yd0")
+
+[node name="ThechanginglightLogo2" type="Sprite2D" parent="."]
+modulate = Color(0.286275, 0.286275, 0.286275, 1)
+position = Vector2(606, 46)
+texture = ExtResource("4_w7yd0")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -201,36 +201,9 @@ texture = ExtResource("11_v3tke")
 transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 14.2725, 1.74428, -32.6804)
 texture = ExtResource("12_bwk1k")
 
-[node name="Sprite3D9" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.2476, 1.74428, -29.2528)
-texture = ExtResource("13_nruyd")
-
-[node name="Sprite3D10" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -29.2528)
-flip_h = true
-texture = ExtResource("13_nruyd")
-
-[node name="Sprite3D11" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -23.1913)
-flip_h = true
-texture = ExtResource("13_nruyd")
-
-[node name="Sprite3D12" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -3.65295)
-flip_h = true
-texture = ExtResource("13_nruyd")
-
 [node name="Sprite3D13" type="Sprite3D" parent="Commuters"]
 transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5964, 1.74428, 3.66062)
 flip_h = true
-texture = ExtResource("13_nruyd")
-
-[node name="Sprite3D14" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.486, 1.74428, 4.65411)
-texture = ExtResource("13_nruyd")
-
-[node name="Sprite3D15" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.486, 1.74428, 14.2576)
 texture = ExtResource("13_nruyd")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Commuters"]
@@ -241,28 +214,59 @@ texture = ExtResource("12_bwk1k")
 transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 15.5088, 1.74428, 12.7777)
 texture = ExtResource("14_73a7w")
 
-[node name="Sprite3D4" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 12.436, 1.74428, 8.8844)
-texture = ExtResource("14_73a7w")
-
 [node name="Sprite3D5" type="Sprite3D" parent="Commuters"]
 transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 15.1136, 2.27787, -20.7942)
 flip_h = true
 texture = ExtResource("14_73a7w")
 
-[node name="Sprite3D6" type="Sprite3D" parent="Commuters"]
-transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 16.4819, 2.27787, -20.7942)
-flip_h = true
-texture = ExtResource("15_bamm1")
-
 [node name="Sprite3D7" type="Sprite3D" parent="Commuters"]
 transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 12.4394, 2.27787, -33.8096)
 texture = ExtResource("15_bamm1")
 
-[node name="Sprite3D8" type="Sprite3D" parent="Commuters"]
+[node name="group1" type="Node3D" parent="Commuters"]
+
+[node name="Sprite3D8" type="Sprite3D" parent="Commuters/group1"]
 transform = Transform3D(0.143682, 0, 0, 0, 0.143682, 0, 0, 0, 0.143682, 13.3954, 1.07803, 8.88618)
 flip_h = true
 texture = ExtResource("15_bamm1")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Commuters/group1"]
+transform = Transform3D(0.289784, 0, 0, 0, 0.289784, 0, 0, 0, 0.289784, 16.4819, 2.27787, -20.7942)
+flip_h = true
+texture = ExtResource("15_bamm1")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Commuters/group1"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 12.436, 1.74428, 8.8844)
+texture = ExtResource("14_73a7w")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Commuters/group1"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.486, 1.74428, 4.65411)
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Commuters/group1"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -23.1913)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="group2" type="Node3D" parent="Commuters"]
+
+[node name="Sprite3D9" type="Sprite3D" parent="Commuters/group2"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.2476, 1.74428, -29.2528)
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Commuters/group2"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -3.65295)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Commuters/group2"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 17.5747, 1.74428, -29.2528)
+flip_h = true
+texture = ExtResource("13_nruyd")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Commuters/group2"]
+transform = Transform3D(0.219821, 0, 0, 0, 0.219821, 0, 0, 0, 0.219821, 11.486, 1.74428, 14.2576)
+texture = ExtResource("13_nruyd")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(-1.51081e-07, 0, -3.45634, 0, 3.45634, 0, 3.45634, 0, -1.51081e-07, 0, -10.6685, 0)

@@ -73,6 +73,7 @@ if sanity == 100:
 else:
 	Scott notices a few of his colleagues are out, having said they'd work from home today.
 	The amount of work he has to do is light, and he finds himself reading the news instead.
+do emit("jumpScareSound")
 [wait=1] ! [wait=1]
 Scott feels a hand clasp his shoulder. He looks up and sees his boss, Dylan, smiling down at him.
 Dylan: Hey, man. What's up?
@@ -157,13 +158,13 @@ if missed_calls >= 0:
 	do missed_calls += 1
 	Something in the back of his neck twinges.
 	Scott: I'll call her back later.
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!")..
 elif missed_calls == 1:
 	do sanity -= 10
 	do missed_calls += 1
 	The sides of his face feel flush and hot, like something is tearing inside him.
 	Scott: I'll get back to her, eventually.
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!"). 
 => post_phone_call_3
 
 ~ pick_up_call_mom

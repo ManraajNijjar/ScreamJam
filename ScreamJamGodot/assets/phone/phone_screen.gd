@@ -93,7 +93,7 @@ func find_mouse(pos: Vector2):
 	rayparam.collide_with_areas = true;
 
 	var result = dss.intersect_ray(rayparam);
-	print(result);
+	#print(result);
 	if result.size() > 0:
 		return result.position;
 	else:

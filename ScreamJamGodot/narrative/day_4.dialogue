@@ -37,6 +37,7 @@ do emit("showMouseSignal")
 	do emit("hideMouseSignal")
 	Barista: I got you. With one cream.
 	She smiles again, and walks off to start the pour over.
+	do emit("jumpScareSound")
 	[wait=1] ! [wait=1]
 	Man: Are you serious?
 	Scott turns around. 
@@ -118,6 +119,7 @@ do emit("showMouseSignal")
 	He grabs his salad and sits back down on his desk.
 	Scott works while eating. 
 	He looks down at his salad, trying to pick up an optimal bite of steak, lettuce, tomato, and bleu cheese, and notices something.
+	do emit("jumpScareSound")
 	[wait=1] ! [wait=1]
 	It moves, slightly.
 	He uses his fork to push the salad around in the bowl, and finds nothing.
@@ -168,13 +170,13 @@ if missed_calls == 0:
 	do missed_calls += 1
 	Something in the back of his neck twinges.
 	Scott: I'll call her back later.
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!") before turning back to the TV to watch for a while. 
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!").
 elif missed_calls == 1:
 	do sanity -= 15
 	do missed_calls += 1
 	The sides of his face feel flush and hot, like something is tearing inside him.
 	Scott: I'll get back to her, eventually.
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!") before turning back to the TV to watch for a while.
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! It's been a few days. So... call me back! Love you, bye!").
 elif missed_calls == 2:
 	do sanity -= 20
 	do missed_calls += 1
@@ -186,7 +188,8 @@ elif missed_calls == 2:
 	In the back of his neck, his cheeks, the sides of his throat. They feel sore.
 	They burn, and he takes a deep breath through it.
 	Scott: [shake rate=20 level=10]When's the last time she actually showed interest in me?[/shake]
-	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! I'm starting to worry but I'm sure you're okay. So... call me back! Love you, bye!") but he's too mad to watch any more television.. 
+	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! I'm starting to worry but I'm sure you're okay. So... call me back! Love you, bye!").
+	He's too mad to watch any more videos. 
 => post_phone_call_4
 
 ~ pick_up_call_mom
@@ -225,7 +228,7 @@ Scott: Well, she hung up fast this time...
 
 # lowest possible sanity here is 20
 ~ post_phone_call_4
-He watches TV for a bit, and thinks about the day. 
+He thinks about the day. 
 He gets lost in a fantasy world for a bit, without realizing it.
 Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 

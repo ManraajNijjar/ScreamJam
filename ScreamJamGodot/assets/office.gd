@@ -12,6 +12,7 @@ extends Node3D
 @onready var foreground = $foreground
 
 @onready var soundBankOfficeEnv = $OfficeEnv
+@onready var soundBankJumpScare = $JumpScare
 
 var currentColor : Color = Color("87abdf");
 var transitionToRed : bool = false;
@@ -28,6 +29,7 @@ var previousSanity = 100;
 signal toTrainPM
 signal showMouseSignal
 signal hideMouseSignal
+signal jumpScareSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +37,7 @@ func _ready():
 	toTrainPM.connect(goToTrainPM);
 	showMouseSignal.connect(showMouse);
 	hideMouseSignal.connect(hideMouse);
+	jumpScareSound.connect(jumpScareSoundFunction);
 
 	if(PlayerVariables.day == 0):
 		DialogueManager.show_dialogue_balloon(load("res://narrative/start.dialogue"), "day_1_office")
@@ -58,7 +61,7 @@ func _process(delta):
 	if(fogMachineEnabled):
 		worldEnvironment.environment.volumetric_fog_enabled = true;
 		worldEnvironment.environment.volumetric_fog_density = fogMachineDensity;
-		fogMachineDensity += delta * 0.01;
+		fogMachineDensity += delta * 0.1;
 		if(fogMachineDensity >= fogMachineCap):
 			fogMachineEnabled = false;
 
@@ -70,7 +73,11 @@ func _process(delta):
 func processSanityChanges():
 	if PlayerVariables.sanity != previousSanity:
 		previousSanity = PlayerVariables.sanity;
+		print("Sanity: " + str(PlayerVariables.sanity));
 		Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.SANITY, PlayerVariables.sanity, $Music);
+		if PlayerVariables.sanity <= 20:
+			fogMachineEnabled = true;
+
 		if PlayerVariables.sanity <= 55:
 			foreground.texture = load("res://images/Office scene assets/darkest/OfficeBG-darkest-foreground.PNG")
 			monitor1.texture = load("res://images/Office scene assets/desktopbg-darkest.png")
@@ -122,3 +129,7 @@ func showMouse():
 func hideMouse():
 	player.selectingOption = false;
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
+
+func jumpScareSoundFunction():
+	soundBankJumpScare.post_event()
+	pass;

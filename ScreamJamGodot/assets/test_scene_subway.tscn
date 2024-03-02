@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://co2ktstqpgolr"]
+[gd_scene load_steps=19 format=3 uid="uid://co2ktstqpgolr"]
 
 [ext_resource type="Material" uid="uid://c6gmlk1yx8ss8" path="res://materials/plasticSubwayFloor/plasticMaterialFloor.tres" id="1_0bc31"]
 [ext_resource type="Texture2D" uid="uid://bxm77wbj53yl1" path="res://images/subwayBackground.png" id="2_1phr6"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://7pxjhvjgqfhm" path="res://assets/Environment/subway_ceiling.tscn" id="6_0weqf"]
 [ext_resource type="PackedScene" uid="uid://bytbt8nnkl8ve" path="res://3DModels/SubwayRearDoor/subwayRearDoor.glb" id="7_gqx10"]
 [ext_resource type="PackedScene" uid="uid://b7q65nu2xj4we" path="res://assets/Environment/subway_side_door.tscn" id="8_e2tci"]
-[ext_resource type="Texture2D" uid="uid://cxigo0rfqgkut" path="res://goku.png" id="9_2hvmc"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="15_3rrx8"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gkwe8"]
@@ -130,12 +129,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.2713
 
 [node name="subwaySideDoor2" parent="environment" instance=ExtResource("8_e2tci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92621, -0.421463, 7.88285)
-
-[node name="Sprite3D3" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7912, 2.59674, 0)
-modulate = Color(0.419608, 0.0705882, 0.352941, 1)
-billboard = 2
-texture = ExtResource("9_2hvmc")
 
 [node name="AkBank_Init" type="AkBank" parent="."]
 bank = {

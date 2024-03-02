@@ -12,12 +12,17 @@ extends Node3D
 @onready var nightSpawn = $PMSpawnLocation
 @onready var bedSpawn = $BedSpawnLocation
 
+@onready var light1 = $environment/light/OmniLight3D
+@onready var light2 = $environment/light/OmniLight3D2
+
 @onready var pictureFrame : Sprite3D = $PictureFrame
 
 @onready var coffeeSceneControl : Control = $CoffeeScene
 
 @onready var timeWipe : Control = $TimeWipe
 @onready var wakeupTimer : Timer = $WakeupTimer
+
+@onready var gambitSprite = $Gambit
 
 var previousSanity = 100;
 
@@ -30,7 +35,8 @@ signal showMouseSignal
 signal hideMouseSignal
 signal goToBed
 signal turnOffAlarm
-
+signal endGame
+signal jumpScareSound
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
@@ -43,6 +49,8 @@ func _ready():
 	hideMouseSignal.connect(hideMouse);
 	goToBed.connect(goToBedFunction);
 	turnOffAlarm.connect(turnOffAlarmFunction);
+	endGame.connect(endGameFunction);
+	jumpScareSound.connect(jumpScareSoundFunction);
 
 	#soundBankDarkMusic.post_event()
 
@@ -53,6 +61,8 @@ func _ready():
 	elif(PlayerVariables.time == PlayerVariables.TIMEOFDAY.NIGHT):
 		player.global_transform.origin = nightSpawn.global_transform.origin
 		timeOfDayString = "pm";
+		light1.light_energy = 0.0
+		light2.light_energy = 0.3
 
 	if(PlayerVariables.day == 0):
 		if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
@@ -62,6 +72,8 @@ func _ready():
 	else:
 		DialogueManager.show_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_house_"+timeOfDayString)
 
+	if PlayerVariables.sanity <= 20:
+		gambitSprite.visible = false;
 	#soundBankTVStatic.post_event()
 	soundBankHomeEnv.post_event()
 	pass
@@ -73,7 +85,11 @@ func _process(delta):
 func processSanityChanges():
 	if PlayerVariables.sanity != previousSanity:
 		previousSanity = PlayerVariables.sanity;
+		print("Sanity: " + str(PlayerVariables.sanity));
 		Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.SANITY, PlayerVariables.sanity, $Music);
+		if PlayerVariables.sanity <= 20:
+			gambitSprite.visible = false;
+			
 		if PlayerVariables.sanity <= 55:
 			pictureFrame.texture = load("res://images/Apartment scene assets/familyphoto-darkest.png")
 		elif PlayerVariables.sanity < 80:
@@ -108,6 +124,8 @@ func goToHouseAM():
 	player.global_transform.origin = morningSpawn.global_transform.origin
 	player.canMove = true;
 	soundBankAlarmClock.post_event()
+	light1.light_energy = 1.0
+	light2.light_energy = 1.0
 	DialogueManager.show_dialogue_balloon(load("res://narrative/day_"+str(PlayerVariables.day+1)+".dialogue"), "day_"+str(PlayerVariables.day+1)+"_house_am")
 	pass;
 
@@ -130,4 +148,11 @@ func hideMouse():
 func _on_wakeup_timer_timeout():
 	timeWipe.visible = false;
 	pass # Replace with function body.
-	
+
+func jumpScareSoundFunction():
+	soundBankJumpScare.post_event()
+	pass;
+
+func endGameFunction():
+	get_tree().quit()
+	pass; 
