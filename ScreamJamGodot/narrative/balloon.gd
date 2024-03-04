@@ -47,7 +47,7 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
-		var portrait_path: String = "res://narrative/%s.png" % dialogue_line.character.to_lower()
+		var portrait_path: String = "res://images/Character portraits/%s.png" % dialogue_line.character.to_lower()
 		
 		
 		if dialogue_line.character == "Scott":
@@ -62,8 +62,15 @@ var dialogue_line: DialogueLine:
 		else:
 			portrait.texture = null
 			# ^ comment out this line/switch to "pass" if we want him to always be visible
-		if FileAccess.file_exists(portrait_path):
-			mom_portrait.texture = load(portrait_path)
+		if dialogue_line.character == "Barista":
+		#if FileAccess.file_exists(portrait_path):
+			mom_portrait.texture = load("res://images/Character portraits/barista.png")
+		elif dialogue_line.character == "Alexis":
+			mom_portrait.texture = load("res://images/Character portraits/alexis.png")
+		elif dialogue_line.character == "Dylan":
+			mom_portrait.texture = load("res://images/Character portraits/dylan.png")
+		elif dialogue_line.character == "Sandra":
+			mom_portrait.texture = load("res://images/Character portraits/sandra.png")
 		else:
 			mom_portrait.texture = null
 		#if dialogue_line.character == "Mom":
