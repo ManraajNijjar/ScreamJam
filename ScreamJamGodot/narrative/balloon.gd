@@ -55,7 +55,7 @@ var dialogue_line: DialogueLine:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-neutral.png")
 			elif PlayerVariables.sanity >= 55:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-dark.PNG")
-			elif PlayerVariables.sanity >= 25:
+			elif PlayerVariables.sanity >= 30:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-darker.png")
 			else:
 				portrait.texture = load("res://images/Character portraits/ScottAvatar-darkest.PNG")

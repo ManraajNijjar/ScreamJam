@@ -154,13 +154,13 @@ do emit("showCall")
 
 ~ deny_call_mom
 if missed_calls >= 0:
-	do sanity -= 10
+	do sanity -= 11
 	do missed_calls += 1
 	Something in the back of his neck twinges.
 	Scott: I'll call her back later.
 	He reads the transcript of the voicemail ("Hi, Scott! Just wanted to check in! Call me back! Love you, bye!")..
 elif missed_calls == 1:
-	do sanity -= 10
+	do sanity -= 11
 	do missed_calls += 1
 	The sides of his face feel flush and hot, like something is tearing inside him.
 	Scott: I'll get back to her, eventually.

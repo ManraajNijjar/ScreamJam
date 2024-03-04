@@ -1,7 +1,7 @@
 # import "res://narrative/day_2.dialogue" as snippets
 
 ~ day_4_house_am
-if sanity == 100:
+if sanity >= 90:
 	The clear blue sky has started to stretch for miles around.
 	The sun is brighter than Scott remembers it can be. It feels like years since he’s seen the sun, and seen so clearly.
 	do emit("turnOffAlarm")
@@ -72,7 +72,7 @@ do emit("toTrainAM")
 # lowest possible sanity here is 50
 
 ~ day_4_train_am
-if sanity == 100:
+if sanity >= 90:
 	Scott makes the train just in time. It's much busier than earlier this week. 
 	He has to walk through people and bumps into someone.
 	Scott: Sorry!
@@ -166,7 +166,7 @@ do emit("showCall")
 
 ~ deny_call_mom
 if missed_calls == 0:
-	do sanity -= 10
+	do sanity -= 11
 	do missed_calls += 1
 	Something in the back of his neck twinges.
 	Scott: I'll call her back later.
@@ -236,7 +236,7 @@ Eventually, Gambit headbutts him enough that he gets up and makes him dinner.
 ~ day_4_bed
 do emit("goToBed")
 Scott scrolls on his phone shorter than usual tonight. 
-if sanity == 100:
+if sanity >= 90:
 	Gambit comes right up to him and plops down almost on his head.
 elif sanity >=80:
 	It takes a while for Gambit to come up to him, but when he does, he sits almost on Scott's head.

@@ -88,7 +88,7 @@ do emit("showCall")
 => END!
 
 ~ deny_call_mom
-do sanity -= 10
+do sanity -= 11
 do missed_calls += 1
 Something in the back of his neck twinges.
 Scott: I'll call her back later.

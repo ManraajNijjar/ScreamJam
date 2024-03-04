@@ -1,7 +1,7 @@
 # import "res://narrative/day_2.dialogue" as snippets
 
 ~ day_5_house_am
-if sanity == 100:
+if sanity >= 90:
 	Scott has never seen weather like this in his years in San Francisco. 
 	He’s so used to the fog that it almost chills him to the bone to see the sun, so many days in a row. He enjoys it, of course, as does Gambit. 
 	Gambit sits in a little sun puddle, enjoying the morning.
@@ -22,7 +22,7 @@ else:
 
 do emit("showCoffee")
 
-if sanity == 100:
+if sanity >= 90:
 	As he steps into the crowded cafe, the barista hands him a coffee.
 	Scott: One cream?
 	Barista: Of course, Scott! Have a good day.
@@ -105,7 +105,7 @@ do emit("showCall")
 => END!
 
 ~ deny_call_mom
-if sanity == 100:
+if sanity >= 90:
 	Scott: Pick up the phone.
 	Scott: Come on, Scott, you've already done everything perfectly this week.
 	Scott: [shake rate=20 level=10](Why would you mess it up now?)[/shake]
@@ -128,7 +128,7 @@ Scott: Hi, mom.
 => phone_call_5 
 
 ~ phone_call_5
-if sanity == 100:
+if sanity >= 90:
 	Mom: Hi, Scott. Just wanted to check in.
 	Scott: Sure, I’m doing okay.
 	Mom: Great! Did you see that Martin Remowitz is running for president?
@@ -223,7 +223,7 @@ It's time for bed.
 
 ~ day_5_bed
 do emit("goToBed")
-if sanity == 100:
+if sanity >= 90:
 	Scott stares out at the clear sky. 
 	The buildings stretch for what feels like miles out the window.
 	He plugs in his phone to charge. 
