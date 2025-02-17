@@ -2,11 +2,12 @@ extends Node3D
 
 @export var player : Node3D;
 @onready var soundBankDarkMusic = $Music
-@onready var soundBankCatMeow = $Gambit/Cat_Meow
+@onready var soundBankCatMeow = $Music
 @onready var soundBankTVStatic = $TV_Static
-@onready var soundBankHomeEnv = $HomeEnv
+@onready var soundBankHomeEnv : AkEvent3D = $HomeEnv
 @onready var soundBankJumpScare = $JumpScare
 @onready var soundBankAlarmClock = $AlarmClock
+@onready var soundBankCoffeeShop = $CoffeeShop
 
 @onready var morningSpawn = $MorningSpawnLocation
 @onready var nightSpawn = $PMSpawnLocation
@@ -39,7 +40,6 @@ signal endGame
 signal jumpScareSound
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	showCoffee.connect(displayCoffeeScene);
 	toTrainAM.connect(goToTrain);
 	showCall.connect(displayPlayerCall);
@@ -75,11 +75,23 @@ func _ready():
 	if PlayerVariables.sanity <= 20:
 		gambitSprite.visible = false;
 	#soundBankTVStatic.post_event()
-	soundBankHomeEnv.post_event()
+	#Wwise.post_event("Cat_Meow", self);
+	#print(soundBankHomeEnv.set_event());
+	Wwise.register_game_obj(gambitSprite, "Gambit")
+	print(soundBankCatMeow.get_event());
+	processSanityChanges();
 	pass
 
 func _process(delta):
+	if Input.is_action_pressed("viewPhone"):
+		#soundBankCatMeow.post_event()
+		#Wwise.register_game_obj(self, "player")
+		Wwise.post_event("Cat_Meow", gambitSprite);
+		#print(AK.EVENTS);
+		#Wwise.post_event_id(AK.EVENTS, self);
+		pass
 	processSanityChanges();
+
 
 
 func processSanityChanges():
@@ -100,6 +112,7 @@ func processSanityChanges():
 func displayCoffeeScene():
 	player.canMove = false;
 	coffeeSceneControl.visible = true;
+	soundBankCoffeeShop.post_event()
 	pass;
 
 func goToTrain():
@@ -107,6 +120,8 @@ func goToTrain():
 	#soundBankDarkMusic.stop_event()
 	soundBankTVStatic.stop_event()
 	soundBankHomeEnv.stop_event()
+	if(coffeeSceneControl.visible):
+		soundBankCoffeeShop.stop_event()
 	get_tree().change_scene_to_file("res://assets/subway.tscn")
 	pass;
 

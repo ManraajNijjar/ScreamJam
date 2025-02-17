@@ -26,6 +26,7 @@ var selectingOption = false;
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	#Wwise.register_listener(self);
 	if(lockMouseOnStart):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 

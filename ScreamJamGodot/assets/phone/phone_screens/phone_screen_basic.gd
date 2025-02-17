@@ -20,6 +20,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	#if Input.is_action_pressed("viewPhone"):
+		#phoneRingtone.post_event();
 	processSanityChanges();
 
 func processSanityChanges():

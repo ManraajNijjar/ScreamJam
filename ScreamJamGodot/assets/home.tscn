@@ -246,4 +246,12 @@ color = Color(0, 0, 0, 1)
 [node name="WakeupTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="CoffeeShop" type="AkEvent3D" parent="."]
+event = {
+"id": 1123806448,
+"name": "CoffeeShopEnvLoop"
+}
+is_environment_aware = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.893064, 3.91307, 6.39694)
+
 [connection signal="timeout" from="WakeupTimer" to="." method="_on_wakeup_timer_timeout"]

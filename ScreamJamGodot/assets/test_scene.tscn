@@ -25,8 +25,7 @@ glow_enabled = true
 script = ExtResource("1_m0wfy")
 
 [node name="Phone" parent="." instance=ExtResource("1_8sibd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.04081, -6)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xtl6b")
