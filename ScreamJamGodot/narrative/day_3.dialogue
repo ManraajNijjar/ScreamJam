@@ -133,6 +133,8 @@ elif sanity >=80:
 	It's a little gloomy.
 	Few seats are available, but he gets one facing forward.
 else:
+	do nightLight()
+	do emptyTrain()
 	The day is unusually dark. The walk to the train seemed weird. 
 	Scott is unusually sweaty.
 	The empty train seems weird in the middle of rush hour, but Scott is glad to sit and ride home in silence.

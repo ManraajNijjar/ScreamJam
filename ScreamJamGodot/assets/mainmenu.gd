@@ -24,3 +24,7 @@ func _process(delta):
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://assets/home.tscn")
 	pass # Replace with function body.
+
+func _on_button_2_pressed():
+	var options = load("res://assets/OptionsMenu.tscn").instantiate();
+	add_child(options);

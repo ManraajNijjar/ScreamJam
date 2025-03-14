@@ -147,6 +147,8 @@ func goToHouseAM():
 func goToBedFunction():
 	player.global_transform.origin = bedSpawn.global_transform.origin
 	player.canMove = false;
+	light1.light_energy = 0.0
+	light2.light_energy = 0.1
 
 func turnOffAlarmFunction():
 	soundBankAlarmClock.stop_event()

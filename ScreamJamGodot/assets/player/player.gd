@@ -20,6 +20,10 @@ var phoneInPlace = true;
 
 @onready var phone = $Phone;
 
+@onready var raycast : RayCast3D = $head/Camera3D/RayCast3D
+@onready var gambitPrompt : Control = $Control
+@onready var catMeow : AkEvent3D = $AkEvent3D;
+
 var selectingOption = false;
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -60,6 +64,13 @@ func _physics_process(delta):
 	
 	if !canMove:
 		return;
+
+	if raycast.is_colliding() && PlayerVariables.sanity > 20:
+		gambitPrompt.visible = true;
+		if Input.is_action_just_pressed('interact'):
+			catMeow.post_event();
+	else:
+		gambitPrompt.visible = false;
 	
 
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")

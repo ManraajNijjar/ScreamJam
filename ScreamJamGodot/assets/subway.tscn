@@ -184,15 +184,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5484, 2.86639, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9809, 2.4913, -9.93876)
 
 [node name="foreground" type="Sprite3D" parent="."]
-transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 26.8726, 31.0747)
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 15.918, 31.0747)
 texture = ExtResource("11_v3tke")
 
 [node name="foreground3" type="Sprite3D" parent="."]
-transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 26.8726, 396.585)
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 15.918, 396.585)
 texture = ExtResource("11_v3tke")
 
 [node name="foreground2" type="Sprite3D" parent="."]
-transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 26.8726, -512.063)
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 15.918, -512.063)
+texture = ExtResource("11_v3tke")
+
+[node name="foreground4" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 51.103, 387.122)
+visible = false
+texture = ExtResource("11_v3tke")
+
+[node name="foreground5" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 51.103, -134.525)
+visible = false
+texture = ExtResource("11_v3tke")
+
+[node name="foreground6" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8236e-07, 0, 13.3229, 0, 13.3228, 0, -13.3229, 0, -5.8236e-07, 110.44, 51.103, -134.525)
+visible = false
 texture = ExtResource("11_v3tke")
 
 [node name="Commuters" type="Node3D" parent="."]

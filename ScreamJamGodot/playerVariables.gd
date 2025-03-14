@@ -8,6 +8,7 @@ var missed_calls = 0;
 var currentCall = 0;
 var day = 0;
 var time : TIMEOFDAY = TIMEOFDAY.MORNING;
+var gameStarted : bool = false;
 
 signal toTrain
 signal displayMomCall
@@ -22,3 +23,11 @@ func loadTrain(sceneChangeParameter: String):
 func toggleMomCall(dayCall):
 	pass
 	
+func reset():
+	sanity = 100;
+	weirdness = 0;
+	missed_calls = 0;
+	currentCall = 0;
+	day = 0;
+	time = TIMEOFDAY.MORNING;
+	gameStarted = false;

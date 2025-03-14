@@ -1,12 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://pjcfmlbqtqyq"]
+[gd_scene load_steps=9 format=3 uid="uid://pjcfmlbqtqyq"]
 
 [ext_resource type="Texture2D" uid="uid://b72au0civketj" path="res://images/Office scene assets/desktopbg.png" id="1_5g0yg"]
 [ext_resource type="Script" path="res://assets/mainmenu.gd" id="1_6gx3w"]
+[ext_resource type="Texture2D" uid="uid://bbt7tsvse0hvp" path="res://images/glassPanel.png" id="4_bfu78"]
 [ext_resource type="Texture2D" uid="uid://dr7enu00u8wii" path="res://images/Office scene assets/desktopbg-darkest.png" id="4_ht6b2"]
 [ext_resource type="Texture2D" uid="uid://c8xnxxog7nv6l" path="res://images/thechanginglightLogo.png" id="4_w7yd0"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4f8lr"]
+texture = ExtResource("4_bfu78")
+modulate_color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odafq"]
+texture = ExtResource("4_bfu78")
+
 [sub_resource type="Theme" id="Theme_45oos"]
 default_font_size = 33
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxTexture_4f8lr")
+Button/styles/hover = SubResource("StyleBoxTexture_4f8lr")
+Button/styles/normal = SubResource("StyleBoxTexture_odafq")
+Button/styles/pressed = SubResource("StyleBoxTexture_4f8lr")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,19 +37,32 @@ texture = ExtResource("1_5g0yg")
 
 [node name="Alt" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(636, 350)
-scale = Vector2(0.360834, 0.360834)
 texture = ExtResource("4_ht6b2")
 
 [node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 784.0
-offset_top = 464.0
-offset_right = 891.0
-offset_bottom = 518.0
-scale = Vector2(3.3212, 3.3212)
+offset_left = 696.0
+offset_top = 472.0
+offset_right = 803.0
+offset_bottom = 526.0
+scale = Vector2(1.721, 1.721)
 theme = SubResource("Theme_45oos")
-text = "START"
+theme_override_font_sizes/font_size = 24
+text = "Play
+"
+
+[node name="Button2" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 938.0
+offset_top = 472.0
+offset_right = 1045.0
+offset_bottom = 526.0
+scale = Vector2(1.721, 1.721)
+theme = SubResource("Theme_45oos")
+theme_override_font_sizes/font_size = 21
+text = "Settings"
 
 [node name="Music" type="AkEvent3D" parent="."]
 event = {
@@ -57,4 +83,10 @@ modulate = Color(0.286275, 0.286275, 0.286275, 1)
 position = Vector2(606, 46)
 texture = ExtResource("4_w7yd0")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -7,7 +7,7 @@ extends Control
 @onready var phoneAlert = $Phone_Alert
 
 @onready var phoneIcons = $Phonebgicons
-@onready var phoneBg = $Phonebg
+@onready var phoneBg = $TextureRect
 @onready var photoMom = $MomCallScreen/momPhoto
 
 @onready var denyTimer = $DenyTimer;

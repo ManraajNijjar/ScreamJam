@@ -64,6 +64,7 @@ Luckily, these are completely precooked, so he doesn’t have to do anything exc
 He flips through Youtube videos on chess and history that are catered to him algorithmically. 
 
 do emit("showCall")
+(Press Right Click to Check Phone)
 => END!
 
 ~ pick_up_call_mom

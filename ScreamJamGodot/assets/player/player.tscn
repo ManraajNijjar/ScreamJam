@@ -85,6 +85,10 @@ shape = SubResource("CapsuleShape3D_mu32f")
 [node name="Camera3D" type="Camera3D" parent="head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
+[node name="RayCast3D" type="RayCast3D" parent="head/Camera3D"]
+target_position = Vector3(0, 0, -4)
+collision_mask = 128
+
 [node name="Phone" parent="." instance=ExtResource("2_o8v1j")]
 transform = Transform3D(0.281113, 0, 0, 0, 0.281113, 0, 0, 0, 0.281113, 0.367247, 0.171169, -0.731582)
 
@@ -95,3 +99,30 @@ libraries = {
 
 [node name="AkListener3D" type="AkListener3D" parent="."]
 is_spatial = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -155.5
+offset_top = 74.0
+offset_right = 155.5
+offset_bottom = 116.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Press E to pet Gambit"
+
+[node name="AkEvent3D" type="AkEvent3D" parent="."]
+event = {
+"id": 1968116890,
+"name": "Cat_Meow"
+}

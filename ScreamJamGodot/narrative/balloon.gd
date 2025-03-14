@@ -15,6 +15,9 @@ const SKIP_ACTION = &"ui_cancel"
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
+@onready var nextArrow : Label = $Balloon/Panel/Dialogue/HBoxContainer/nextArrowLabel
+var showNext : bool = false;
+
 ## The dialogue resource
 var resource: DialogueResource
 
@@ -120,6 +123,12 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
+
+func _process(delta) -> void:
+	if is_waiting_for_input:
+		nextArrow.visible = true;
+	else:
+		nextArrow.visible = false;
 
 
 func _unhandled_input(_event: InputEvent) -> void:

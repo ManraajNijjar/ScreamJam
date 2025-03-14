@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://exantjwgqt6w"]
+[gd_scene load_steps=32 format=3 uid="uid://exantjwgqt6w"]
 
 [ext_resource type="Script" path="res://assets/office.gd" id="1_7q7d6"]
 [ext_resource type="Material" uid="uid://ciuor5jv1ttgd" path="res://materials/woodFloor/woodfloor.tres" id="1_a32h0"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b72au0civketj" path="res://images/Office scene assets/desktopbg.png" id="18_cm6tt"]
 [ext_resource type="Texture2D" uid="uid://dkv8c6f4mldo5" path="res://images/Office scene assets/coworker1.png" id="20_8u0dh"]
 [ext_resource type="Texture2D" uid="uid://be5gsr6kt4va3" path="res://images/Office scene assets/coworker2.png" id="21_6xnox"]
+[ext_resource type="Texture2D" uid="uid://bbdnpveqnq42t" path="res://images/Office scene assets/deskplant.png" id="22_b4qvj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0xni8"]
 
@@ -385,3 +386,7 @@ event = {
 "id": 2589581548,
 "name": "Jump_Scare"
 }
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.093681, 0, 0.0474223, 0, 0.105, 0, -0.0474223, 0, 0.093681, -4.01236, 3.43991, -3.02206)
+texture = ExtResource("22_b4qvj")

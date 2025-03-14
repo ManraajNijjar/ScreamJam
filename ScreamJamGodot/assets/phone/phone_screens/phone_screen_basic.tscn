@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://1ucq783b85rq"]
+[gd_scene load_steps=9 format=3 uid="uid://1ucq783b85rq"]
 
 [ext_resource type="Script" path="res://assets/phone/phone_screens/phone_screen_basic.gd" id="1_yka7p"]
 [ext_resource type="Texture2D" uid="uid://b85px31g0br1e" path="res://images/Misc assets/phonebg.png" id="2_5emwn"]
 [ext_resource type="Texture2D" uid="uid://bebam4ugihv0f" path="res://images/Misc assets/phonebg-icons.png" id="3_djpkx"]
 [ext_resource type="Texture2D" uid="uid://coj1kl3a1rtin" path="res://images/Apartment scene assets/familyphoto.png" id="4_xqwdy"]
+[ext_resource type="Texture2D" uid="uid://o24hg0nmfwso" path="res://images/bar_square_gloss_large_square_g.png" id="5_qk8y6"]
+[ext_resource type="Texture2D" uid="uid://brh5bdjc2hr5i" path="res://images/bar_square_gloss_large_square.png" id="6_phlri"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lcky1"]
+texture = ExtResource("5_qk8y6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pli34"]
+texture = ExtResource("6_phlri")
 
 [node name="PhoneScreenBasic" type="Control"]
 layout_mode = 3
@@ -81,9 +89,25 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Phonebg" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(238, 309)
 scale = Vector2(0.471557, 0.338063)
 texture = ExtResource("2_5emwn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -125.0
+offset_right = -772.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.31459, 1.31459)
+texture = ExtResource("2_5emwn")
+expand_mode = 1
 
 [node name="Phonebgicons" type="Sprite2D" parent="."]
 position = Vector2(224, 251)
@@ -110,7 +134,9 @@ offset_top = 335.0
 offset_right = 148.0
 offset_bottom = 366.0
 scale = Vector2(2.2695, 3.13981)
-text = "pickup"
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_lcky1")
+text = "PICKUP"
 
 [node name="MomReject" type="Button" parent="MomCallScreen"]
 layout_mode = 0
@@ -119,7 +145,9 @@ offset_top = 335.0
 offset_right = 361.0
 offset_bottom = 366.0
 scale = Vector2(2.2695, 3.13981)
-text = "deny"
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_pli34")
+text = "DENY"
 
 [node name="Phone_Ringtone" type="AkEvent3D" parent="."]
 event = {

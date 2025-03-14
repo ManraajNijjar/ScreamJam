@@ -11,6 +11,9 @@ extends Node3D
 @onready var foreground = $foreground
 @onready var foreground2 = $foreground2
 @onready var foreground3 = $foreground3
+@onready var foreground4 = $foreground4
+@onready var foreground5 = $foreground5
+@onready var foreground6 = $foreground6
 
 @onready var group1 = $Commuters/group1
 @onready var group2 = $Commuters/group2
@@ -49,6 +52,12 @@ func _ready():
 	elif(PlayerVariables.time == PlayerVariables.TIMEOFDAY.NIGHT):
 		nightLight();
 		timeOfDayString = "pm";
+		foreground.visible = false
+		foreground2.visible = false
+		foreground3.visible = false
+		foreground4.visible = true
+		foreground5.visible = true
+		foreground6.visible = true
 
 	if(PlayerVariables.day == 0):
 		if(PlayerVariables.time == PlayerVariables.TIMEOFDAY.MORNING):
@@ -98,6 +107,9 @@ func processSanityChanges():
 			foreground.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
 			foreground2.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
 			foreground3.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
+			foreground4.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
+			foreground5.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
+			foreground6.texture = load("res://images/BART scene assets/darkest/TransitBG-darkest-foreground.PNG")
 			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/darkest/TransitBG-darkest-skybox.PNG")
 			
 		elif PlayerVariables.sanity < 80:
@@ -105,12 +117,18 @@ func processSanityChanges():
 			foreground.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
 			foreground2.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
 			foreground3.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
+			foreground4.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
+			foreground5.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
+			foreground6.texture = load("res://images/BART scene assets/darker/TransitBG-darker-foreground.PNG")
 			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/darker/TransitBG-darker-skybox.PNG")
 		elif PlayerVariables.sanity < 100:
 			group1.visible = false;
 			foreground.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
 			foreground2.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
 			foreground3.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
+			foreground4.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
+			foreground5.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
+			foreground6.texture = load("res://images/BART scene assets/dark/TransitBG-dark-foreground.PNG")
 			worldEnvironment.environment.sky.sky_material.panorama = load("res://images/BART scene assets/dark/TransitBG-dark-skybox.PNG")
 	
 
@@ -170,3 +188,8 @@ func showMouse():
 func hideMouse():
 	player.selectingOption = false;
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
+
+func emptyTrain():
+	group1.visible = false;
+	group2.visible = false;
+	group3.visible = false;
