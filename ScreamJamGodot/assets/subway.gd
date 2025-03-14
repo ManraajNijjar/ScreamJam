@@ -2,6 +2,9 @@ extends Node3D
 
 @export var player : Node3D;
 @onready var soundbankSubwayEnvLoop = $SubwayEnvLoop
+
+@onready var endSubwayLoop = $EndSubwayEnvLoop
+
 @onready var worldEnvironment : WorldEnvironment = $WorldEnvironment
 @onready var directionalLight : DirectionalLight3D = $DirectionalLight3D
 
@@ -133,12 +136,14 @@ func processSanityChanges():
 	
 
 func goToOffice():
-	soundbankSubwayEnvLoop.stop_event();
+	#soundbankSubwayEnvLoop.stop_event();
+	endSubwayLoop.post_event();
 	get_tree().change_scene_to_file("res://assets/office.tscn")
 	pass
 
 func goToHousePM():
-	soundbankSubwayEnvLoop.stop_event();
+	#soundbankSubwayEnvLoop.stop_event();
+	endSubwayLoop.post_event();
 	get_tree().change_scene_to_file("res://assets/home.tscn")
 	pass
 

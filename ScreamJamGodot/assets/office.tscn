@@ -390,3 +390,9 @@ event = {
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.093681, 0, 0.0474223, 0, 0.105, 0, -0.0474223, 0, 0.093681, -4.01236, 3.43991, -3.02206)
 texture = ExtResource("22_b4qvj")
+
+[node name="EndOfficeEnvLoop" type="AkEvent3D" parent="."]
+event = {
+"id": 1577914543,
+"name": "Stop_OfficeEnvLoop"
+}

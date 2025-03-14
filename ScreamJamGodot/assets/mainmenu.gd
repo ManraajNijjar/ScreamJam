@@ -2,6 +2,7 @@ extends Control
 
 @onready var altImage : Sprite2D = $Alt
 @onready var soundBankMusic = $Music
+@onready var listner = $AkListener3D;
 
 var time : float = 0;
 
@@ -17,9 +18,12 @@ func _ready():
 func _process(delta):
 	time += delta
 	altImage.modulate = Color(1, 1, 1, sin(time/5));
-	#print(sin(time));
+	updateSoundSettings(PlayerVariables.soundVolume)
 	pass
 
+func updateSoundSettings(value):
+	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.RTPC_SFX_VOLUME, value, listner);
+	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.RTPC_MUSIC_VOLUME, value, listner);
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://assets/home.tscn")

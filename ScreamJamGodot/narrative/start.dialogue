@@ -74,7 +74,6 @@ Scott: Hi, mom.
 ~ deny_call_mom
 He gets a gnawing feeling in the pit of his stomach, swirling and dizzy.
 Scott: I really should pick up.
-[wait=1]
 => phone_call_1
 
 ~ phone_call_1

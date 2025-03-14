@@ -287,3 +287,9 @@ texture = ExtResource("13_nruyd")
 transform = Transform3D(-1.51081e-07, 0, -3.45634, 0, 3.45634, 0, 3.45634, 0, -1.51081e-07, 0, -10.6685, 0)
 visible = false
 texture = ExtResource("16_y7jda")
+
+[node name="EndSubwayEnvLoop" type="AkEvent3D" parent="."]
+event = {
+"id": 3951841242,
+"name": "Stop_SubwayEnvLoop"
+}

@@ -9,6 +9,9 @@ extends Node3D
 @onready var soundBankAlarmClock = $AlarmClock
 @onready var soundBankCoffeeShop = $CoffeeShop
 
+@onready var endHomeEnvLoop : AkEvent3D = $EndHomeEnvLoop;
+@onready var endCoffeeShopLoop : AkEvent3D = $EndCoffeeShopLoop;
+
 @onready var morningSpawn = $MorningSpawnLocation
 @onready var nightSpawn = $PMSpawnLocation
 @onready var bedSpawn = $BedSpawnLocation
@@ -83,13 +86,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	if Input.is_action_pressed("viewPhone"):
-		#soundBankCatMeow.post_event()
-		#Wwise.register_game_obj(self, "player")
-		Wwise.post_event("Cat_Meow", gambitSprite);
-		#print(AK.EVENTS);
-		#Wwise.post_event_id(AK.EVENTS, self);
-		pass
 	processSanityChanges();
 
 
@@ -119,9 +115,12 @@ func goToTrain():
 	timeWipe.visible = true;
 	#soundBankDarkMusic.stop_event()
 	soundBankTVStatic.stop_event()
-	soundBankHomeEnv.stop_event()
+	#soundBankHomeEnv.stop_event()
+	endHomeEnvLoop.post_event();
 	if(coffeeSceneControl.visible):
-		soundBankCoffeeShop.stop_event()
+		#soundBankCoffeeShop.stop_event()
+		endCoffeeShopLoop.post_event();
+
 	get_tree().change_scene_to_file("res://assets/subway.tscn")
 	pass;
 

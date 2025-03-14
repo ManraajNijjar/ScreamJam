@@ -20,9 +20,11 @@ var phoneInPlace = true;
 
 @onready var phone = $Phone;
 
-@onready var raycast : RayCast3D = $head/Camera3D/RayCast3D
-@onready var gambitPrompt : Control = $Control
+@onready var raycast : RayCast3D = $head/Camera3D/RayCast3D;
+@onready var gambitPrompt : Control = $Control;
 @onready var catMeow : AkEvent3D = $AkEvent3D;
+
+@onready var playerListener : AkListener3D = $AkListener3D;
 
 var selectingOption = false;
 
@@ -33,6 +35,9 @@ func _ready():
 	#Wwise.register_listener(self);
 	if(lockMouseOnStart):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	PlayerVariables.player = self;
+	updateSoundSettings(PlayerVariables.soundVolume);
+	gambitPrompt.visible = false;
 
 func _input(event):
 	if event is InputEventMouseMotion && !Input.is_action_pressed("viewPhone") && !selectingOption:
@@ -42,6 +47,9 @@ func _input(event):
 		if(clampY):
 			rotation.y = clamp(rotation.y, deg_to_rad(-yClamp), deg_to_rad(yClamp))	
 
+func updateSoundSettings(value):
+	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.RTPC_SFX_VOLUME, value, playerListener);
+	Wwise.set_rtpc_value_id(AK.GAME_PARAMETERS.RTPC_MUSIC_VOLUME, value, playerListener);
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -56,12 +64,15 @@ func _physics_process(delta):
 		if(phoneInPlace):
 			phoneInPlace = false;
 			animationPlayer.play("MovePhoneToFace");
-	elif lockMouseOnStart:
+	elif lockMouseOnStart && !PlayerVariables.optionsOpen:
 		if(!phoneInPlace):
 			phoneInPlace = true;
 			animationPlayer.play("MovePhoneBack");
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	
+	if Input.is_action_just_pressed('options') && !PlayerVariables.optionsOpen:
+		var options = load("res://assets/OptionsMenu.tscn").instantiate();
+		add_child(options);
 	if !canMove:
 		return;
 

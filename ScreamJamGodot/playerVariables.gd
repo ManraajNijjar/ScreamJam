@@ -9,6 +9,10 @@ var currentCall = 0;
 var day = 0;
 var time : TIMEOFDAY = TIMEOFDAY.MORNING;
 var gameStarted : bool = false;
+var soundVolume : float = 100;
+var optionsOpen : bool = false;
+
+var player = null;
 
 signal toTrain
 signal displayMomCall
@@ -31,3 +35,5 @@ func reset():
 	day = 0;
 	time = TIMEOFDAY.MORNING;
 	gameStarted = false;
+	player = null;
+	optionsOpen = false;

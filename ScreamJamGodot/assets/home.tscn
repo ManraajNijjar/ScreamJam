@@ -336,7 +336,7 @@ is_environment_aware = true
 transform = Transform3D(7.19456, 0, 0, 0, 7.19456, 0, 0, 0, 7.19456, -119.997, -21.2403, -25.7535)
 
 [node name="GambitCollisionNode3D" type="StaticBody3D" parent="Gambit"]
-collision_layer = 128
+collision_layer = 8388608
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gambit/GambitCollisionNode3D"]
@@ -389,5 +389,17 @@ event = {
 }
 is_environment_aware = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.893064, 3.91307, 6.39694)
+
+[node name="EndHomeEnvLoop" type="AkEvent3D" parent="."]
+event = {
+"id": 2136568880,
+"name": "Stop_HomeEnvLoop"
+}
+
+[node name="EndCoffeeShopLoop" type="AkEvent3D" parent="."]
+event = {
+"id": 2973155327,
+"name": "Stop_CoffeeShopEnvLoop"
+}
 
 [connection signal="timeout" from="WakeupTimer" to="." method="_on_wakeup_timer_timeout"]

@@ -14,6 +14,8 @@ extends Node3D
 @onready var soundBankOfficeEnv = $OfficeEnv
 @onready var soundBankJumpScare = $JumpScare
 
+@onready var endOfficeEnvLoop = $EndOfficeEnvLoop
+
 var currentColor : Color = Color("87abdf");
 var transitionToRed : bool = false;
 var transitionToRedPercent : float = 0.0;
@@ -96,7 +98,8 @@ func processSanityChanges():
 	
 
 func goToTrainPM():
-	soundBankOfficeEnv.stop_event();
+	#soundBankOfficeEnv.stop_event();
+	endOfficeEnvLoop.post_event();
 	get_tree().change_scene_to_file("res://assets/subway.tscn")
 	pass
 
