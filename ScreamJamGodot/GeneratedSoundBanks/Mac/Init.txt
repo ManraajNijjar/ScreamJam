@@ -11,6 +11,8 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
 	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	932301089	RTPC_SFX_Volume			\Default Work Unit\RTPC_SFX_Volume	
+	1596647065	RTPC_Music_Volume			\Default Work Unit\RTPC_Music_Volume	
 	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
 	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
 	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
@@ -24,7 +26,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

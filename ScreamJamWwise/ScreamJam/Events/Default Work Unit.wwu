@@ -21,6 +21,7 @@
 								<Action Name="" ID="{2258B01D-31A9-4C8C-95FB-035AAD1BF80F}" ShortID="39818476">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -36,6 +37,7 @@
 								<Action Name="" ID="{8A156AD0-FD52-44C1-8440-82D5E304A5A3}" ShortID="1059915861">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -51,6 +53,7 @@
 								<Action Name="" ID="{DEC3B788-CC17-4EEC-8075-B61418B40164}" ShortID="869518976">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -66,11 +69,76 @@
 								<Action Name="" ID="{47E78656-EE15-4B0A-B69D-4894D55AA190}" ShortID="460604212">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_OfficeEnvLoop" ID="{B8645DF1-153E-4012-A14C-A416BC94EC15}">
+							<ChildrenList>
+								<Action Name="" ID="{87F3433F-890B-45C5-83F1-27A293FBD60A}" ShortID="192133306">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_SubwayEnvLoop" ID="{BF774399-D814-4160-868B-5FC354FFD012}">
+							<ChildrenList>
+								<Action Name="" ID="{CF7E7DE5-C06D-4383-99EE-22BE6AB1C213}" ShortID="659757682">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_HomeEnvLoop" ID="{8C9DC167-DCBF-4E3F-93E4-27437F02FA29}">
+							<ChildrenList>
+								<Action Name="" ID="{C1729377-5938-4A09-BA14-FB7143C08E99}" ShortID="317966705">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_CoffeeShopEnvLoop" ID="{A1CEB841-0E23-40E4-8413-1B19749B605A}">
+							<ChildrenList>
+								<Action Name="" ID="{8889406A-6E73-41E7-82F7-B7A9D047B262}" ShortID="971304202">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
