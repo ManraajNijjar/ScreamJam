@@ -22,6 +22,10 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="TransitionMusic" ID="{F98D70F3-C60C-484B-855C-F348B307CB99}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Darker" ID="{A3BC4146-FEF7-4D2F-8AD1-D518040FC035}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
 							<Position X="1" Y="1"/>
 						</Module>
@@ -34,8 +38,16 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="JumpScare" ID="{E5D6A308-47FD-48D2-9B88-26F9728FBC21}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Darkest" ID="{58B63303-BA32-48A2-802E-E1FCE6488C8C}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
 							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_OfficeEnvLoop" ID="{B8645DF1-153E-4012-A14C-A416BC94EC15}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
@@ -46,6 +58,10 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Stop_CoffeeShopEnvLoop" ID="{A1CEB841-0E23-40E4-8413-1B19749B605A}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
 							<Position X="3" Y="3"/>
 						</Module>
@@ -53,12 +69,20 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}"/>
-							<Value>54</Value>
+							<Value>32</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_SFX_Volume" ID="{FC360121-738C-448D-851C-0230DA7CC3DA}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Music_Volume" ID="{5D5F65C9-A5D3-456D-8220-CAC938CF9D22}"/>
+							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Darker" ID="{8F905F88-A7C7-4E1D-B176-7A0AF054B66D}"/>
+						<CurrentSwitchRef Name="Dark" ID="{F993DD12-B3E2-4CB6-AF30-4E2AE1BAE2BD}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

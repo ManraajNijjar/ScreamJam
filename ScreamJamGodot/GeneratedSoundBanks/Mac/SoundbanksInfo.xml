@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{13711D46-6FB9-7A50-BABA-B8CFCA8E5EBA}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{C17A7FF3-AC44-3CA0-4325-333E452C4BFD}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -19,7 +19,7 @@
 				</File>
 				<File Id="56846897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HomeEnvLoop.wav</ShortName>
-					<CachePath>SFX/HomeEnvLoop_30D5597E.wem</CachePath>
+					<CachePath>SFX/HomeEnvLoop_BF75F23C.wem</CachePath>
 				</File>
 				<File Id="65579422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>02_Dark_Music_bpm75_D-Kick.wav</ShortName>
@@ -111,7 +111,7 @@
 				</File>
 				<File Id="540861004" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>OfficeEnvLoop.wav</ShortName>
-					<CachePath>SFX/OfficeEnvLoop_BCC3A2B7.wem</CachePath>
+					<CachePath>SFX/OfficeEnvLoop_A7B02714.wem</CachePath>
 				</File>
 				<File Id="542651587" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>00_Neutral_Music_bpm75_D-GuitarSoloB.wav</ShortName>
@@ -479,7 +479,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{153D8AF5-D098-10DA-D985-E4AA4750A89F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6010606C-9A70-1D56-48DD-6FA238DDDC1F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -489,9 +489,13 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="932301089" Name="RTPC_SFX_Volume"/>
+				<GameParameter Id="1596647065" Name="RTPC_Music_Volume"/>
 				<GameParameter Id="2938993575" Name="sanity"/>
 			</GameParameters>
 			<SwitchGroups>
@@ -635,5 +639,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C373A5CD-C74A-8715-ADCE-A2B4C46CA6FD}</FileHash>
+	<FileHash>{C31E0BCD-F6E9-0215-9866-7E5685840B40}</FileHash>
 </SoundBanksInfo>
