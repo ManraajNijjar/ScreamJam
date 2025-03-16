@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{C17A7FF3-AC44-3CA0-4325-333E452C4BFD}">
+		<SoundBank Id="534561221" Type="User" Language="SFX" Hash="{284D48D4-20EA-B620-B98B-C3FB65365124}">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
 			<Media>
@@ -447,6 +447,10 @@
 						<MediaRef Id="234497861"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2973155327" Name="Stop_CoffeeShopEnvLoop"/>
+				<Event Id="2136568880" Name="Stop_HomeEnvLoop"/>
+				<Event Id="1577914543" Name="Stop_OfficeEnvLoop"/>
+				<Event Id="3951841242" Name="Stop_SubwayEnvLoop"/>
 				<Event Id="1699039505" Name="SubwayEnvLoop">
 					<MediaRefs>
 						<MediaRef Id="937904889"/>
@@ -639,5 +643,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C31E0BCD-F6E9-0215-9866-7E5685840B40}</FileHash>
+	<FileHash>{0D9E12D7-001D-E2C1-1698-88F682C13591}</FileHash>
 </SoundBanksInfo>

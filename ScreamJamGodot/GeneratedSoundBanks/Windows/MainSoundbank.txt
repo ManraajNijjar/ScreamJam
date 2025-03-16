@@ -8,13 +8,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	1123806448	CoffeeShopEnvLoop			\Default Work Unit\Environments\CoffeeShopEnvLoop	
 	1142103033	Dark_Music			\Default Work Unit\Music\Dark_Music	
 	1436086644	TV_Static			\Default Work Unit\TV_Static	
+	1577914543	Stop_OfficeEnvLoop			\Default Work Unit\Environments\Stop_OfficeEnvLoop	
 	1699039505	SubwayEnvLoop			\Default Work Unit\Environments\SubwayEnvLoop	
 	1929201915	HomeEnvLoop			\Default Work Unit\Environments\HomeEnvLoop	
 	1968116890	Cat_Meow			\Default Work Unit\Cat_Meow	
+	2136568880	Stop_HomeEnvLoop			\Default Work Unit\Environments\Stop_HomeEnvLoop	
 	2589581548	Jump_Scare			\Default Work Unit\Jump_Scare	
+	2973155327	Stop_CoffeeShopEnvLoop			\Default Work Unit\Environments\Stop_CoffeeShopEnvLoop	
 	2983829731	Darkest_Music			\Default Work Unit\Music\Darkest_Music	
 	3735096532	Transition_Music			\Default Work Unit\Music\Transition_Music	
 	3875690554	Neutral_Music			\Default Work Unit\Music\Neutral_Music	
+	3951841242	Stop_SubwayEnvLoop			\Default Work Unit\Environments\Stop_SubwayEnvLoop	
 	3991942870	Music			\Default Work Unit\Music\Music	
 	4265022948	Phone_Ringtone			\Default Work Unit\Phone_Ringtone	
 

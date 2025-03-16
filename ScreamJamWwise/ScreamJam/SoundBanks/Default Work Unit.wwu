@@ -5,8 +5,11 @@
 			<ChildrenList>
 				<SoundBank Name="MainSoundbank" ID="{1033ABBB-97CE-4D25-88AD-004616118164}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stop_OfficeEnvLoop" ID="{B8645DF1-153E-4012-A14C-A416BC94EC15}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Transition_Music" ID="{F6CB5431-4C65-4021-997B-9AE10C81D54A}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_CoffeeShopEnvLoop" ID="{A1CEB841-0E23-40E4-8413-1B19749B605A}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Phone_Alert" ID="{D32CBE60-7851-4117-8AFE-97366996FB0C}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_SubwayEnvLoop" ID="{BF774399-D814-4160-868B-5FC354FFD012}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Cat_Meow" ID="{027D2CC5-4752-418D-A1FD-EACB518D0776}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Jump_Scare" ID="{3D375E15-1BF9-41BB-A360-F9DF29BBC336}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TV_Static" ID="{BFC5D598-3740-423A-BAC7-EBC6EDA1580F}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
@@ -23,6 +26,7 @@
 						<ObjectRef Name="Music" ID="{89A5D241-CCDC-4C0D-A484-7E5E6CE5D5D4}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mom_Dialog" ID="{8F611BF4-0F76-4C41-BB09-8153CFF11E56}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Darkest_Music" ID="{96BCEB3C-6CFA-4E2D-8407-C10764E6562A}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_HomeEnvLoop" ID="{8C9DC167-DCBF-4E3F-93E4-27437F02FA29}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
