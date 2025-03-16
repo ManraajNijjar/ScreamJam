@@ -18,8 +18,8 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="CoffeeShopEnvLoop" ID="{6E519956-0EFD-4929-AE55-1C5A9020E222}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
-							<Position X="0" Y="3"/>
+							<ObjectRef Name="HomeEnvLoop" ID="{F9A6654F-3D2C-4BD4-B748-83536186657D}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="0" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="TransitionMusic" ID="{F98D70F3-C60C-484B-855C-F348B307CB99}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
@@ -34,8 +34,8 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="HomeEnvLoop" ID="{60C7BAC4-20CD-4457-93B2-0FF237E4819B}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
-							<Position X="1" Y="3"/>
+							<ObjectRef Name="Stop_HomeEnvLoop" ID="{8C9DC167-DCBF-4E3F-93E4-27437F02FA29}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="1" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="JumpScare" ID="{E5D6A308-47FD-48D2-9B88-26F9728FBC21}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
@@ -46,12 +46,8 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Stop_OfficeEnvLoop" ID="{B8645DF1-153E-4012-A14C-A416BC94EC15}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
-							<Position X="2" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="OfficeEnvLoop" ID="{3CC9D06C-A34E-440E-AD53-A847ED63A2CB}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
-							<Position X="2" Y="3"/>
+							<ObjectRef Name="CoffeeShopEnvLoop" ID="{7E836A0D-21C0-49DF-BCAC-68D028BC0DA5}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="2" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Neutral" ID="{61654DBD-FBD4-4C61-BD6E-21E419FDE85A}" WorkUnitID="{A5FD0792-DBB7-4B07-8755-E2E2E8D05C56}"/>
@@ -59,17 +55,29 @@
 						</Module>
 						<Module>
 							<ObjectRef Name="Stop_CoffeeShopEnvLoop" ID="{A1CEB841-0E23-40E4-8413-1B19749B605A}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
-							<Position X="3" Y="2"/>
+							<Position X="3" Y="5"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="SubwayEnvLoop" ID="{4EA662D0-164F-422A-85AC-40482DCF6A27}" WorkUnitID="{F92FF8B8-5E50-4FD5-B672-5095599FC90A}"/>
-							<Position X="3" Y="3"/>
+							<ObjectRef Name="OfficeEnvLoop" ID="{C9FABD87-A70C-4818-93FB-77761319158F}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SubwayEnvLoop" ID="{D010032E-3B05-4677-B6C4-40E42F256F83}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="4" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_OfficeEnvLoop" ID="{B8645DF1-153E-4012-A14C-A416BC94EC15}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="5" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_SubwayEnvLoop" ID="{BF774399-D814-4160-868B-5FC354FFD012}" WorkUnitID="{B6BAF5D9-871D-4343-A68C-BBA9F5AE1124}"/>
+							<Position X="5" Y="5"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="sanity" ID="{2756837F-F72E-442A-9DC8-64A562B315F7}"/>
-							<Value>32</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="RTPC_SFX_Volume" ID="{FC360121-738C-448D-851C-0230DA7CC3DA}"/>
@@ -82,7 +90,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Dark" ID="{F993DD12-B3E2-4CB6-AF30-4E2AE1BAE2BD}"/>
+						<CurrentSwitchRef Name="Neutral" ID="{DB091246-9D66-4D8B-BCC5-B85011F4BCED}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
